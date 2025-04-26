@@ -14,7 +14,7 @@ It doesn't just list devices — it checks if they belong to vendors known for p
 
 ## 🛠️ Installation
 ```bash
-git clone https://github.com/yourusername/bluetooth-risk-scanner.git
+git clone https://github.com/schoi1337/bluetooth-risk-scanner.git
 cd bluetooth-risk-scanner
 pip install -r requirements.txt
 ```
