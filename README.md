@@ -39,7 +39,7 @@ The report will be saved as `output/report.html`. Open it in your browser to vie
 
 ## 🧠 How it Works
 - Performs a Bluetooth Low Energy (BLE) scan.
-- Checks device names against internal risk databases.
+- Checks device names against internal risk databases. (`/data`)
 - Optionally, matches devices against known Bluetooth CVEs.
 
 ## 🌱 Future Improvements
