@@ -1,0 +1,10 @@
+keyword,cve_id,description
+bluetooth,cve-2023-24023,Bluetooth BR/EDR devices may be vulnerable to an unauthenticated encryption downgrade attack.
+br/edr,cve-2022-42916,Memory corruption issue in Bluetooth BR/EDR stack.
+ble,cve-2023-41064,Buffer overflow vulnerability in BLE stack when handling crafted data.
+headset,cve-2022-39176,Bluetooth headset vulnerability leading to MITM attack.
+airpods,cve-2023-31582,Bluetooth device pairing leak in Apple AirPods.
+fitbit,cve-2022-20786,Fitbit BLE security bypass vulnerability.
+smartwatch,cve-2023-36290,Smartwatch BLE improper authentication vulnerability.
+speaker,cve-2024-10123,Bluetooth speaker device denial of service vulnerability.
+keyboard,cve-2023-11235,Bluetooth keyboard insecure pairing vulnerability.
