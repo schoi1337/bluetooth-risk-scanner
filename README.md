@@ -10,6 +10,7 @@ It doesn't just list devices — it checks if they belong to vendors known for p
 - Highlight devices linked to past security incidents
 - Cross-reference devices against recent Bluetooth CVEs
 - Display results in terminal and save as JSON
+- Generate results as a visual HTML report
 
 ## 🛠️ Installation
 ```bash
