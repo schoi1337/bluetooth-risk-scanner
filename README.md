@@ -14,14 +14,19 @@ It doesn't just list devices — it checks if they belong to vendors known for p
 
 ### 📊 Comparison with Other Tools
 
+### 📊 Comparison with Other Tools
+
 | Tool | Main Features | Bluetooth Risk Scanner |
 |:---|:---|:---|
 | **Btlejuice** | BLE Man-in-the-Middle attack framework | Focuses on **risk detection**, not active attacks. |
 | **BLE Scanner App** | iOS/Android BLE device discovery | Focuses on **security/privacy risk analysis**, not just listing devices. |
 | **gatttool (deprecated)** | CLI tool for basic BLE scanning | Offers **risk evaluation, CVE matching, and reporting** on top of scanning. |
 | **Nmap Bluetooth Scripts** | Limited Bluetooth scanning scripts | Specializes in **BLE-centric risk analysis and CVE tracking**. |
-
-
+| **Nessus** | Network, system, web vulnerability scanning | Specializes in **local BLE device risk detection**, not network/server vulnerabilities. |
+| **OpenVAS** | Network-based vulnerability scanning | Focuses on **IP network vulnerabilities**, while we target **Bluetooth LE threats**. |
+| **Qualys** | Cloud-based vulnerability management | Designed for **enterprise-wide asset scanning**; we operate in **physical BLE environments**. |
+| **Rapid7 Nexpose** | Risk-based vulnerability management | Targets **large IT infrastructures**; we focus on **lightweight BLE device analysis**. |
+| **Tenable.io** | SaaS vulnerability management platform | Built for **cloud and network assets**; we **scan real-world Bluetooth devices**. |
 
 ## 🛠️ Installation
 ```bash
