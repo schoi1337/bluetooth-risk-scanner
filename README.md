@@ -20,10 +20,10 @@ It doesn't just list devices — it checks if they belong to vendors known for p
 | **gatttool (deprecated)** | CLI tool for basic BLE scanning | Offers **risk evaluation, CVE matching, and reporting** on top of scanning. |
 | **Nmap Bluetooth Scripts** | Limited Bluetooth scanning scripts | Specializes in **BLE-centric risk analysis and CVE tracking**. |
 | **Nessus** | Network, system, web vulnerability scanning | Specializes in **local BLE device risk detection**, not network/server vulnerabilities. |
-| **OpenVAS** | Network-based vulnerability scanning | Focuses on **IP network vulnerabilities**, while we target **Bluetooth LE threats**. |
-| **Qualys** | Cloud-based vulnerability management | Designed for **enterprise-wide asset scanning**; we operate in **physical BLE environments**. |
-| **Rapid7 Nexpose** | Risk-based vulnerability management | Targets **large IT infrastructures**; we focus on **lightweight BLE device analysis**. |
-| **Tenable.io** | SaaS vulnerability management platform | Built for **cloud and network assets**; we **scan real-world Bluetooth devices**. |
+| **OpenVAS** | Network-based vulnerability scanning | Targets **Bluetooth LE threats**, not IP network vulnerabilities |
+| **Qualys** | Cloud-based vulnerability management | Operates in **physical BLE environments**, not designed for enterprise-wide asset scanning |
+| **Rapid7 Nexpose** | Risk-based vulnerability management | Focuses on **lightweight BLE device analysis**, does not target large IT infrastructures |
+| **Tenable.io** | SaaS vulnerability management platform |  **Scans real-world Bluetooth devices**, not built for cloud and network assets |
 
 ## 🛠️ Installation
 ```bash
