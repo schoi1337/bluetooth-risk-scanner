@@ -21,10 +21,25 @@ It doesn't just list devices — it checks if they belong to vendors known for p
 | **gatttool (deprecated)** | CLI tool for basic BLE scanning | Offers **risk evaluation, CVE matching, and reporting** on top of scanning. |
 | **Nmap Bluetooth Scripts** | Limited Bluetooth scanning scripts | Specializes in **BLE-centric risk analysis and CVE tracking**. |
 | **Armis** | Enterprise IoT and BLE device risk management | Provides a **lightweight, free BLE risk detection tool** instead of expensive enterprise SaaS solutions. |
-| **Asimily** | BLE/IoT risk detection for healthcare and industrial environments | Targets **general security of IoT environments**, while we **focus specifically on BLE device privacy and vulnerabilities**. |
-| **Ordr** | IoT and medical device visibility and risk management | Focuses on **full asset management**, while we **specialize in targeted BLE device risk scanning**. |
-| **Nozomi Networks** | Industrial control system (ICS) cybersecurity | Focuses on **industrial networks**, while we **analyze BLE risks in real-world physical spaces**. |
-| **Forescout** | Device detection and risk management across networks and IoT | Designed for **large enterprise network environments**, while we provide a **simple, deployable BLE risk analysis tool**. |
+| **Asimily** | BLE/IoT risk detection for healthcare and industrial environments |  **Focuses specifically on BLE device privacy and vulnerabilities**, and does not target general security of IoT environments. |
+| **Ordr** | IoT and medical device visibility and risk management |  **Specializes in targeted BLE device risk scanning**, not for full asset management |
+| **Nozomi Networks** | Industrial control system (ICS) cybersecurity | **Analyze BLE risks in real-world physical spaces**, does not focus on industrial networks. |
+| **Forescout** | Device detection and risk management across networks and IoT | Provide a **simple, deployable BLE risk analysis tool**, not designed for large enterprise network environments. |
+
+### Bluetooth Risk Scanner is designed for:
+
+- **Security Researchers**  
+  Quickly identify BLE device vulnerabilities and privacy risks during security assessments.
+- **Penetration Testers**  
+  Add BLE risk detection to physical and wireless security engagements.
+- **Red Team Operators**  
+  Map nearby BLE device exposures without intrusive scans.
+- **IoT/OT Security Analysts**  
+  Assess the risk posture of Bluetooth-enabled assets in industrial and healthcare environments.
+- **Privacy Advocates**  
+  Detect and highlight BLE devices from vendors known for privacy issues.
+- **Cybersecurity Students and Enthusiasts**  
+  Learn BLE device security analysis with an easy-to-use open-source tool.
 
 ## 🛠️ Installation
 ```bash
