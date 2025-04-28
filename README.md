@@ -12,6 +12,17 @@ It doesn't just list devices — it checks if they belong to vendors known for p
 - Display results in terminal and save as JSON
 - Generate results as a visual HTML report
 
+### 📊 Comparison with Other Tools
+
+| Tool | Main Features | Difference from Bluetooth Risk Scanner |
+|:---|:---|:---|
+| **Btlejuice** | BLE Man-in-the-Middle attack framework | We focus on **risk detection**, not active attacks. |
+| **BLE Scanner App** | iOS/Android BLE device discovery | We focus on **security/privacy risk analysis**, not just listing devices. |
+| **gatttool (deprecated)** | CLI tool for basic BLE scanning | We offer **risk evaluation, CVE matching, and reporting** on top of scanning. |
+| **Nmap Bluetooth Scripts** | Limited Bluetooth scanning scripts | We specialize in **BLE-centric risk analysis and CVE tracking**. |
+
+
+
 ## 🛠️ Installation
 ```bash
 git clone https://github.com/schoi1337/bluetooth-risk-scanner.git
