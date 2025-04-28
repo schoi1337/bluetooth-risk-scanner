@@ -13,17 +13,18 @@ It doesn't just list devices — it checks if they belong to vendors known for p
 - Generate results as a visual HTML report
 
 ### 📊 Comparison with Other Tools
+
 | Tool | Main Features | Bluetooth Risk Scanner |
 |:---|:---|:---|
 | **Btlejuice** | BLE Man-in-the-Middle attack framework | Focuses on **risk detection**, not active attacks. |
 | **BLE Scanner App** | iOS/Android BLE device discovery | Focuses on **security/privacy risk analysis**, not just listing devices. |
 | **gatttool (deprecated)** | CLI tool for basic BLE scanning | Offers **risk evaluation, CVE matching, and reporting** on top of scanning. |
 | **Nmap Bluetooth Scripts** | Limited Bluetooth scanning scripts | Specializes in **BLE-centric risk analysis and CVE tracking**. |
-| **Nessus** | Network, system, web vulnerability scanning | Specializes in **local BLE device risk detection**, not network/server vulnerabilities. |
-| **OpenVAS** | Network-based vulnerability scanning | Targets **Bluetooth LE threats**, not IP network vulnerabilities |
-| **Qualys** | Cloud-based vulnerability management | Operates in **physical BLE environments**, not designed for enterprise-wide asset scanning |
-| **Rapid7 Nexpose** | Risk-based vulnerability management | Focuses on **lightweight BLE device analysis**, does not target large IT infrastructures |
-| **Tenable.io** | SaaS vulnerability management platform |  **Scans real-world Bluetooth devices**, not built for cloud and network assets |
+| **Armis** | Enterprise IoT and BLE device risk management | Provides a **lightweight, free BLE risk detection tool** instead of expensive enterprise SaaS solutions. |
+| **Asimily** | BLE/IoT risk detection for healthcare and industrial environments | Targets **general security of IoT environments**, while we **focus specifically on BLE device privacy and vulnerabilities**. |
+| **Ordr** | IoT and medical device visibility and risk management | Focuses on **full asset management**, while we **specialize in targeted BLE device risk scanning**. |
+| **Nozomi Networks** | Industrial control system (ICS) cybersecurity | Focuses on **industrial networks**, while we **analyze BLE risks in real-world physical spaces**. |
+| **Forescout** | Device detection and risk management across networks and IoT | Designed for **large enterprise network environments**, while we provide a **simple, deployable BLE risk analysis tool**. |
 
 ## 🛠️ Installation
 ```bash
