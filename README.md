@@ -26,7 +26,7 @@ It doesn't just list devices — it checks if they belong to vendors known for p
 | **Nozomi Networks** | Industrial control system (ICS) cybersecurity | **Analyze BLE risks in real-world physical spaces**, does not focus on industrial networks. |
 | **Forescout** | Device detection and risk management across networks and IoT | Provide a **simple, deployable BLE risk analysis tool**, not designed for large enterprise network environments. |
 
-### Bluetooth Risk Scanner is designed for:
+## 🎯 Bluetooth Risk Scanner is designed for:
 
 - **Security Researchers**  
   Quickly identify BLE device vulnerabilities and privacy risks during security assessments.
