@@ -1,15 +1,11 @@
-vendor
-bose
-fitbit
-garmin
-tile
-withings
-samsung
-sony
-lg
-apple
-amazon
-facebook
-meta
-google
-motorola
+Vendor,Reason
+Microsoft Corporation,Bluetooth stack remote code execution CVE-2019-1253
+Huawei Technologies Co.,Ltd,Bluetooth driver privilege escalation CVE-2020-9274
+Samsung Electronics Co.,Ltd,BLE connection overflow attack vulnerability
+Apple Inc.,BLE advertisement tracking incident
+Garmin International,Inc.,Exposed BLE services with weak permissions
+Xiaomi Communications Co Ltd,Weak BLE authentication reported
+Lenovo Mobile Communication Technology Ltd.,Insecure BLE pairing method
+Motorola Mobility LLC,Static keys used in BLE communication
+HTC Corporation,BLE service enumeration vulnerability
+Withings SA,User data leak through unsecured BLE advertising

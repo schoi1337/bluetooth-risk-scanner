@@ -1,15 +1,12 @@
-vendor
-huawei
-xiaomi
-zte
-lenovo
-oneplus
-tcl
-vivo
-oppo
-realme
-coolpad
-meizu
-hikvision
-dahua
-bytedance
+Vendor,Reason
+Apple Inc.,BLE advertisement privacy issues (persistent identifiers)
+Samsung Electronics Co.,Ltd,Past BLE tracking vulnerability
+Huawei Technologies Co.,Ltd,BLE device information leakage
+Fitbit Inc.,Persistent MAC address exposure
+Google LLC,Unpatched BLE pairing vulnerabilities
+Amazon Technologies Inc.,BLE device discovery issues
+OnePlus Technology (Shenzhen) Co., Ltd.,Weak BLE encryption
+Xiaomi Communications Co Ltd,BLE device UUID exposure
+Realme Chongqing Mobile Telecommunications Corp., Ltd.,Privacy leakage via BLE advertisement
+Pebble Technology Corp.,Static advertisement address usage
+Bytedance Ltd.,Privacy concerns over BLE communication in mobile applications

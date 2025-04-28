@@ -1,7 +1,7 @@
 import asyncio
 import json
-from scanner.ble_scanner import scan_bluetooth_devices
-from utils.risk_checker import check_vendor_risk
+from utils.ble_scanner import scan_bluetooth_devices
+from utils.risk_analyzer import check_vendor_risk
 from utils.cve_checker import check_device_cve
 from pathlib import Path
 
