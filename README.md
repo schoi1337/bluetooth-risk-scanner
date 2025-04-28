@@ -13,9 +13,6 @@ It doesn't just list devices — it checks if they belong to vendors known for p
 - Generate results as a visual HTML report
 
 ### 📊 Comparison with Other Tools
-
-### 📊 Comparison with Other Tools
-
 | Tool | Main Features | Bluetooth Risk Scanner |
 |:---|:---|:---|
 | **Btlejuice** | BLE Man-in-the-Middle attack framework | Focuses on **risk detection**, not active attacks. |
