@@ -35,7 +35,7 @@ It doesn't just list devices — it checks if they belong to vendors known for p
 - **Red Team Operators**  
   Map nearby BLE device exposures without intrusive scans.
 - **IoT/OT Security Analysts**  
-  Assess the risk posture of Bluetooth-enabled assets in industrial and healthcare environments.
+  Assess the risk posture of Bluetooth-enabled assets.
 - **Privacy Advocates**  
   Detect and highlight BLE devices from vendors known for privacy issues.
 - **Cybersecurity Students and Enthusiasts**  
