@@ -14,12 +14,12 @@ It doesn't just list devices — it checks if they belong to vendors known for p
 
 ### 📊 Comparison with Other Tools
 
-| Tool | Main Features | Difference from Bluetooth Risk Scanner |
+| Tool | Main Features | Bluetooth Risk Scanner |
 |:---|:---|:---|
-| **Btlejuice** | BLE Man-in-the-Middle attack framework | We focus on **risk detection**, not active attacks. |
-| **BLE Scanner App** | iOS/Android BLE device discovery | We focus on **security/privacy risk analysis**, not just listing devices. |
-| **gatttool (deprecated)** | CLI tool for basic BLE scanning | We offer **risk evaluation, CVE matching, and reporting** on top of scanning. |
-| **Nmap Bluetooth Scripts** | Limited Bluetooth scanning scripts | We specialize in **BLE-centric risk analysis and CVE tracking**. |
+| **Btlejuice** | BLE Man-in-the-Middle attack framework | Focuses on **risk detection**, not active attacks. |
+| **BLE Scanner App** | iOS/Android BLE device discovery | Focuses on **security/privacy risk analysis**, not just listing devices. |
+| **gatttool (deprecated)** | CLI tool for basic BLE scanning | Offers **risk evaluation, CVE matching, and reporting** on top of scanning. |
+| **Nmap Bluetooth Scripts** | Limited Bluetooth scanning scripts | Specializes in **BLE-centric risk analysis and CVE tracking**. |
 
 
 
