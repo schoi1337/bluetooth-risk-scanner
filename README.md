@@ -71,10 +71,15 @@ The report will be saved as `output/report.html`. Open it in your browser to vie
 - Checks device names against internal risk databases. (`/data`)
 - Optionally, matches devices against known Bluetooth CVEs.
 
-## 🌱 Future Improvements
-- Live CVE database lookup (NVD API integration)
-- Signal strength-based device proximity estimation
-- Interactive scanning interface
+## 🗺️ Roadmap
+- [ ] Improve MAC address to vendor matching accuracy (expand OUI database)
+- [ ] Integrate CVE database lookup (NVD API integration)
+- [ ] Add more privacy risk indicators based on BLE advertisement data
+- [ ] Introduce scoring weight configuration for flexible risk assessment
+- [ ] Optimize BLE device scanning performance
+- [ ] Implement HTML report generation alongside JSON output
+- [ ] Add CLI options for advanced scanning parameters (e.g., custom timeout, filter)
+- [ ] Prepare full documentation with examples and API references
 
 ## 🤝 Contributing
 Contributions are welcome!
