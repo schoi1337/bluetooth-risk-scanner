@@ -1,5 +1,8 @@
 # Bluetooth Risk Scanner 🛡️🔍
 
+>[!Note]
+>This is currently under development
+
 Bluetooth Risk Scanner is a lightweight tool designed to scan nearby Bluetooth devices and identify potential privacy and security risks associated with them.
 
 It doesn't just list devices — it checks if they belong to vendors known for privacy issues, previous data breaches, or are associated with recent Bluetooth vulnerabilities (CVEs).
