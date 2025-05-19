@@ -1,0 +1,66 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# macOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Virtual environment
+venv/
+.env/
+.venv/
+ENV/
+env.bak/
+env/
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# System-wide Python history
+.python_history
+
+# Jupyter notebooks checkpoint
+.ipynb_checkpoints/
+
+# Test output
+htmlcov/
+.coverage
+.tox/
+.nox/
+.cache/
+pytest_cache/
+
+# Reports
+*.pdf
+*.md.html
+*.report.html
+report.json
+
+# BLE scan outputs or logs (if applicable)
+*.pcap
+*.dump
+scan_results.json
+
+# OS-specific hidden files
+Thumbs.db
+ehthumbs.db
+Icon?
+
+# user specific files
+.todo
