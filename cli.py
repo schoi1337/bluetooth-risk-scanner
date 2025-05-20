@@ -1,23 +1,27 @@
 # cli.py
 
-import argparse
-import asyncio
+import click
+from scanner.ble_scanner import run_active_scan
+from scanner.ble_sniffer import run_ubertooth_scan
+from report.report_generator import generate_report
+import json
 
-from scanner import scan_and_analyze
-from reporter import generate_report
+@click.command()
+@click.option("--method", type=click.Choice(["hci", "ubertooth"]), default="hci", help="Scan method to use")
+@click.option("--duration", default=30, help="Scan duration in seconds")
+def main(method, duration):
+    if method == "hci":
+        print("[*] Running HCI (BLE dongle) active scan...")
+        devices = run_active_scan(duration)
+    else:
+        print("[*] Running Ubertooth passive scan...")
+        devices = run_ubertooth_scan(duration)
 
-def main():
-    parser = argparse.ArgumentParser(description="Bluetooth Risk Scanner CLI")
-    parser.add_argument("--scan", action="store_true", help="Scan BLE devices and analyze risks.")
-    parser.add_argument("--report", action="store_true", help="Generate JSON and HTML reports.")
+    with open("scan_results.json", "w") as f:
+        json.dump(devices, f, indent=2)
 
-    args = parser.parse_args()
-
-    if args.scan:
-        asyncio.run(scan_and_analyze())
-
-    if args.report:
-        generate_report()
+    print(f"[✓] {len(devices)} devices saved to scan_results.json")
+    generate_report("scan_results.json")
 
 if __name__ == "__main__":
     main()
