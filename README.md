@@ -10,6 +10,7 @@ It doesn't just list devices — it checks if they belong to vendors known for p
 ## 🚀 Features
 
 - Scan nearby Bluetooth (BLE) devices
+- Normalize MAC prefixes and map to vendors using Wireshark's manuf database
 - Detect vendors with known privacy concerns
 - Highlight devices linked to past security incidents
 - Cross-reference devices against recent Bluetooth CVEs
@@ -57,7 +58,7 @@ pip install -r requirements.txt
 ## 📋 Usage
 
 ```bash
-python main.py
+python main.py --all
 ```
 
 The results will be displayed in the terminal and saved to `output/scan_results.json`.
@@ -66,8 +67,10 @@ The results will be displayed in the terminal and saved to `output/scan_results.
 
 After scanning, you can generate a visual HTML report:
 
+![BLE Risk Report Preview](/screenshots/Report.png)
+
 ```bash
-python generate_report.py
+python main.py --report
 ```
 
 The report will be saved as `output/report.html`. Open it in your browser to view the results.
@@ -75,9 +78,9 @@ The report will be saved as `output/report.html`. Open it in your browser to vie
 ## 🧠 How it Works
 
 - Performs a Bluetooth Low Energy (BLE) scan.
-- Checks device names against internal risk databases. (`/data`)
-- Optionally, matches devices against known Bluetooth CVEs.
-
+- Parses MAC addresses and maps to vendor using Wireshark's manuf database
+- Calculates a risk score based on known CVEs, signal strength, and vendor reputation
+- Saves results to JSON and generates HTML report with color-coded risk indicators
 
 ## 🔀 Alternative Branches
 
@@ -97,13 +100,13 @@ This project also includes a dedicated branch for Ubertooth users:
 ## 🗺️ Roadmap
 
 - [x] HTML + JSON reporting implemented
-- [x] Improve MAC address to vendor matching accuracy (expand OUI database)
+- [x] Improve MAC address to vendor matching accuracy (expand OUI database using manuf)
 - [ ] Integrate CVE database lookup (NVD API integration)
 - [ ] Add more privacy risk indicators based on BLE advertisement data
 - [ ] Introduce scoring weight configuration for flexible risk assessment
 - [ ] Optimize BLE device scanning performance
-- [ ] Implement HTML report generation alongside JSON output
-- [ ] Add CLI options for advanced scanning parameters (e.g., custom timeout, filter)
+- [x] Implement HTML report generation alongside JSON output
+- [x] Add CLI options for advanced scanning parameters (e.g., custom timeout, filter)
 - [ ] Prepare full documentation with examples and API references
 
 ## 🤝 Contributing
