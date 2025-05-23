@@ -73,7 +73,8 @@ After scanning, you can generate a visual HTML report:
 python main.py --report
 ```
 
-The report will be saved as `output/report.html`. Open it in your browser to view the results.
+The report will be automatically opened in your browser after generation.  
+It is also saved as `report.html` in the project root.
 
 ## 🧠 How it Works
 
