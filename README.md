@@ -8,6 +8,7 @@ Bluetooth Risk Scanner is a lightweight tool designed to scan nearby Bluetooth d
 It doesn't just list devices — it checks if they belong to vendors known for privacy issues, previous data breaches, or are associated with recent Bluetooth vulnerabilities (CVEs).
 
 ## 🚀 Features
+
 - Scan nearby Bluetooth (BLE) devices
 - Detect vendors with known privacy concerns
 - Highlight devices linked to past security incidents
@@ -45,6 +46,7 @@ It doesn't just list devices — it checks if they belong to vendors known for p
   Learn BLE device security analysis with an easy-to-use open-source tool.
 
 ## 🛠️ Installation
+
 ```bash
 git clone https://github.com/schoi1337/bluetooth-risk-scanner.git
 cd bluetooth-risk-scanner
@@ -53,6 +55,7 @@ pip install -r requirements.txt
 > Note: This tool requires a Bluetooth adapter and Python 3.8+.
 
 ## 📋 Usage
+
 ```bash
 python main.py
 ```
@@ -70,12 +73,31 @@ python generate_report.py
 The report will be saved as `output/report.html`. Open it in your browser to view the results.
 
 ## 🧠 How it Works
+
 - Performs a Bluetooth Low Energy (BLE) scan.
 - Checks device names against internal risk databases. (`/data`)
 - Optionally, matches devices against known Bluetooth CVEs.
 
+
+## 🔀 Alternative Branches
+
+This project also includes a dedicated branch for Ubertooth users:
+
+### [`feature/ubertooth-support`](https://github.com/schoi1337/bluetooth-risk-scanner/tree/feature/ubertooth-support)
+
+> Passive BLE scanning using `ubertooth-btle -n` (no HCI Bluetooth dongle required)
+
+- Parses BLE advertisement packets in real-time
+- Performs risk assessment based on MAC prefixes and local name keywords
+- Maps MAC address prefixes to vendor names using IEEE OUI database
+- Generates a color-coded HTML risk report
+
+📖 [View README on that branch →](https://github.com/schoi1337/bluetooth-risk-scanner/blob/feature/ubertooth-support/README.md)
+
 ## 🗺️ Roadmap
-- [ ] Improve MAC address to vendor matching accuracy (expand OUI database)
+
+- [x] HTML + JSON reporting implemented
+- [x] Improve MAC address to vendor matching accuracy (expand OUI database)
 - [ ] Integrate CVE database lookup (NVD API integration)
 - [ ] Add more privacy risk indicators based on BLE advertisement data
 - [ ] Introduce scoring weight configuration for flexible risk assessment

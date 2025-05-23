@@ -1,44 +1,51 @@
-import asyncio
+# main.py
+
+import argparse
 import json
-from utils.ble_scanner import scan_bluetooth_devices
-from utils.risk_analyzer import check_vendor_risk
-from utils.cve_checker import check_device_cve
-from pathlib import Path
+import os
+from scoring import enrich_devices_with_score
+from report_generator import generate_html_report
 
-# Output directory for saving scan results
-OUTPUT_DIR = Path(__file__).parent / "output"
-OUTPUT_DIR.mkdir(exist_ok=True)
+RESULTS_FILE = "results.json"
 
-async def main():
-    # Perform Bluetooth scan
-    devices = await scan_bluetooth_devices()
-    results = []
+def load_devices():
+    if not os.path.exists(RESULTS_FILE):
+        print(f"[!] {RESULTS_FILE} not found.")
+        return []
+    with open(RESULTS_FILE, "r") as f:
+        return json.load(f)
 
-    # Analyze each scanned device
-    for device in devices:
-        risks = check_vendor_risk(device['name'])
-        cves = check_device_cve(device['name'])
-        device_info = {
-            'Name': device['name'],
-            'MAC': device['address'],
-            'RSSI': device['rssi'],
-            'Risks': risks,
-            'CVEs': [{'id': cve[0], 'description': cve[1]} for cve in cves]
-        }
-        results.append(device_info)
+def save_devices(devices):
+    with open(RESULTS_FILE, "w") as f:
+        json.dump(devices, f, indent=2)
 
-    # Display results in the terminal
-    print("\nScan Results:\n")
-    for d in results:
-        print(f"- {d['Name']} ({d['MAC']}) RSSI: {d['RSSI']} dBm")
-        if d['Risks']:
-            print(f"  ⚠️ Risks: {', '.join(d['Risks'])}")
-        if d['CVEs']:
-            print(f"  🛡️ CVEs: {', '.join([c['id'] for c in d['CVEs']])}")
+def main():
+    parser = argparse.ArgumentParser(description="Bluetooth Risk Scanner CLI")
+    parser.add_argument("--scan", action="store_true", help="Run BLE scan and save results")
+    parser.add_argument("--score", action="store_true", help="Calculate and update risk scores")
+    parser.add_argument("--report", action="store_true", help="Generate HTML report")
+    parser.add_argument("--all", action="store_true", help="Run full pipeline")
 
-    # Save results to a JSON file
-    with open(OUTPUT_DIR / "scan_results.json", 'w', encoding='utf-8') as f:
-        json.dump(results, f, indent=4)
+    args = parser.parse_args()
+
+    if args.scan:
+        print("[*] BLE scan not implemented. Load existing results.json instead.")
+        # TODO: Replace this with real scan logic
+        return
+
+    if args.score or args.all:
+        devices = load_devices()
+        if not devices:
+            return
+        print("[*] Calculating risk scores...")
+        devices = enrich_devices_with_score(devices)
+        save_devices(devices)
+        print("[✓] Scores updated.")
+
+    if args.report or args.all:
+        print("[*] Generating HTML report...")
+        generate_html_report()
+        print("[✓] Report generated: report.html")
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
