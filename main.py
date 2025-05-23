@@ -1,51 +1,37 @@
-# main.py
-
 import argparse
-import json
-import os
-from scoring import enrich_devices_with_score
+import asyncio
+from ble_sniffer import scan_ble_devices
+from score_calculator import score_devices
 from report_generator import generate_html_report
 
-RESULTS_FILE = "results.json"
+# Define CLI arguments
+parser = argparse.ArgumentParser(description="Bluetooth Risk Scanner CLI")
 
-def load_devices():
-    if not os.path.exists(RESULTS_FILE):
-        print(f"[!] {RESULTS_FILE} not found.")
-        return []
-    with open(RESULTS_FILE, "r") as f:
-        return json.load(f)
+parser.add_argument('--scan', action='store_true', help='Scan BLE devices and save results')
+parser.add_argument('--score', action='store_true', help='Score scanned devices based on risk')
+parser.add_argument('--report', action='store_true', help='Generate an HTML risk report')
+parser.add_argument('--all', action='store_true', help='Run full scan → score → report pipeline')
 
-def save_devices(devices):
-    with open(RESULTS_FILE, "w") as f:
-        json.dump(devices, f, indent=2)
+# BLE scanning options
+parser.add_argument('--timeout', type=int, default=10, help='BLE scan duration in seconds (default: 10)')
+parser.add_argument('--min-rssi', type=int, default=-100, help='Minimum RSSI threshold for device inclusion (default: -100)')
 
-def main():
-    parser = argparse.ArgumentParser(description="Bluetooth Risk Scanner CLI")
-    parser.add_argument("--scan", action="store_true", help="Run BLE scan and save results")
-    parser.add_argument("--score", action="store_true", help="Calculate and update risk scores")
-    parser.add_argument("--report", action="store_true", help="Generate HTML report")
-    parser.add_argument("--all", action="store_true", help="Run full pipeline")
+args = parser.parse_args()
 
-    args = parser.parse_args()
+# Run scan only
+if args.scan:
+    asyncio.run(scan_ble_devices(timeout=args.timeout, min_rssi=args.min_rssi))
 
-    if args.scan:
-        print("[*] BLE scan not implemented. Load existing results.json instead.")
-        # TODO: Replace this with real scan logic
-        return
+# Run scoring only
+if args.score:
+    score_devices()
 
-    if args.score or args.all:
-        devices = load_devices()
-        if not devices:
-            return
-        print("[*] Calculating risk scores...")
-        devices = enrich_devices_with_score(devices)
-        save_devices(devices)
-        print("[✓] Scores updated.")
+# Run report generation only
+if args.report:
+    generate_html_report()
 
-    if args.report or args.all:
-        print("[*] Generating HTML report...")
-        generate_html_report()
-        print("[✓] Report generated: report.html")
-
-if __name__ == "__main__":
-    main()
+# Run full pipeline
+if args.all:
+    asyncio.run(scan_ble_devices(timeout=args.timeout, min_rssi=args.min_rssi))
+    score_devices()
+    generate_html_report()
