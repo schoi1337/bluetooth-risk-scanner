@@ -10,17 +10,24 @@ async def main():
     parser.add_argument("--min-rssi", type=int, default=-100, help="Minimum RSSI to filter weak signals")
     args = parser.parse_args()
 
-    # Step 1: Scan for BLE devices
-    devices = await scan_ble_devices(args.timeout, args.min_rssi)
+    print(f"\n🔍 [*] Scanning for BLE devices (timeout={args.timeout}s, min_rssi={args.min_rssi})...\n")
 
-    # Step 2: Enrich with risk scores (CVE + privacy + RSSI-based)
+    devices = await scan_ble_devices(args.timeout, args.min_rssi)
+    count = len(devices)
+
+    if count == 0:
+        print("⚠️  No BLE devices found. Try again or reduce min_rssi threshold.\n")
+    else:
+        print(f"📡 Found {count} BLE device(s).\n")
+
     enriched_devices = enrich_devices_with_score(devices)
 
-    # Step 3: Save reports
     save_json_report(enriched_devices, "output/scan_report.json")
     save_html_report(enriched_devices, "output/scan_report.html")
 
-    print("[✓] JSON and HTML reports saved to output/")
+    print("✅ [✓] Reports generated:")
+    print("   📄 JSON → output/scan_report.json")
+    print("   🖼️  HTML → output/scan_report.html\n")
 
 if __name__ == "__main__":
     asyncio.run(main())

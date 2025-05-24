@@ -46,7 +46,7 @@ def format_cve_summary(dev):
 
 def save_html_report(devices, output_path="output/report.html"):
     """
-    Save the scan results as a simple HTML report with improved styling and UX note.
+    Save the scan results as a styled HTML report with proximity risk color coding.
     """
     html = [
         "<html><head><title>Bluetooth Risk Report</title>",
@@ -61,15 +61,26 @@ def save_html_report(devices, output_path="output/report.html"):
         "</style>",
         "</head><body>",
         f"<h1>Bluetooth Risk Report</h1>",
-        f"<p class='note'><strong>Note:</strong> If a device's name or vendor shows as <code>Unknown</code>, it's likely because the device is not in discovery mode and isn't broadcasting identifying information. Try initiating pairing to see more detailed info in future scans.</p>",
+        f"<p class='note'><strong>Note:</strong> If a device's name or vendor shows as <code>Unknown</code>, it's likely because the device is not in discovery mode and isn't broadcasting identifying information.</p>",
+        f"<p class='note'>Try opening the device (e.g., unlock a padlock, open a case, or initiate pairing) to see more detailed info in future scans.</p>",
         f"<p><em>Scan timestamp:</em> {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>",
         "<table>",
         "<tr><th>MAC Address</th><th>Name</th><th>Vendor</th><th>RSSI</th><th>CVE Score</th><th>Risk Score</th><th>Details</th></tr>"
     ]
 
     for dev in devices:
+        risks = dev.get("privacy_risks", [])
+        has_severe_risk = "Very close proximity detected" in risks
+        high_risk_score = dev.get("risk_score", 0) >= 8
+
+        row_style = ""
+        if has_severe_risk:
+            row_style = " style='background-color:#ffe6e6;'"  # Light red for very close proximity
+        elif high_risk_score:
+            row_style = " style='background-color:#fff3e0;'"  # Light orange for high risk score
+
         html.append(
-            f"<tr>"
+            f"<tr{row_style}>"
             f"<td>{dev.get('mac_address', 'N/A')}</td>"
             f"<td>{dev.get('name', 'N/A')}</td>"
             f"<td>{dev.get('vendor', 'N/A')}</td>"
