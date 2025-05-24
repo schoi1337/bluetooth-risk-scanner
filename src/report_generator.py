@@ -53,18 +53,26 @@ def save_html_report(devices, output_path="output/report.html"):
         "<style>",
         "body { font-family: Arial, sans-serif; margin: 40px; }",
         "h1 { color: #2C3E50; }",
-        "p.note { background-color: #f9f9f9; padding: 10px; border-left: 4px solid #3498db; }",
+        "p.note { background-color: #f9f9f9; padding: 15px; border-left: 4px solid #3498db; }",
+        "ul.note-list { margin-top: 10px; padding-left: 20px; }",
         "table { border-collapse: collapse; width: 100%; margin-top: 20px; }",
         "th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }",
         "th { background-color: #f2f2f2; }",
         "tr:nth-child(even) { background-color: #fafafa; }",
         "</style>",
         "</head><body>",
-        f"<h1>Bluetooth Risk Report</h1>",
-        f"<p class='note'><strong>Note:</strong> If a device's name or vendor shows as <code>Unknown</code>, it's likely because the device is not in discovery mode and isn't broadcasting identifying information. Try initiating pairing to see more detailed info.</p>",
+        "<h1>Bluetooth Risk Report</h1>",
+        "<p class='note'>",
+        "<strong>Important Notes:</strong>",
+        "<ul class='note-list'>",
+        "<li><code>Unknown</code> name or vendor usually means the device is not in discovery mode.</li>",
+        "<li>Try opening, unlocking, or pairing the device to reveal more details.</li>",
+        "<li>Some passive trackers (e.g., Apple AirTag, Tile, SmartTag) don't advertise a name. We detect these using <code>manufacturer data</code>.</li>",
+        "<li>High-risk devices will be highlighted in red or orange based on proximity and privacy factors.</li>",
+        "</ul>",
+        "</p>",
         f"<p><em>Scan timestamp:</em> {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>",
-        "<table>",
-        "<tr><th>MAC Address</th><th>Name</th><th>Vendor</th><th>RSSI</th><th>CVE Score</th><th>Risk Score</th><th>Details</th></tr>"
+        ...
     ]
 
     for dev in devices:

@@ -10,7 +10,7 @@ async def main():
     parser.add_argument("--min-rssi", type=int, default=-100, help="Minimum RSSI to filter weak signals")
     args = parser.parse_args()
 
-    print(f"\n🔍 [*] Scanning for BLE devices (timeout={args.timeout}s, min_rssi={args.min_rssi})...\n")
+    print(f"\n🔍 Scanning for BLE devices (timeout={args.timeout}s, min_rssi={args.min_rssi})...\n")
 
     devices = await scan_ble_devices(args.timeout, args.min_rssi)
     count = len(devices)

@@ -16,12 +16,15 @@ async def scan_ble_devices(timeout=10, min_rssi=-100):
 
         name = advertisement_data.local_name or device.name or "Unknown"
         vendor = lookup_vendor(device.address)
+        manufacturer_data = advertisement_data.manufacturer_data or {}
+        manufacturer_id = list(manufacturer_data.keys())[0] if manufacturer_data else None
 
         devices.append({
             "name": name,
             "mac_address": device.address,
             "rssi": advertisement_data.rssi,
             "vendor": vendor,
+            "manufacturer_id": manufacturer_id,
             "uuids": advertisement_data.service_uuids or []
         })
 
