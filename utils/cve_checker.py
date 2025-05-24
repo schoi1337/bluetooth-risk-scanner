@@ -1,3 +1,6 @@
+# cve_checker.py
+# This module provides functions to check known Bluetooth-related CVEs against device names.
+
 import csv
 from pathlib import Path
 
@@ -16,7 +19,7 @@ def load_cve_data():
             cve_map[keyword] = (cve_id, description)
     return cve_map
 
-# Load CVE data
+# Load CVE data once at startup
 cve_data = load_cve_data()
 
 def check_device_cve(device_name):
@@ -27,3 +30,10 @@ def check_device_cve(device_name):
         if keyword in name_lower:
             found.append((cve_id, description))
     return found
+
+def fetch_cves(vendor_name):
+    """
+    Compatibility wrapper for risk_analyzer:
+    Allows vendor_name to be passed instead of device name.
+    """
+    return check_device_cve(vendor_name)
