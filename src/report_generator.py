@@ -62,7 +62,6 @@ def save_html_report(devices, output_path="output/report.html"):
         "</head><body>",
         f"<h1>Bluetooth Risk Report</h1>",
         f"<p class='note'><strong>Note:</strong> If a device's name or vendor shows as <code>Unknown</code>, it's likely because the device is not in discovery mode and isn't broadcasting identifying information. Try initiating pairing to see more detailed info.</p>",
-        f"<p class='note'></p>",
         f"<p><em>Scan timestamp:</em> {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>",
         "<table>",
         "<tr><th>MAC Address</th><th>Name</th><th>Vendor</th><th>RSSI</th><th>CVE Score</th><th>Risk Score</th><th>Details</th></tr>"
