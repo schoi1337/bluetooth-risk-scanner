@@ -11,7 +11,7 @@ async def scan_ble_devices(timeout=10, min_rssi=-100):
         if advertisement_data.rssi < min_rssi:
             return
         if device.address in seen_macs:
-            return  # Skip duplicate devices
+            return
         seen_macs.add(device.address)
 
         name = advertisement_data.local_name or device.name or "Unknown"
@@ -25,10 +25,22 @@ async def scan_ble_devices(timeout=10, min_rssi=-100):
             "uuids": advertisement_data.service_uuids or []
         })
 
-
     scanner = BleakScanner(detection_callback=detection_callback)
     await scanner.start()
     await asyncio.sleep(timeout)
     await scanner.stop()
 
     return devices
+
+# For standalone testing
+if __name__ == "__main__":
+    import argparse
+    import json
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--timeout", type=int, default=10)
+    parser.add_argument("--min-rssi", type=int, default=-100)
+    args = parser.parse_args()
+
+    results = asyncio.run(scan_ble_devices(args.timeout, args.min_rssi))
+    print(json.dumps(results, indent=2))
