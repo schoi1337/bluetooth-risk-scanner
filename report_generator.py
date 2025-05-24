@@ -3,16 +3,18 @@
 
 import json
 from datetime import datetime
-from pathlib import Path
+from pathlib import Path  # Cross-platform path management
 
 def save_json_report(devices, output_path="output/report.json"):
     """
     Save the scan results as a JSON file.
     """
-    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
-    with open(output_path, "w") as f:
+    output_path = Path(output_path)  # Ensure path object
+    output_path.parent.mkdir(parents=True, exist_ok=True)  # Create parent folders if missing
+
+    with output_path.open("w", encoding="utf-8") as f:
         json.dump(devices, f, indent=2)
-    print(f"[+] JSON report saved to {output_path}")
+    print(f"[+] JSON report saved to {output_path.resolve()}")
 
 def save_html_report(devices, output_path="output/report.html"):
     """
@@ -42,7 +44,10 @@ def save_html_report(devices, output_path="output/report.html"):
 
     html.append("</table></body></html>")
 
-    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
-    with open(output_path, "w") as f:
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    with output_path.open("w", encoding="utf-8") as f:
         f.write("\n".join(html))
-    print(f"[+] HTML report saved to {output_path}")
+
+    print(f"[+] HTML report saved to {output_path.resolve()}")
