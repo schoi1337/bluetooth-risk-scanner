@@ -58,3 +58,7 @@ def analyze_device_risk(device):
     device["risk_score"] = round(total_risk_score, 2)
 
     return device
+
+def enrich_devices_with_score(devices):
+    """Process a list of BLE devices and enrich each with a calculated risk score."""
+    return [analyze_device_risk(device) for device in devices]
