@@ -17,8 +17,7 @@ async def scan_ble_devices(timeout=10, min_rssi=-100):
         })
 
     # Register the detection callback and start scanning
-    scanner = BleakScanner()
-    scanner.register_detection_callback(detection_callback)
+    scanner = BleakScanner(detection_callback=detection_callback)
     await scanner.start()
     await asyncio.sleep(timeout)
     await scanner.stop()
