@@ -25,9 +25,5 @@ async def main():
     save_json_report(enriched_devices, "output/scan_report.json")
     save_html_report(enriched_devices, "output/scan_report.html")
 
-    print("✅ [✓] Reports generated:")
-    print("   📄 JSON → output/scan_report.json")
-    print("   🖼️  HTML → output/scan_report.html\n")
-
 if __name__ == "__main__":
     asyncio.run(main())

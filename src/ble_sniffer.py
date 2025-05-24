@@ -3,7 +3,7 @@ from bleak import BleakScanner
 from src.mac_lookup import lookup_vendor
 
 async def scan_ble_devices(timeout=10, min_rssi=-100):
-    print(f"[*] Scanning for BLE devices (timeout={timeout}s, min_rssi={min_rssi})...")
+    # print(f"[*] Scanning for BLE devices (timeout={timeout}s, min_rssi={min_rssi})...")
     seen_macs = set()
     devices = []
 

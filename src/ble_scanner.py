@@ -11,7 +11,6 @@ async def scan_devices(timeout=10, min_rssi=-100):
     Scan nearby BLE devices using bleak.discover() and analyze their risk.
     Returns a list of analyzed device dictionaries.
     """
-    print(f"[*] Scanning for {timeout} seconds (min RSSI: {min_rssi})...")
     devices = await BleakScanner.discover(timeout=timeout)
 
     results = []
