@@ -1,7 +1,8 @@
 import argparse
 import asyncio
+import json
 from ble_sniffer import scan_ble_devices
-from score_calculator import score_devices
+from scoring import enrich_devices_with_score
 from report_generator import generate_html_report
 
 # Define CLI arguments
@@ -18,20 +19,44 @@ parser.add_argument('--min-rssi', type=int, default=-100, help='Minimum RSSI thr
 
 args = parser.parse_args()
 
-# Run scan only
+# Run BLE scan
 if args.scan:
     asyncio.run(scan_ble_devices(timeout=args.timeout, min_rssi=args.min_rssi))
 
-# Run scoring only
+# Run risk scoring
 if args.score:
-    score_devices()
+    try:
+        with open("results.json", "r") as f:
+            devices = json.load(f)
+    except FileNotFoundError:
+        print("[!] results.json not found. Please run --scan first.")
+        exit(1)
 
-# Run report generation only
+    enriched = enrich_devices_with_score(devices)
+    with open("results.json", "w") as f:
+        json.dump(enriched, f, indent=2)
+
+    print("[✓] Risk scoring complete. Results saved to results.json")
+
+# Run report generation
 if args.report:
     generate_html_report()
 
 # Run full pipeline
 if args.all:
     asyncio.run(scan_ble_devices(timeout=args.timeout, min_rssi=args.min_rssi))
-    score_devices()
+
+    try:
+        with open("results.json", "r") as f:
+            devices = json.load(f)
+    except FileNotFoundError:
+        print("[!] results.json not found after scan.")
+        exit(1)
+
+    enriched = enrich_devices_with_score(devices)
+    with open("results.json", "w") as f:
+        json.dump(enriched, f, indent=2)
+
+    print("[✓] Risk scoring complete. Results saved to results.json")
+
     generate_html_report()

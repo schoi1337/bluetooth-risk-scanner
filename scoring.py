@@ -15,8 +15,13 @@ def calculate_risk_score(device: dict) -> float:
     Returns:
     - float: Risk score between 0.0 (safe) and 10.0 (critical)
     """
+    # Calculate CVE-based score
     cve_score = min(len(device.get("cve_list", [])) * 2.0, 6.0)
+
+    # Assign higher risk to closer (stronger RSSI) devices
     rssi_score = 2.0 if device.get("rssi", -100) > -70 else 1.0
+
+    # Assign risk based on vendor reputation
     vendor_score = {
         "WELOCK": 2.0,
         "Xiaomi": 1.5,
@@ -30,13 +35,19 @@ def calculate_risk_score(device: dict) -> float:
 def enrich_devices_with_score(devices: list[dict]) -> list[dict]:
     """
     Adds a 'risk_score' field to each device in the list.
+
+    Parameters:
+    - devices (list of dict): BLE scan results
+
+    Returns:
+    - list of dict: Updated list with 'risk_score' field added
     """
     for device in devices:
         device["risk_score"] = calculate_risk_score(device)
     return devices
 
 
-# 🧪 Example usage
+# 🧪 Example usage for local testing
 if __name__ == "__main__":
     test_devices = [
         {
