@@ -13,13 +13,16 @@ async def scan_ble_devices(timeout=10, min_rssi=-100):
             return  # Skip duplicate devices
         seen_macs.add(device.address)
 
+        name = advertisement_data.local_name or device.name or "Unknown"
+
         devices.append({
-            "name": device.name or "Unknown",
+            "name": name,
             "mac_address": device.address,
             "rssi": advertisement_data.rssi,
             "vendor": "Unknown",
             "uuids": advertisement_data.service_uuids or []
         })
+
 
     scanner = BleakScanner(detection_callback=detection_callback)
     await scanner.start()
