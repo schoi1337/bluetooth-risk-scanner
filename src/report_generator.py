@@ -46,7 +46,7 @@ def format_cve_summary(dev):
 
 def save_html_report(devices, output_path="output/report.html"):
     """
-    Save the scan results as a styled HTML report with proximity risk color coding.
+    Save the scan results as a styled HTML report with color-coded risk rows and passive tracker warning.
     """
     html = [
         "<html><head><title>Bluetooth Risk Report</title>",
@@ -54,7 +54,7 @@ def save_html_report(devices, output_path="output/report.html"):
         "body { font-family: Arial, sans-serif; margin: 40px; }",
         "h1 { color: #2C3E50; }",
         "p.note { background-color: #f9f9f9; padding: 15px; border-left: 4px solid #3498db; }",
-        "ul.note-list { margin-top: 10px; padding-left: 20px; }",
+        "ul.note-list { margin-top: 10px; padding-left: 20px; margin-bottom: 0; }",
         "table { border-collapse: collapse; width: 100%; margin-top: 20px; }",
         "th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }",
         "th { background-color: #f2f2f2; }",
@@ -62,7 +62,7 @@ def save_html_report(devices, output_path="output/report.html"):
         "</style>",
         "</head><body>",
         "<h1>Bluetooth Risk Report</h1>",
-        "<p class='note'>",
+        "<div class='note'>",
         "<strong>Important Notes:</strong>",
         "<ul class='note-list'>",
         "<li><code>Unknown</code> name or vendor usually means the device is not in discovery mode.</li>",
@@ -70,9 +70,10 @@ def save_html_report(devices, output_path="output/report.html"):
         "<li>Some passive trackers (e.g., Apple AirTag, Tile, SmartTag) don't advertise a name. We detect these using <code>manufacturer data</code>.</li>",
         "<li>High-risk devices will be highlighted in red or orange based on proximity and privacy factors.</li>",
         "</ul>",
-        "</p>",
+        "</div>",
         f"<p><em>Scan timestamp:</em> {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>",
-        ...
+            "<table>",
+        "<tr><th>MAC Address</th><th>Name</th><th>Vendor</th><th>RSSI</th><th>CVE Score</th><th>Risk Score</th><th>Details</th></tr>"
     ]
 
     for dev in devices:
@@ -82,9 +83,9 @@ def save_html_report(devices, output_path="output/report.html"):
 
         row_style = ""
         if has_severe_risk:
-            row_style = " style='background-color:#ffe6e6;'"  # Light red for very close proximity
+            row_style = " style='background-color:#ffe6e6;'"  # Light red
         elif high_risk_score:
-            row_style = " style='background-color:#fff3e0;'"  # Light orange for high risk score
+            row_style = " style='background-color:#fff3e0;'"  # Light orange
 
         html.append(
             f"<tr{row_style}>"
