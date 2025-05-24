@@ -1,8 +1,9 @@
 # make_release.py
 # This script creates a ZIP archive containing the Bluetooth Risk Scanner for release or portfolio sharing.
 
-import zipfile
 from pathlib import Path
+import zipfile
+
 
 def make_release_zip():
     # Define files and folders to include

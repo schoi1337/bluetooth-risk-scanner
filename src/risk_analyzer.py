@@ -1,7 +1,7 @@
 # risk_analyzer.py
 # This module analyzes the security risk of a BLE device based on vendor, RSSI, and CVE data.
 
-from utils.cve_checker import fetch_cves
+from src.cve_checker import fetch_cves
 
 def analyze_device_risk(device):
     """

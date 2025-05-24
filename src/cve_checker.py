@@ -1,8 +1,7 @@
 # cve_checker.py
 # This module provides functions to check known Bluetooth-related CVEs against device names.
 
-import csv
-from pathlib import Path
+# No internal imports (self-contained)
 
 # Path to the data directory
 DATA_PATH = Path(__file__).parent.parent / "data"

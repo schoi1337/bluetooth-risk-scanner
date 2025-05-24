@@ -1,6 +1,8 @@
 # utils/ble_scanner.py
 
 from bleak import BleakScanner
+from src.vendor_lookup import lookup_vendor_from_mac
+from src.risk_analyzer import analyze_device_risk
 
 async def scan_ble_devices(timeout=10):
     """

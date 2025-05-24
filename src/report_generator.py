@@ -3,7 +3,7 @@
 
 import json
 from datetime import datetime
-from pathlib import Path  # Cross-platform path management
+from pathlib import Path
 
 def save_json_report(devices, output_path="output/report.json"):
     """
