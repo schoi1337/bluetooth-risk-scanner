@@ -1,68 +1,48 @@
 # report_generator.py
+# This module generates HTML and JSON reports from analyzed BLE scan results.
 
 import json
 from datetime import datetime
-import webbrowser
-import os
+from pathlib import Path
 
-def generate_html_report(input_file="results.json", output_file="report.html", auto_open=True):
-    with open(input_file, "r") as f:
-        results = json.load(f)
+def save_json_report(devices, output_path="output/report.json"):
+    """
+    Save the scan results as a JSON file.
+    """
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w") as f:
+        json.dump(devices, f, indent=2)
+    print(f"[+] JSON report saved to {output_path}")
 
-    def score_to_color(score):
-        if score >= 8.0:
-            return "#ff4d4d"  # High - Red
-        elif score >= 5.0:
-            return "#ffa64d"  # Medium - Orange
-        else:
-            return "#90ee90"  # Low - Green
+def save_html_report(devices, output_path="output/report.html"):
+    """
+    Save the scan results as a simple HTML report.
+    """
+    html = [
+        "<html><head><title>BLE Risk Report</title></head><body>",
+        f"<h1>Bluetooth Risk Report - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</h1>",
+        "<table border='1' cellpadding='6' cellspacing='0'>",
+        "<tr><th>Address</th><th>Name</th><th>Vendor</th><th>RSSI</th><th>CVE Score</th><th>Risk Score</th><th>CVE Summary</th></tr>"
+    ]
 
-    html = f"""<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Bluetooth Risk Scanner Report</title>
-    <style>
-        body {{ font-family: Arial, sans-serif; padding: 20px; }}
-        table {{ border-collapse: collapse; width: 100%; }}
-        th, td {{ border: 1px solid #ccc; padding: 8px; text-align: left; }}
-        th {{ background-color: #f2f2f2; }}
-    </style>
-</head>
-<body>
-    <h2>Bluetooth Risk Scanner Report</h2>
-    <p>Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
-    <table>
-        <tr>
-            <th>MAC</th>
-            <th>Vendor</th>
-            <th>RSSI</th>
-            <th>Risk Score</th>
-            <th>CVEs</th>
-        </tr>"""
+    for dev in devices:
+        cves = dev.get("cve_summary", [])
+        cve_display = "<ul>" + "".join([f"<li>{cve['id']} (CVSS: {cve['cvss']})</li>" for cve in cves]) + "</ul>" if cves else "None"
+        html.append(
+            f"<tr>"
+            f"<td>{dev.get('address')}</td>"
+            f"<td>{dev.get('name')}</td>"
+            f"<td>{dev.get('vendor')}</td>"
+            f"<td>{dev.get('rssi')}</td>"
+            f"<td>{dev.get('cve_score', 0)}</td>"
+            f"<td>{dev.get('risk_score', 0)}</td>"
+            f"<td>{cve_display}</td>"
+            f"</tr>"
+        )
 
-    for device in results:
-        color = score_to_color(device.get("risk_score", 0))
-        html += f"""
-        <tr style="background-color: {color};">
-            <td>{device.get("mac", "")}</td>
-            <td>{device.get("vendor", "")}</td>
-            <td>{device.get("rssi", "")}</td>
-            <td>{device.get("risk_score", "N/A")}</td>
-            <td>{", ".join(device.get("cve_list", []))}</td>
-        </tr>"""
+    html.append("</table></body></html>")
 
-    html += """
-    </table>
-</body>
-</html>"""
-
-    with open(output_file, "w") as f:
-        f.write(html)
-
-    if auto_open:
-        webbrowser.open(f"file://{os.path.abspath(output_file)}")
-
-# Example run
-if __name__ == "__main__":
-    generate_html_report()
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w") as f:
+        f.write("\n".join(html))
+    print(f"[+] HTML report saved to {output_path}")
