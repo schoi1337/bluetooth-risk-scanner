@@ -4,6 +4,13 @@ Bluetooth Risk Scanner passively detects nearby BLE (Bluetooth Low Energy) devic
 
 Unlike simple scanners, this tool classifies threats based on proximity, vendor reputation, advertising behavior, and CVE history.
 
+## Motivation
+
+This project was inspired by increasing reports of Apple AirTags and other BLE trackers being used in stalking and other crimes. I developed Bluetooth Risk Scanner to help individuals and security teams identify potential privacy risks from nearby Bluetooth devices — especially those that may be tracking users without their knowledge.
+
+The goal is to raise awareness of Bluetooth-based threats and provide a lightweight, actionable tool for BLE risk assessment.
+
+
 > ⚠️ **This project is actively maintained and evolving.**  
 > Features like custom risk scoring, BLE behavior anomaly detection, and advanced reporting are under development.
 
