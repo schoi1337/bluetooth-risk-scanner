@@ -72,28 +72,6 @@ Use Ubertooth to sniff BLE advertisements without needing an HCI-compatible dong
 
 📦 [`feature/ubertooth-support`](https://github.com/schoi1337/bluetooth-risk-scanner/tree/feature/ubertooth-support)
 
-## 🛠️ Troubleshooting
-
-### 💥 Linux: BleakDBusError
-
-If you encounter:
-
-```bash
-bleak.exc.BleakDBusError: [org.freedesktop.systemd1.NoSuchUnit] Unit dbus-org.bluez.service not found.
-```
-
-Fix with:
-
-```bash
-sudo apt update
-sudo apt install bluetooth bluez -y
-sudo systemctl start bluetooth
-sudo systemctl enable bluetooth
-```
-
-Then retry your scan.
-
-
 ## 🤝 Contributing
 
 PRs welcome. Submit bugs, ideas, or integrations via issues.
