@@ -1,6 +1,3 @@
-# src/risk_analyzer.py
-# Calculates risk score for a given BLE device based on RSSI, CVE info, and privacy risks.
-
 from src.cve_checker import fetch_cves
 
 def assess_privacy_risks(device):
@@ -8,23 +5,45 @@ def assess_privacy_risks(device):
     risks = []
     score = 0
 
-    if device.get("name") != "Unknown":
+    name = device.get("name", "").lower()
+    mac = device.get("mac_address", "").upper()
+
+    # Device name is visible
+    if name != "unknown":
         risks.append("Device name is visible")
         score += 2
 
+    # Vendor inferred from MAC
     if device.get("vendor") != "Unknown":
         risks.append("Vendor can be inferred from MAC")
         score += 1
 
-    mac = device.get("address", "").upper()
+    # Static random MAC address check
     if mac and len(mac) >= 2 and mac[1] in "26AE":
         risks.append("Possible static random MAC address")
         score += 2
 
-    name = device.get("name", "").lower()
-    if any(x in name for x in ["lock", "sensor", "watch", "tag"]):
+    # Device type inference from name
+    if any(x in name for x in ["lock", "sensor", "watch", "tag", "cam", "track"]):
         risks.append("Device type is inferable from name")
         score += 1
+
+    # Sensitive BLE services exposed
+    services = device.get("uuids", [])
+    sensitive_services = {
+        "180D": "Heart Rate",
+        "180F": "Battery",
+        "181A": "Environmental Sensor",
+        "181C": "User Data",
+        "181E": "Weight Scale",
+        "1822": "Pulse Oximeter",
+        "1823": "HTTP Proxy"
+    }
+    for uuid in services:
+        short_uuid = uuid[-4:].upper()
+        if short_uuid in sensitive_services:
+            risks.append(f"Sensitive GATT service exposed: {sensitive_services[short_uuid]}")
+            score += 3
 
     return risks, score
 
@@ -46,7 +65,7 @@ def analyze_device_risk(device):
 
     base_score = 5 if device.get("rssi", -100) > -60 else 2
 
-    # New: Privacy Risk Scoring
+    # Privacy Risk Scoring
     privacy_risks, privacy_score = assess_privacy_risks(device)
 
     total_risk_score = base_score + cve_score + privacy_score
@@ -58,6 +77,7 @@ def analyze_device_risk(device):
     device["risk_score"] = round(total_risk_score, 2)
 
     return device
+
 
 def enrich_devices_with_score(devices):
     """Process a list of BLE devices and enrich each with a calculated risk score."""

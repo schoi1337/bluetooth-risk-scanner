@@ -13,10 +13,10 @@ async def scan_ble_devices(timeout=10, min_rssi=-100):
             "name": device.name or "Unknown",
             "mac_address": device.address,
             "rssi": advertisement_data.rssi,
-            "vendor": "Unknown"  # Placeholder; will be enriched later
+            "vendor": "Unknown",  # Will be enriched later
+            "uuids": advertisement_data.service_uuids or []  # New: GATT UUIDs
         })
 
-    # Register the detection callback and start scanning
     scanner = BleakScanner(detection_callback=detection_callback)
     await scanner.start()
     await asyncio.sleep(timeout)
@@ -24,14 +24,14 @@ async def scan_ble_devices(timeout=10, min_rssi=-100):
 
     return devices
 
-# For direct testing of this module
+# For direct testing
 if __name__ == "__main__":
     import argparse
     import json
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--timeout", type=int, default=10, help="Scanning timeout in seconds")
-    parser.add_argument("--min-rssi", type=int, default=-100, help="Minimum RSSI threshold")
+    parser.add_argument("--timeout", type=int, default=10)
+    parser.add_argument("--min-rssi", type=int, default=-100)
     args = parser.parse_args()
 
     results = asyncio.run(scan_ble_devices(args.timeout, args.min_rssi))
