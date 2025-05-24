@@ -16,6 +16,7 @@ def save_json_report(devices, output_path="output/report.json"):
         json.dump(devices, f, indent=2)
     print(f"[+] JSON report saved to {output_path.resolve()}")
 
+
 def format_cve_summary(dev):
     """
     Combine CVE and privacy risks into an HTML block for report display.
@@ -42,6 +43,7 @@ def format_cve_summary(dev):
 
     return "".join(html)
 
+
 def save_html_report(devices, output_path="output/report.html"):
     """
     Save the scan results as a simple HTML report.
@@ -50,16 +52,16 @@ def save_html_report(devices, output_path="output/report.html"):
         "<html><head><title>BLE Risk Report</title></head><body>",
         f"<h1>Bluetooth Risk Report - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</h1>",
         "<table border='1' cellpadding='6' cellspacing='0'>",
-        "<tr><th>Address</th><th>Name</th><th>Vendor</th><th>RSSI</th><th>CVE Score</th><th>Risk Score</th><th>Details</th></tr>"
+        "<tr><th>MAC Address</th><th>Name</th><th>Vendor</th><th>RSSI</th><th>CVE Score</th><th>Risk Score</th><th>Details</th></tr>"
     ]
 
     for dev in devices:
         html.append(
             f"<tr>"
-            f"<td>{dev.get('address')}</td>"
-            f"<td>{dev.get('name')}</td>"
-            f"<td>{dev.get('vendor')}</td>"
-            f"<td>{dev.get('rssi')}</td>"
+            f"<td>{dev.get('mac_address', 'N/A')}</td>"
+            f"<td>{dev.get('name', 'N/A')}</td>"
+            f"<td>{dev.get('vendor', 'N/A')}</td>"
+            f"<td>{dev.get('rssi', 'N/A')}</td>"
             f"<td>{dev.get('cve_score', 0)}</td>"
             f"<td>{dev.get('risk_score', 0)}</td>"
             f"<td>{format_cve_summary(dev)}</td>"
