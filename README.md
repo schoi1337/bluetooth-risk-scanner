@@ -4,6 +4,9 @@ Bluetooth Risk Scanner passively detects nearby BLE (Bluetooth Low Energy) devic
 
 Unlike simple scanners, this tool classifies threats based on proximity, vendor reputation, advertising behavior, and CVE history.
 
+> ⚠️ **This project is actively maintained and evolving.**  
+> Features like custom risk scoring, BLE behavior anomaly detection, and advanced reporting are under development.
+
 ## 🚀 Features
 
 - Passive BLE scan using `bleak`
@@ -71,6 +74,17 @@ Reports are saved to:
 Use Ubertooth to sniff BLE advertisements without needing an HCI-compatible dongle:
 
 📦 [`feature/ubertooth-support`](https://github.com/schoi1337/bluetooth-risk-scanner/tree/feature/ubertooth-support)
+
+## 🧭 Roadmap
+
+- [x] HTML + JSON reporting implemented
+- [x] Improve MAC address to vendor matching accuracy (expand OUI database using manuf)
+- [ ] Integrate CVE database lookup (NVD API integration)
+- [ ] Add more privacy risk indicators based on BLE advertisement data
+- [ ] Introduce scoring weight configuration via YAML for custom risk models
+- [ ] Detect behavioral anomalies (e.g. MAC/name switching) to flag evasive BLE devices
+- [ ] Visualize risk severity (Low/Medium/High/Critical) in HTML report with filters
+- [ ] Build optional CLI interface for batch scan + scheduled reports
 
 ## 🤝 Contributing
 
