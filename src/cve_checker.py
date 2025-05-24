@@ -1,32 +1,45 @@
 # src/cve_checker.py
-# Matches device names or vendor names to known CVEs using keyword mapping.
+# Queries NVD for CVEs based on vendor keyword
 
-import csv
-from pathlib import Path
+import requests
+import time
 
-DATA_PATH = Path(__file__).parent.parent / "data"
-
-def load_cve_data():
-    cve_map = {}
-    with open(DATA_PATH / 'bluetooth_cve_list.csv', 'r', encoding='utf-8') as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            keyword = row['keyword'].lower()
-            cve_id = row['cve_id']
-            description = row['description']
-            cvss_score = row.get('cvss', 0)
-            cve_map[keyword] = (cve_id, cvss_score)
-    return cve_map
-
-cve_data = load_cve_data()
-
-def check_device_cve(device_name):
-    name_lower = device_name.lower()
-    found = []
-    for keyword, (cve_id, score) in cve_data.items():
-        if keyword in name_lower:
-            found.append((cve_id, score))
-    return found
+NVD_BASE_URL = "https://services.nvd.nist.gov/rest/json/cves/2.0"
+DEFAULT_WAIT = 1  # seconds (rate limiting)
 
 def fetch_cves(vendor_name):
-    return check_device_cve(vendor_name)
+    """
+    Query NVD for CVEs related to the given vendor name.
+    Returns a list of tuples: (CVE ID, CVSS Score)
+    """
+    try:
+        params = {
+            "keywordSearch": vendor_name,
+            "resultsPerPage": 5,
+            "sortBy": "published"
+        }
+        response = requests.get(NVD_BASE_URL, params=params)
+        response.raise_for_status()
+        data = response.json()
+
+        results = []
+        for item in data.get("vulnerabilities", []):
+            cve_id = item["cve"]["id"]
+            metrics = item["cve"].get("metrics", {})
+            cvss = "N/A"
+
+            if "cvssMetricV31" in metrics:
+                cvss = metrics["cvssMetricV31"][0]["cvssData"]["baseScore"]
+            elif "cvssMetricV30" in metrics:
+                cvss = metrics["cvssMetricV30"][0]["cvssData"]["baseScore"]
+            elif "cvssMetricV2" in metrics:
+                cvss = metrics["cvssMetricV2"][0]["cvssData"]["baseScore"]
+
+            results.append((cve_id, cvss))
+
+        time.sleep(DEFAULT_WAIT)
+        return results
+
+    except Exception as e:
+        print(f"[!] CVE fetch error for '{vendor_name}': {e}")
+        return []
