@@ -1,15 +1,64 @@
-# Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
 
-# venv
+# C extensions
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
 venv/
+env/
+ENV/
+.venv/
+.pip-wheel-metadata/
 
-# Results
-results.json
-report.html
+# Logs and debug
+*.log
 
-# macOS
+# Report outputs
+*.html
+*.json
+example_reports/
+output/
+
+# dotenv and secrets
+.env
+*.env
+
+# macOS system files
 .DS_Store
+.AppleDouble
+.LSOverride
 
-.todo
+# macOS metadata and trash
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+VolumeIcon.icns
+*.AppleDouble
+*.LSOverride
+
+# macOS Finder tags and extended attributes
+*.fseventsd
+*.DocumentRevisions-V100
+*.TemporaryItems
+*.com.apple.timemachine.donotpresent
+*.AppleDB
+*.AppleDesktop
+Network Trash Folder
+
+# IDE-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# GitHub Desktop merge conflict files
+*.orig
