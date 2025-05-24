@@ -24,7 +24,7 @@ async def scan_ble_devices(timeout=10, min_rssi=-100):
 
         # Placeholder: you may add vendor detection here
         from vendor_lookup import get_vendor
-        result["vendor"] = get_vendor(d.address)
+        result["vendor"] = get_vendor(d.address,d.name)
 
         results.append(result)
 
