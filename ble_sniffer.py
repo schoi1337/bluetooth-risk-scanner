@@ -1,35 +1,42 @@
+# ble_sniffer.py
+# This script scans for nearby BLE devices and analyzes their risk using vendor information, RSSI, and CVE data.
+
 import asyncio
-import json
 from bleak import BleakScanner
-from vendor_lookup import get_vendor
+from vendor_lookup import lookup_vendor_from_mac
+from risk_analyzer import analyze_device_risk
 
-RESULTS_FILE = "results.json"
-
-# Scan for BLE devices with timeout and RSSI threshold
-async def scan_ble_devices(timeout=10, min_rssi=-100):
-    print(f"[i] Scanning for BLE devices (timeout={timeout}s, min_rssi={min_rssi} dBm)...")
-
+async def scan_devices(timeout=10, min_rssi=-100):
+    """
+    Scan nearby BLE devices for a specified timeout and filter by RSSI.
+    """
+    print(f"[*] Scanning for {timeout} seconds (min RSSI: {min_rssi})...")
     devices = await BleakScanner.discover(timeout=timeout)
+
     results = []
-
     for d in devices:
+        if d.rssi < min_rssi:
+            continue  # Ignore weak signal devices
+
+        address = d.address
+        name = d.name or "Unknown"
         rssi = d.rssi
-        if rssi < min_rssi:
-            continue  # Skip weak signal devices
+        vendor = lookup_vendor_from_mac(address)
 
-        mac = d.address
-        name = d.name or ""
-
-        result = {
-            "mac": mac,
+        device_info = {
+            "address": address,
             "name": name,
             "rssi": rssi,
-            "vendor": get_vendor(mac, name)  # ✅ name-based vendor inference
+            "vendor": vendor
         }
 
-        results.append(result)
+        # Analyze risk using RSSI and CVE info
+        analyzed = analyze_device_risk(device_info)
+        results.append(analyzed)
 
-    with open(RESULTS_FILE, "w") as f:
-        json.dump(results, f, indent=2)
+    return results
 
-    print(f"[✓] Found {len(results)} device(s). Results saved to {RESULTS_FILE}")
+if __name__ == "__main__":
+    scanned = asyncio.run(scan_devices(timeout=15, min_rssi=-80))
+    for dev in scanned:
+        print(dev)
