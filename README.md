@@ -10,8 +10,9 @@ It doesn't just list devices — it checks if they belong to vendors known for p
 ## 🚀 Features
 
 - Scan nearby Bluetooth (BLE) devices
-- Normalize MAC prefixes and map to vendors using Wireshark's manuf database
+- Normalize MAC prefixes and map to vendors using Wireshark's `manuf` database
 - Detect vendors with known privacy concerns
+- Infer vendor names from device names (e.g., "Mi Band" → Xiaomi, "Samsung(942Z)" → Samsung)
 - Highlight devices linked to past security incidents
 - Cross-reference devices against recent Bluetooth CVEs
 - Display results in terminal and save as JSON
@@ -53,7 +54,7 @@ git clone https://github.com/schoi1337/bluetooth-risk-scanner.git
 cd bluetooth-risk-scanner
 pip install -r requirements.txt
 ```
-> Note: This tool requires a Bluetooth adapter and Python 3.8+.
+> Note: This tool requires a Bluetooth adapter (BLE-compatible) and Python 3.8+.
 
 ## 📋 Usage
 
@@ -61,25 +62,23 @@ pip install -r requirements.txt
 python main.py --all
 ```
 
-The results will be displayed in the terminal and saved to `output/scan_results.json`.
+The tool will scan for BLE devices, enrich the results with vendor info and risk score, and generate a `results.json` and `report.html`.
 
-## 📈 Generating a Scan Report (HTML)
+## 📈 Generating a Scan Report (HTML Only)
 
-After scanning, you can generate a visual HTML report:
-
-![BLE Risk Report Preview](/screenshots/Report.png)
+After scanning or importing a `results.json`, you can generate a visual HTML report:
 
 ```bash
 python main.py --report
 ```
 
-The report will be automatically opened in your browser after generation.  
-It is also saved as `report.html` in the project root.
+The report will be saved as `report.html`. Open it in your browser to view the results.
 
 ## 🧠 How it Works
 
-- Performs a Bluetooth Low Energy (BLE) scan.
-- Parses MAC addresses and maps to vendor using Wireshark's manuf database
+- Performs a Bluetooth Low Energy (BLE) scan
+- Parses MAC addresses and maps to vendor using Wireshark's `manuf` database
+- Uses BLE local name to infer vendor when MAC prefix is unavailable
 - Calculates a risk score based on known CVEs, signal strength, and vendor reputation
 - Saves results to JSON and generates HTML report with color-coded risk indicators
 
@@ -102,13 +101,41 @@ This project also includes a dedicated branch for Ubertooth users:
 
 - [x] HTML + JSON reporting implemented
 - [x] Improve MAC address to vendor matching accuracy (expand OUI database using manuf)
+- [x] Implement HTML report generation alongside JSON output
+- [x] Add CLI options for advanced scanning parameters (e.g., custom timeout, filter)
+- [x] Add vendor name inference based on BLE local name (e.g., Samsung, Xiaomi)
 - [ ] Integrate CVE database lookup (NVD API integration)
 - [ ] Add more privacy risk indicators based on BLE advertisement data
 - [ ] Introduce scoring weight configuration for flexible risk assessment
 - [ ] Optimize BLE device scanning performance
-- [x] Implement HTML report generation alongside JSON output
-- [x] Add CLI options for advanced scanning parameters (e.g., custom timeout, filter)
 - [ ] Prepare full documentation with examples and API references
+
+## 🛠️ Troubleshooting
+
+### 💪 Linux: BleakDBusError on scan (Kali/Ubuntu)
+
+If you encounter this error:
+
+```bash
+bleak.exc.BleakDBusError: [org.freedesktop.systemd1.NoSuchUnit] Unit dbus-org.bluez.service not found.
+```
+
+Install and start BlueZ:
+
+```bash
+sudo apt update
+sudo apt install bluetooth bluez -y
+sudo systemctl start bluetooth
+sudo systemctl enable bluetooth
+```
+
+Then retry your scan.
+
+### 🚫 macOS: BLE MAC addresses are masked
+
+> On macOS, due to CoreBluetooth limitations, BLE MAC addresses appear as randomized UUIDs.  
+> Vendor detection will be limited or unavailable on macOS.  
+> For full functionality, run this tool on Linux (e.g., Kali) with a BLE USB dongle.
 
 ## 🤝 Contributing
 Contributions are welcome!
