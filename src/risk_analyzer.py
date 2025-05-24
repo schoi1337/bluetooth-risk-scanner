@@ -34,13 +34,13 @@ def assess_privacy_risks(device):
         risks.append("Close-range signal detected")
         score += 1
     elif rssi > -85:
-        risks.append("Device signal is very strong (possible proximity tracker)")
+        risks.append("Device signal is very strong")
         score += 1
 
     # Manufacturer ID-based risk
     mfg_id = device.get("manufacturer_id")
     if mfg_id == 76:  # Apple
-        risks.append("Apple manufacturer data detected (potential passive tracker like AirTag)")
+        risks.append("Apple manufacturer data detected")
         score += 2
     elif mfg_id == 1177:  # Tile
         risks.append("Tile tracking device detected via manufacturer ID")
