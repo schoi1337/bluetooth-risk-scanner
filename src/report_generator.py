@@ -1,25 +1,19 @@
-# report_generator.py
-# This module generates HTML and JSON reports from analyzed BLE scan results.
+# src/report_generator.py
+# Generates HTML and JSON reports from analyzed BLE scan results.
 
 import json
 from datetime import datetime
 from pathlib import Path
 
 def save_json_report(devices, output_path="output/report.json"):
-    """
-    Save the scan results as a JSON file.
-    """
-    output_path = Path(output_path)  # Ensure path object
-    output_path.parent.mkdir(parents=True, exist_ok=True)  # Create parent folders if missing
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
 
     with output_path.open("w", encoding="utf-8") as f:
         json.dump(devices, f, indent=2)
     print(f"[+] JSON report saved to {output_path.resolve()}")
 
 def save_html_report(devices, output_path="output/report.html"):
-    """
-    Save the scan results as a simple HTML report.
-    """
     html = [
         "<html><head><title>BLE Risk Report</title></head><body>",
         f"<h1>Bluetooth Risk Report - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</h1>",
@@ -49,5 +43,4 @@ def save_html_report(devices, output_path="output/report.html"):
 
     with output_path.open("w", encoding="utf-8") as f:
         f.write("\n".join(html))
-
     print(f"[+] HTML report saved to {output_path.resolve()}")

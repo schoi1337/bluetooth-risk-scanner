@@ -1,17 +1,11 @@
-# vendor_lookup.py
-# This module loads a local OUI manufacturer database (manuf file)
-# and provides MAC address to vendor name lookup functionality.
+# src/vendor_lookup.py
+# Resolves vendor names from BLE MAC addresses using a local OUI file.
 
 from pathlib import Path
 
-# Global dictionary to store MAC prefix to vendor mappings
 mac_prefix_to_vendor = {}
 
-def load_oui_database(manuf_file="manuf"):
-    """
-    Load MAC address prefix to vendor mappings from a manuf file.
-    Ignores lines starting with # and handles UTF-8 decoding errors.
-    """
+def load_oui_database(manuf_file="data/manuf"):
     manuf_path = Path(manuf_file)
     if not manuf_path.exists():
         print(f"[!] OUI database file '{manuf_file}' not found.")
@@ -29,10 +23,6 @@ def load_oui_database(manuf_file="manuf"):
                 mac_prefix_to_vendor[prefix] = vendor
 
 def lookup_vendor_from_mac(mac_address):
-    """
-    Lookup the vendor name for a given MAC address using the loaded OUI database.
-    Returns 'Unknown' if not found.
-    """
     if not mac_prefix_to_vendor:
         load_oui_database()
 
