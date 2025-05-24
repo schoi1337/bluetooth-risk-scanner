@@ -2,7 +2,7 @@ import argparse
 import asyncio
 import json
 from src.ble_sniffer import scan_ble_devices
-from scoring import enrich_devices_with_score
+from src.risk_analyzer import enrich_devices_with_score
 from src.report_generator import generate_html_report
 
 async def main():
@@ -18,11 +18,11 @@ async def main():
     enriched_devices = enrich_devices_with_score(devices)
 
     # Save reports
-    with open("results/scan_report.json", "w") as f:
+    with open("output/scan_report.json", "w") as f:
         json.dump(enriched_devices, f, indent=2)
-    generate_html_report(enriched_devices, "results/scan_report.html")
+    generate_html_report(enriched_devices, "output/scan_report.html")
 
-    print("[✓] JSON and HTML reports saved to results/")
+    print("[✓] JSON and HTML reports saved to output/")
 
 if __name__ == "__main__":
     asyncio.run(main())
