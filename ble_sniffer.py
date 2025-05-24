@@ -1,10 +1,11 @@
 import asyncio
-from bleak import BleakScanner
 import json
+from bleak import BleakScanner
+from vendor_lookup import get_vendor
 
 RESULTS_FILE = "results.json"
 
-# Perform BLE scan with timeout and RSSI filter
+# Scan for BLE devices with timeout and RSSI threshold
 async def scan_ble_devices(timeout=10, min_rssi=-100):
     print(f"[i] Scanning for BLE devices (timeout={timeout}s, min_rssi={min_rssi} dBm)...")
 
@@ -16,15 +17,15 @@ async def scan_ble_devices(timeout=10, min_rssi=-100):
         if rssi < min_rssi:
             continue  # Skip weak signal devices
 
-        result = {
-            "mac": d.address,
-            "name": d.name or "Unknown",
-            "rssi": rssi
-        }
+        mac = d.address
+        name = d.name or "Unknown"
 
-        # Placeholder: you may add vendor detection here
-        from vendor_lookup import get_vendor
-        result["vendor"] = get_vendor(d.address,d.name)
+        result = {
+            "mac": mac,
+            "name": name,
+            "rssi": rssi,
+            "vendor": get_vendor(mac, name)  # ✅ name-based vendor inference
+        }
 
         results.append(result)
 
