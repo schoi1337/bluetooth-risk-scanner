@@ -18,7 +18,7 @@ async def scan_ble_devices(timeout=10, min_rssi=-100):
             continue  # Skip weak signal devices
 
         mac = d.address
-        name = d.name or "Unknown"
+        name = d.name or ""
 
         result = {
             "mac": mac,
