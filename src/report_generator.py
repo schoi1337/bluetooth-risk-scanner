@@ -46,12 +46,24 @@ def format_cve_summary(dev):
 
 def save_html_report(devices, output_path="output/report.html"):
     """
-    Save the scan results as a simple HTML report.
+    Save the scan results as a simple HTML report with improved styling and UX note.
     """
     html = [
-        "<html><head><title>BLE Risk Report</title></head><body>",
-        f"<h1>Bluetooth Risk Report - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</h1>",
-        "<table border='1' cellpadding='6' cellspacing='0'>",
+        "<html><head><title>Bluetooth Risk Report</title>",
+        "<style>",
+        "body { font-family: Arial, sans-serif; margin: 40px; }",
+        "h1 { color: #2C3E50; }",
+        "p.note { background-color: #f9f9f9; padding: 10px; border-left: 4px solid #3498db; }",
+        "table { border-collapse: collapse; width: 100%; margin-top: 20px; }",
+        "th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }",
+        "th { background-color: #f2f2f2; }",
+        "tr:nth-child(even) { background-color: #fafafa; }",
+        "</style>",
+        "</head><body>",
+        f"<h1>Bluetooth Risk Report</h1>",
+        f"<p class='note'><strong>Note:</strong> If a device's name or vendor shows as <code>Unknown</code>, it's likely because the device is not in discovery mode and isn't broadcasting identifying information. Try initiating pairing to see more detailed info in future scans.</p>",
+        f"<p><em>Scan timestamp:</em> {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>",
+        "<table>",
         "<tr><th>MAC Address</th><th>Name</th><th>Vendor</th><th>RSSI</th><th>CVE Score</th><th>Risk Score</th><th>Details</th></tr>"
     ]
 

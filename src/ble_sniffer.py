@@ -14,6 +14,10 @@ async def scan_ble_devices(timeout=10, min_rssi=-100):
             return
         seen_macs.add(device.address)
 
+         # ✅ 디버그 출력 추가
+        print(f"[debug] MAC: {device.address} | NAME: {device.name} | LOCAL_NAME: {advertisement_data.local_name}")
+        print(f"[debug] RAW RSSI: {advertisement_data.rssi} | UUIDs: {advertisement_data.service_uuids}")
+
         name = advertisement_data.local_name or device.name or "Unknown"
         vendor = lookup_vendor(device.address)
 
