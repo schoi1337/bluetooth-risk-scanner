@@ -28,6 +28,12 @@ def assess_privacy_risks(device):
         risks.append("Device type is inferable from name")
         score += 1
 
+    # RSSI-based proximity risk
+    rssi = device.get("rssi", -100)
+    if rssi > -60:
+        risks.append("Device signal is very strong (possible proximity tracker)")
+        score += 1
+
     # Sensitive BLE services exposed
     services = device.get("uuids", [])
     sensitive_services = {
