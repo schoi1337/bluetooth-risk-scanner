@@ -1,14 +1,16 @@
 # ble_sniffer.py
 # This script scans for nearby BLE devices or uses test mode data,
 # and analyzes their risk using vendor information, RSSI, and CVE data.
-
-import asyncio
-import argparse
-import json
+import sys
 from pathlib import Path
-from bleak import BleakScanner
+
+# Ensure current folder is in sys.path
+sys.path.append(str(Path(__file__).parent.resolve()))
+
+from utils.risk_analyzer import analyze_device_risk
+from utils.ble_scanner import scan_devices  # if used
+from utils.cve_checker import fetch_cves  # optional
 from vendor_lookup import lookup_vendor_from_mac
-from risk_analyzer import analyze_device_risk
 from report_generator import save_json_report, save_html_report
 
 async def scan_devices(timeout=10, min_rssi=-100):
