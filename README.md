@@ -58,6 +58,10 @@ python main.py
 python main.py --timeout 15 --min-rssi -85
 ```
 
+### 🔣 Options
+- `--timeout`: Scanning timeout in seconds (default: 10)
+- `--min-rssi`: Minimum RSSI threshold to filter out weak signals (default: -100)
+
 Reports are saved to:
 - `output/scan_report.json`
 - `output/scan_report.html` 
@@ -85,6 +89,7 @@ Use Ubertooth to sniff BLE advertisements without needing an HCI-compatible dong
 
 - [x] HTML + JSON reporting implemented
 - [x] Improve MAC address to vendor matching accuracy (expand OUI database using manuf)
+- [x] Scoring model with privacy risk detection
 - [ ] Integrate CVE database lookup (NVD API integration)
 - [ ] Add more privacy risk indicators based on BLE advertisement data
 - [ ] Introduce scoring weight configuration via YAML for custom risk models
