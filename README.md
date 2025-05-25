@@ -88,7 +88,7 @@ Use Ubertooth to sniff BLE advertisements without needing an HCI-compatible dong
 ## 🧭 Roadmap
 
 - [x] HTML + JSON reporting implemented
-- [x] Improve MAC address to vendor matching accuracy (expand OUI database using manuf)
+- [x] Improve MAC address to vendor matching accuracy
 - [x] Scoring model with privacy risk detection
 - [ ] Integrate CVE database lookup (NVD API integration)
 - [ ] Add more privacy risk indicators based on BLE advertisement data
