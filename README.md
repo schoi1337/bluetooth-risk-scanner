@@ -92,7 +92,7 @@ Reports are saved to:
 
 ### 📸 Sample Output
 
-![Sample HTML Report](doc/report.png)
+![Sample HTML Report](docs/report.png)
 
 
 ## 🧪 Platform Notes
