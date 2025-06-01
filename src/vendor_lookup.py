@@ -22,9 +22,8 @@ def load_oui_database(manuf_file="data/manuf"):
                 vendor = parts[1]
                 mac_prefix_to_vendor[prefix] = vendor
 
-def lookup_vendor_from_mac(mac_address):
+def lookup_vendor_name(mac_address):
     if not mac_prefix_to_vendor:
         load_oui_database()
-
     prefix = ":".join(mac_address.upper().split(":")[0:3])
     return mac_prefix_to_vendor.get(prefix, "Unknown")

@@ -1,32 +1,36 @@
 # src/cve_checker.py
 
-import requests
+import json
+import os
 
-def query_nvd(keyword, max_results=5):
+def load_ble_cve_db(*years):
     """
-    Search NVD for CVEs related to the given keyword (e.g. vendor or product name).
-    Returns a list of dicts: [{"id": CVE-ID, "cvss": score}, ...]
+    Load BLE CVE database JSON files for the specified years.
+    Returns a single list of all CVE entries.
     """
-    url = "https://services.nvd.nist.gov/rest/json/cves/2.0"
-    params = {
-        "keywordSearch": keyword,
-        "resultsPerPage": max_results
-    }
+    db = []
+    for y in years:
+        fname = os.path.join("data", f"ble_cve_db_{y}.json")
+        if os.path.exists(fname):
+            with open(fname, "r", encoding="utf-8") as f:
+                db.extend(json.load(f))
+    return db
 
-    try:
-        resp = requests.get(url, params=params, timeout=10)
-        data = resp.json()
-        results = []
-        for item in data.get("vulnerabilities", []):
-            cve = item["cve"]
-            cve_id = cve["id"]
-            cvss = (
-                cve.get("metrics", {}).get("cvssMetricV31", [{}])[0]
-                .get("cvssData", {}).get("baseScore", 0.0)
-            )
-            results.append({"id": cve_id, "cvss": cvss})
-        return results
-
-    except Exception as e:
-        print(f"[!] NVD API error for keyword {keyword}: {e}")
-        return []
+def find_cves_for_device(vendor, product, cve_db):
+    """
+    Search the CVE DB for entries matching the device's vendor or product name.
+    Returns a list of dicts with id, cvss, description, and URL.
+    """
+    v = (vendor or "").lower()
+    p = (product or "").lower()
+    result = []
+    for c in cve_db:
+        desc = c.get("description", "").lower()
+        if (v and v in desc) or (p and p in desc):
+            result.append({
+                "id": c["cve"],
+                "cvss": c.get("severity", "N/A"),
+                "desc": c.get("description", ""),
+                "url": c.get("url", "")
+            })
+    return result

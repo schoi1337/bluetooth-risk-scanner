@@ -9,7 +9,7 @@ console = Console()
 
 def print_banner():
     banner_text = """
-    
+
 ┌┐ ┬  ┬ ┬┌─┐┌┬┐┌─┐┌─┐┌┬┐┬ ┬   ┬─┐┬┌─┐┬┌─   ┌─┐┌─┐┌─┐┌┐┌┌┐┌┌─┐┬─┐
 ├┴┐│  │ │├┤  │ │ ││ │ │ ├─┤───├┬┘│└─┐├┴┐───└─┐│  ├─┤││││││├┤ ├┬┘
 └─┘┴─┘└─┘└─┘ ┴ └─┘└─┘ ┴ ┴ ┴   ┴└─┴└─┘┴ ┴   └─┘└─┘┴ ┴┘└┘┘└┘└─┘┴└─
@@ -43,8 +43,20 @@ async def batch_scan(args):
     print_banner()
     while True:
         print_info(f"Starting BLE scan with timeout={args.timeout}s")
-        await run_scan(timeout=args.timeout, json_only=args.json_only, html_only=args.html_only, offline=args.offline)
+        devices = await run_scan(
+            timeout=args.timeout,
+            json_only=args.json_only,
+            html_only=args.html_only,
+            offline=args.offline
+        )
         print_success("Scan completed successfully.")
+        print_info(f"Total devices scanned: {len(devices)}")
+        for dev in devices:
+            print(f"- {dev.get('name', 'Unknown')} ({dev.get('vendor_name', 'Unknown')}), Risk: {dev.get('risk_level', 'N/A')}")
+            if dev.get("cve_summary"):
+                print("  CVEs:")
+                for cve in dev["cve_summary"]:
+                    print(f"    {cve['id']} [{cve['cvss']}]: {cve['desc'][:60]}...")
         if args.interval <= 0:
             break
         print_info(f"Waiting {args.interval} minutes until next scan...")

@@ -1,102 +1,67 @@
-import sys
+# main.py
+
+import json
 import os
-import asyncio
-from pathlib import Path
+from src.cve_checker import load_ble_cve_db, find_cves_for_device
+from src.report_generator import save_html_report, save_json_report
+from src.vendor_lookup import lookup_vendor_name
+from bleak import BleakScanner
 
-# Add src folder to Python module search path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "src"))
-
-from ble_scanner import scan_devices
-from risk_analyzer import load_risk_weights, analyze_device_risk, analyze_privacy_risks
-from vendor_lookup import lookup_vendor_from_mac as get_vendor_name
-from behavior_tracker import check_mac_rotation, check_name_switching, save_device_profile
-from report_generator import save_html_report, save_json_report
-
-
-def convert_bytes_to_hex(obj):
+async def scan_ble_devices(timeout=10):
     """
-    Recursively convert bytes objects to hex strings for JSON serialization.
+    Scan for BLE devices using bleak and return a list of device info dicts.
     """
-    if isinstance(obj, dict):
-        return {k: convert_bytes_to_hex(v) for k, v in obj.items()}
-    elif isinstance(obj, list):
-        return [convert_bytes_to_hex(i) for i in obj]
-    elif isinstance(obj, bytes):
-        return obj.hex()
-    else:
-        return obj
-
+    found = await BleakScanner.discover(timeout=timeout)
+    devices = []
+    for d in found:
+        vendor = lookup_vendor_name(d.address) if hasattr(d, "address") else "Unknown"
+        devices.append({
+            "name": d.name or "Unknown",
+            "mac": d.address,
+            "vendor_name": vendor,
+            "risk_level": "Unknown",
+            "score": 0,
+            "recommendation": "TBD",
+            "risk_reasons": [],
+            "uuids": [],
+            "anomaly": "None"
+        })
+    return devices
 
 async def run_scan(timeout=10, json_only=False, html_only=False, offline=None):
     """
-    Core scan and analysis function.
-    If offline is set, analyze the given JSON file instead of scanning.
+    Perform a BLE scan (or analyze offline JSON), match CVEs, and generate reports.
     """
-    weights = load_risk_weights()
-    enriched_devices = []
-
+    # Step 1: Load from offline file or scan
     if offline:
-        import json
+        if not os.path.exists(offline):
+            print(f"[ERROR] Offline file '{offline}' not found.")
+            return []
         with open(offline, "r", encoding="utf-8") as f:
-            devices_raw = json.load(f)
-        # Assume devices_raw is already enriched JSON data
-        enriched_devices = devices_raw
+            devices = json.load(f)
     else:
-        devices_raw = await scan_devices(return_advertisement=True, timeout=timeout)
+        devices = await scan_ble_devices(timeout=timeout)
 
-        # Remove duplicates by MAC address
-        unique_devices = {}
-        for device_info, advertisement_data in devices_raw:
-            mac = device_info.address
-            if mac not in unique_devices:
-                unique_devices[mac] = (device_info, advertisement_data)
+    # Step 2: Load BLE CVE DB (all years)
+    cve_db = []
+    for year in [2020, 2021, 2022, 2023]:  # Add years as available
+        cve_db += load_ble_cve_db(year)
 
-        for device_info, advertisement_data in unique_devices.values():
-            mac = device_info.address
-            name = device_info.name or "Unknown"
-            rssi = advertisement_data.rssi
-            manufacturer_data = advertisement_data.manufacturer_data
+    # Step 3: CVE auto-mapping for each device
+    for dev in devices:
+        vendor = dev.get("vendor_name")
+        product = dev.get("name")
+        dev["cve_summary"] = find_cves_for_device(vendor, product, cve_db)
 
-            vendor_name = get_vendor_name(mac)
-
-            dev = {
-                "mac": mac,
-                "name": name,
-                "rssi": rssi,
-                "vendor_name": vendor_name,
-                "mac_randomized": False,
-                "manufacturer_data": manufacturer_data
-            }
-
-            score, reasons = analyze_device_risk(dev, weights)
-            dev["score"] = score
-            dev["risk_reasons"] = reasons
-            dev["privacy_risks"] = analyze_privacy_risks(dev)
-
-            rotating_mac = check_mac_rotation(dev)
-            name_switch = check_name_switching(dev)
-
-            anomalies = []
-            if rotating_mac:
-                anomalies.append("Rotating MAC detected")
-            if name_switch:
-                anomalies.append("Name switching detected")
-
-            dev["anomaly"] = ", ".join(anomalies) if anomalies else "Normal"
-
-            save_device_profile(dev)
-            enriched_devices.append(dev)
-
-    # Clean bytes for serialization
-    cleaned_devices = convert_bytes_to_hex(enriched_devices)
-
-    output_dir = Path("output")
-    output_dir.mkdir(exist_ok=True)
-
-    if not json_only:
-        save_html_report(cleaned_devices, output_path=output_dir / "report.html")
-        print(f"[INFO] HTML report saved to {output_dir / 'report.html'}")
-
+    # Step 4: Save reports as requested
     if not html_only:
-        save_json_report(cleaned_devices, output_path=output_dir / "scan_report.json")
-        print(f"[INFO] JSON report saved to {output_dir / 'scan_report.json'}")
+        save_json_report(devices, output_path="output/report.json")
+    if not json_only:
+        save_html_report(devices, output_path="output/report.html")
+
+    return devices
+
+# For manual testing (non-CLI)
+if __name__ == "__main__":
+    import asyncio
+    asyncio.run(run_scan())
