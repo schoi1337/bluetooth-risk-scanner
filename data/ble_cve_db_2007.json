@@ -1,0 +1,58 @@
+[
+  {
+    "cve": "CVE-2007-0899",
+    "year": "2007",
+    "description": "There is a possible heap overflow in libclamav/fsg.c before 0.100.0.",
+    "severity": "CRITICAL",
+    "url": "https://security-tracker.debian.org/tracker/CVE-2007-0899"
+  },
+  {
+    "cve": "CVE-2007-10001",
+    "year": "2007",
+    "description": "A vulnerability classified as problematic has been found in web-cyradm. This affects an unknown part of the file search.php. The manipulation of the argument searchstring leads to sql injection. It is recommended to apply a patch to fix this issue. The identifier VDB-217449 was assigned to this vulnerability.",
+    "severity": "HIGH",
+    "url": "https://github.com/web-cyradm/web-cyradm/commit/3e8f0717f133907bb6a09cb674b05c5f273da3e1"
+  },
+  {
+    "cve": "CVE-2007-10003",
+    "year": "2007",
+    "description": "A vulnerability, which was classified as critical, has been found in The Hackers Diet Plugin up to 0.9.6b on WordPress. This issue affects some unknown processing of the file ajax_blurb.php of the component HTTP POST Request Handler. The manipulation of the argument user leads to sql injection. The attack may be initiated remotely. Upgrading to version 0.9.7b is able to address this issue. The patch is named 7dd8acf7cd8442609840037121074425d363b694. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-243803.",
+    "severity": "HIGH",
+    "url": "https://github.com/wp-plugins/the-hackers-diet/commit/7dd8acf7cd8442609840037121074425d363b694"
+  },
+  {
+    "cve": "CVE-2007-2056",
+    "year": "2007",
+    "description": "Rejected reason: The getlock function in aimage/aimage.cpp in AFFLIB 2.2.8 and earlier allows local users to overwrite arbitrary files via a symlink attack on temporary lock files (aka \"time-of-check-time-of-use file race\"). NOTE: the researcher has retracted the original advisory, stating that \"the portion of vulnerable code is not called in any current version of AFFLIB and is therefore not exploitable.",
+    "severity": "N/A",
+    "url": ""
+  },
+  {
+    "cve": "CVE-2007-4044",
+    "year": "2007",
+    "description": "Rejected reason: The MS-RPC functionality in smbd in Samba 3 on SUSE Linux before 20070720 does not include \"one character in the shell escape handling.\"  NOTE: this issue was originally characterized as a shell metacharacter issue due to an incomplete fix for CVE-2007-2447, which was interpreted by CVE to be security relevant.  However, SUSE and Red Hat have disputed the problem, stating that the only impact is that scripts will not be executed if they have a \"c\" in their name, but even this limitation might not exist.  This does not have security implications, so should not be included in CVE",
+    "severity": "N/A",
+    "url": ""
+  },
+  {
+    "cve": "CVE-2007-4774",
+    "year": "2007",
+    "description": "The Linux kernel before 2.4.36-rc1 has a race condition. It was possible to bypass systrace policies by flooding the ptraced process with SIGCONT signals, which can can wake up a PTRACED process.",
+    "severity": "MEDIUM",
+    "url": "http://taviso.decsystem.org/research.html"
+  },
+  {
+    "cve": "CVE-2007-5908",
+    "year": "2007",
+    "description": "Rejected reason: Buffer overflow in the (1) sysfs_show_available_clocksources and (2) sysfs_show_current_clocksources functions in Linux kernel 2.6.23 and earlier might allow local users to cause a denial of service or execute arbitrary code via crafted clock source names.  NOTE: follow-on analysis by Linux developers states that \"There is no way for unprivileged users (or really even the root user) to add new clocksources.",
+    "severity": "N/A",
+    "url": ""
+  },
+  {
+    "cve": "CVE-2007-6762",
+    "year": "2007",
+    "description": "In the Linux kernel before 2.6.20, there is an off-by-one bug in net/netlabel/netlabel_cipso_v4.c where it is possible to overflow the doi_def->tags[] array.",
+    "severity": "CRITICAL",
+    "url": "https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=2a2f11c227bdf292b3a2900ad04139d301b56ac4"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "cve": "CVE-2003-0687",
+    "year": "2003",
+    "description": "Rejected reason: DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: none.  Reason: This candidate has been revoked by its Candidate Numbering Authority (CNA) because it was internally assigned to a problem that was not reachable (the affected routine was not used by the software).  Notes: none",
+    "severity": "N/A",
+    "url": ""
+  },
+  {
+    "cve": "CVE-2003-0790",
+    "year": "2003",
+    "description": "Rejected reason: DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: none.  Reason: the reported issue is not a vulnerability or exposure.  Notes: This candidate was assigned to a \"head-reading\" bug in a component of fetchmail 6.2.4 and earlier, which was claimed to allow a denial of service.  However, the bug is in a broken component of fetchmail that is not \"reachable\" by any execution path, so it cannot be triggered by any sort of attack and is not exploitable",
+    "severity": "N/A",
+    "url": ""
+  },
+  {
+    "cve": "CVE-2003-5002",
+    "year": "2003",
+    "description": "A vulnerability was found in ISS BlackICE PC Protection. It has been declared as problematic. Affected by this vulnerability is the component Update Handler which allows cleartext transmission of data. NOTE: This vulnerability only affects products that are no longer supported by the maintainer",
+    "severity": "MEDIUM",
+    "url": "https://vuldb.com/?id.295"
+  },
+  {
+    "cve": "CVE-2003-5003",
+    "year": "2003",
+    "description": "A vulnerability was found in ISS BlackICE PC Protection. It has been rated as problematic. Affected by this issue is the Update Handler. The manipulation with an unknown input leads to cross site scripting. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. NOTE: This vulnerability only affects products that are no longer supported by the maintainer",
+    "severity": "MEDIUM",
+    "url": "https://vuldb.com/?id.296"
+  }
+]

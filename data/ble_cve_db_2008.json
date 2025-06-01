@@ -1,0 +1,58 @@
+[
+  {
+    "cve": "CVE-2008-10001",
+    "year": "2008",
+    "description": "A vulnerability, which was classified as problematic, has been found in Pro2col Stingray FTS. The manipulation of the argument Username leads to cross site scripting. The attack may be initiated remotely. It is recommended to upgrade the affected component. NOTE: This vulnerability only affects products that are no longer supported by the maintainer",
+    "severity": "MEDIUM",
+    "url": "http://seclists.org/bugtraq/2008/Sep/0157.html"
+  },
+  {
+    "cve": "CVE-2008-10002",
+    "year": "2008",
+    "description": "A vulnerability has been found in cfire24 ajaxlife up to 0.3.2 and classified as problematic. This vulnerability affects unknown code. The manipulation leads to cross site scripting. The attack can be initiated remotely. Upgrading to version 0.3.3 is able to address this issue. The patch is identified as 9fb53b67312fe3f4336e01c1e3e1bedb4be0c1c8. It is recommended to upgrade the affected component. VDB-222286 is the identifier assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/cfire24/ajaxlife/commit/9fb53b67312fe3f4336e01c1e3e1bedb4be0c1c8"
+  },
+  {
+    "cve": "CVE-2008-10003",
+    "year": "2008",
+    "description": "A vulnerability was found in iGamingModules flashgames 1.1.0. It has been classified as critical. Affected is an unknown function of the file game.php. The manipulation of the argument lid leads to sql injection. It is possible to launch the attack remotely. The name of the patch is 6e57683704885be32eea2ea614f80c9bb8f012c5. It is recommended to apply a patch to fix this issue. The identifier of this vulnerability is VDB-222288.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/iGamingModules/flashgames/commit/6e57683704885be32eea2ea614f80c9bb8f012c5"
+  },
+  {
+    "cve": "CVE-2008-10004",
+    "year": "2008",
+    "description": "A vulnerability was found in Email Registration 5.x-2.1 on Drupal. It has been declared as critical. This vulnerability affects the function email_registration_user of the file email_registration.module. The manipulation of the argument namenew leads to sql injection. The attack can be initiated remotely. Upgrading to version 6.x-1.0 is able to address this issue. The patch is identified as 126c141b7db038c778a2dc931d38766aad8d1112. It is recommended to upgrade the affected component. VDB-222334 is the identifier assigned to this vulnerability.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/drupalprojects/email_registration/commit/126c141b7db038c778a2dc931d38766aad8d1112"
+  },
+  {
+    "cve": "CVE-2008-3280",
+    "year": "2008",
+    "description": "It was found that various OpenID Providers (OPs) had TLS Server Certificates that used weak keys, as a result of the Debian Predictable Random Number Generator (CVE-2008-0166). In combination with the DNS Cache Poisoning issue (CVE-2008-1447) and the fact that almost all SSL/TLS implementations do not consult CRLs (currently an untracked issue), this means that it is impossible to rely on these OPs.",
+    "severity": "MEDIUM",
+    "url": "http://lists.openid.net/pipermail/openid-security/2008-August/000942.html"
+  },
+  {
+    "cve": "CVE-2008-5850",
+    "year": "2008",
+    "description": "Rejected reason: DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: None.  Reason: this candidate was originally recorded for a \"SPLAT Remote Root Exploit\" that was claimed to exist for Check Point SmartCenter.  The claim has no actionable details and was disclosed by a person of unknown reliability who did not coordinate with the vendor.  No people of known reliability have confirmed the original claim.  The vendor has not indicated that they are aware of any vulnerability.  Since the claim has no actionable details or independent verification, it is outside the scope of CVE according to current inclusion criteria",
+    "severity": "N/A",
+    "url": ""
+  },
+  {
+    "cve": "CVE-2008-6049",
+    "year": "2008",
+    "description": "Rejected reason: SQL injection vulnerability in index.php in TinyMCE 2.0.1 allows remote attackers to execute arbitrary SQL commands via the menuID parameter.  NOTE: CVE and multiple reliable third parties dispute this issue, since TinyMCE does not contain index.php or any PHP code.  This may be an issue in a product that has integrated TinyMCE",
+    "severity": "N/A",
+    "url": ""
+  },
+  {
+    "cve": "CVE-2008-6800",
+    "year": "2008",
+    "description": "Rejected reason: DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: None.  Reason: this candidate is not a security issue.  It was originally created based on one vendor's misinterpretation of an upstream changelog comment that referred to a race condition in the winbind daemon (aka winbindd) in Samba before 3.0.32.  The upstream vendor states: \"The Samba Team sees no way to exploit this race condition by a user of the system or an external attacker. In order to be able to trigger the race condition a privileged user (root) need to intentionally kill a winbind child process and carefully time the killing to trigger the race condition. Although, if the user is already privileged, it can more easily just kill the parent process directly.\"  CVE concurs with the dispute.  Notes: CVE users should not use this identifier",
+    "severity": "N/A",
+    "url": ""
+  }
+]

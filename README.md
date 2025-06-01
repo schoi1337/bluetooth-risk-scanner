@@ -4,27 +4,22 @@ Bluetooth Risk Scanner passively detects nearby BLE (Bluetooth Low Energy) devic
 
 Unlike simple scanners, this tool classifies threats based on proximity, vendor reputation, advertising behavior, and CVE history.
 
-> ⚠️ **This project is actively maintained and evolving.**  
-> Features like custom risk scoring, BLE behavior anomaly detection, and advanced reporting are under development.
-
-## 💞 Motivation
-
-This project was inspired by increasing reports of Apple AirTags and other BLE trackers being used in stalking and other crimes. I developed Bluetooth Risk Scanner to help individuals and security teams identify potential privacy risks from nearby Bluetooth devices — especially those that may be tracking users without their knowledge.
-
-The goal is to raise awareness of Bluetooth-based threats and provide a lightweight, actionable tool for BLE risk assessment.
-
 ## 🚀 Features
 
-- Passive BLE scan using `bleak`
-- Detect name, RSSI, MAC (when available), manufacturer ID, service UUIDs
-- Vendor detection using IEEE OUI (`manuf`-like logic)
-- Privacy risk scoring:
-  - Static MAC behavior
-  - Proximity tracking (RSSI-based)
-  - Manufacturer-based passive tracker detection (e.g. Apple AirTag)
-  - GATT service analysis (e.g. heart rate, user data)
-- HTML + JSON reports with color-coded risk indicators
-- Ubertooth branch available for sniffer-mode scanning
+- Passive BLE scanning using [`bleak`](https://github.com/hbldh/bleak) (Windows/Linux/macOS)
+- Device data: Name, RSSI, UUIDs, Manufacturer ID, MAC (when available)
+- Vendor/OUI detection for manufacturer reputation and CVE mapping
+- Risk scoring model:
+  - Proximity-based scoring (RSSI)
+  - Static/rotating MAC analysis
+  - Manufacturer-based tracker detection (Apple, Tile, Samsung, etc.)
+  - BLE GATT service fingerprinting
+  - Behavioral anomaly detection (MAC/name switching)
+- CVE lookups (offline DB, auto-mapped by vendor/product)
+- YAML-based scoring weights for custom risk models
+- HTML/JSON reports with color-coded severity, explanations, and recommendations
+- CLI: batch scan, scheduling (cron), offline analysis of stored scan logs
+- Modern CLI (color, ASCII art, status icons) via [Rich](https://github.com/Textualize/rich)
 
 ## 🎛️ Risk Model
 
@@ -38,7 +33,6 @@ The following factors contribute to a device's total `risk_score`:
 | **Passive Tracker** | Apple (AirTag), Tile, Samsung SmartTag via Manufacturer ID | +2    |
 | **BLE Services**    | Sensitive UUIDs like Heart Rate, User Data                | +3    |
 
-
 ## 📋 Usage
 
 ```bash
@@ -51,16 +45,26 @@ source .venv/bin/activate  # or .venv\Scripts\activate on Windows
 # Install dependencies
 pip install -r requirements.txt
 
-# Run the scanner (default: 10s scan, no RSSI filter)
-python main.py
+# Quick start
+python cli.py --scan
 
 # Custom scan: 15s timeout, ignore weak signals
-python main.py --timeout 15 --min-rssi -85
+python cli.py --scan --timeout 20 --min-rssi -80 --output-dir results/
+
+#Batch/Scheduled Scanning (Linux/macOS cron example)
+# Run every day at 3am, save with timestamp
+0 3 * * * cd /path/to/bluetooth-risk-scanner && .venv/bin/python cli.py --scan --output-dir /path/to/reports/$(date +\%F
 ```
 
-### 🔣 Options
+### 🔣 CLI Options
 - `--timeout`: Scanning timeout in seconds (default: 10)
 - `--min-rssi`: Minimum RSSI threshold to filter out weak signals (default: -100)
+- `--output-dir <folder>`: Save reports to this directory
+
+📊 Reporting & Output
+- **HTML Report**: Color-coded severity (Low/Medium/High/Critical), sortable/filterable, device fingerprint summary, recommendations, explanations per finding.
+- **JSON Report**: Structured data for automation or further offline analysis.
+- **Sample Output**: See [Sample HTML Report](docs/sample_report.html), [See Sample JSON report](docs/sample_report.json).
 
 Reports are saved to:
 - `output/scan_report.json`
@@ -68,7 +72,7 @@ Reports are saved to:
 
 ### 📸 Sample Output
 
-![Sample HTML Report](screenshots/Report.png)
+![Sample HTML Report](doc/report.png)
 
 
 ## 🧪 Platform Notes
@@ -84,18 +88,6 @@ Reports are saved to:
 Use Ubertooth to sniff BLE advertisements without needing an HCI-compatible dongle:
 
 📦 [`feature/ubertooth-support`](https://github.com/schoi1337/bluetooth-risk-scanner/tree/feature/ubertooth-support)
-
-## 🧭 Roadmap
-
-- [x] HTML + JSON reporting implemented
-- [x] Improve MAC address to vendor matching accuracy
-- [x] Scoring model with privacy risk detection
-- [ ] Integrate CVE database lookup (NVD API integration)
-- [ ] Add more privacy risk indicators based on BLE advertisement data
-- [ ] Introduce scoring weight configuration via YAML for custom risk models
-- [ ] Detect behavioral anomalies (e.g. MAC/name switching) to flag evasive BLE devices
-- [ ] Visualize risk severity (Low/Medium/High/Critical) in HTML report with filters
-- [ ] Build optional CLI interface for batch scan + scheduled reports
 
 ## 🤝 Contributing
 

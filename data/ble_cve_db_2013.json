@@ -1,0 +1,436 @@
+[
+  {
+    "cve": "CVE-2013-0163",
+    "year": "2013",
+    "description": "OpenShift haproxy cartridge: predictable /tmp in set-proxy connection hook which could facilitate DoS",
+    "severity": "MEDIUM",
+    "url": "https://access.redhat.com/security/cve/cve-2013-0163"
+  },
+  {
+    "cve": "CVE-2013-0264",
+    "year": "2013",
+    "description": "An import error was introduced in Cumin in the code refactoring in r5310. Server certificate validation is always disabled when connecting to Aviary servers, even if the installed packages on a system support it.",
+    "severity": "HIGH",
+    "url": "https://access.redhat.com/security/cve/cve-2013-0264"
+  },
+  {
+    "cve": "CVE-2013-0326",
+    "year": "2013",
+    "description": "OpenStack nova base images permissions are world readable",
+    "severity": "MEDIUM",
+    "url": "https://access.redhat.com/security/cve/cve-2013-0326"
+  },
+  {
+    "cve": "CVE-2013-0743",
+    "year": "2013",
+    "description": "Rejected reason: DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: none.  Reason: This candidate was withdrawn by its CNA at the suggestion of the CVE project team.  The candidate had been associated with a correct report of a security problem, but not a problem that is categorized as a vulnerability within CVE.  Compromised or unauthorized SSL certificates are not within CVE's scope.  Notes: none",
+    "severity": "N/A",
+    "url": ""
+  },
+  {
+    "cve": "CVE-2013-10001",
+    "year": "2013",
+    "description": "A vulnerability was found in HTC One/Sense 4.x. It has been rated as problematic. Affected by this issue is the certification validation of the mail client. An exploit has been disclosed to the public and may be used.",
+    "severity": "MEDIUM",
+    "url": "http://www.modzero.ch/modlog/archives/2013/05/28/htcs_e-mail_client_fails_to_verify_server_certificates/"
+  },
+  {
+    "cve": "CVE-2013-10002",
+    "year": "2013",
+    "description": "A vulnerability was found in Telecommunication Software SAMwin Contact Center Suite 5.1. It has been rated as critical. Affected by this issue is the function getCurrentDBVersion in the library SAMwinLIBVB.dll of the credential handler. Authentication is possible with hard-coded credentials. Upgrading to version 6.2 is able to address this issue. It is recommended to upgrade the affected component.",
+    "severity": "CRITICAL",
+    "url": "http://www.modzero.ch/advisories/MZ-13-06_SAMwin_Architectural_Issues.txt"
+  },
+  {
+    "cve": "CVE-2013-10003",
+    "year": "2013",
+    "description": "A vulnerability classified as critical has been found in Telecommunication Software SAMwin Contact Center Suite 5.1. This affects the function getCurrentDBVersion in the library SAMwinLIBVB.dll of the database handler. The manipulation leads to sql injection. The exploit has been disclosed to the public and may be used. Upgrading to version 6.2 is able to address this issue. It is recommended to upgrade the affected component.",
+    "severity": "CRITICAL",
+    "url": "http://www.modzero.ch/advisories/MZ-13-06_SAMwin_Architectural_Issues.txt"
+  },
+  {
+    "cve": "CVE-2013-10004",
+    "year": "2013",
+    "description": "A vulnerability classified as critical was found in Telecommunication Software SAMwin Contact Center Suite 5.1. This vulnerability affects the function passwordScramble in the library SAMwinLIBVB.dll of the component Password Handler. Incorrect implementation of a hashing function leads to predictable authentication possibilities. Upgrading to version 6.2 is able to address this issue. It is recommended to upgrade the affected component.",
+    "severity": "CRITICAL",
+    "url": "http://www.modzero.ch/advisories/MZ-13-07_SAMwin_Collisions.txt"
+  },
+  {
+    "cve": "CVE-2013-10006",
+    "year": "2013",
+    "description": "A vulnerability classified as problematic was found in Ziftr primecoin up to 0.8.4rc1. Affected by this vulnerability is the function HTTPAuthorized of the file src/bitcoinrpc.cpp. The manipulation of the argument strUserPass/strRPCUserColonPass leads to observable timing discrepancy. The complexity of an attack is rather high. The exploitation appears to be difficult. Upgrading to version 0.8.4rc2 is able to address this issue. The patch is named cdb3441b5cd2c1bae49fae671dc4a496f7c96322. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-217171.",
+    "severity": "HIGH",
+    "url": "https://github.com/Ziftr/primecoin/commit/cdb3441b5cd2c1bae49fae671dc4a496f7c96322"
+  },
+  {
+    "cve": "CVE-2013-10007",
+    "year": "2013",
+    "description": "A vulnerability classified as problematic has been found in ethitter WP-Print-Friendly up to 0.5.2. This affects an unknown part of the file wp-print-friendly.php. The manipulation leads to information disclosure. It is possible to initiate the attack remotely. Upgrading to version 0.5.3 is able to address this issue. The identifier of the patch is 437787292670c20b4abe20160ebbe8428187f2b4. It is recommended to upgrade the affected component. The identifier VDB-217269 was assigned to this vulnerability.",
+    "severity": "HIGH",
+    "url": "https://github.com/ethitter/WP-Print-Friendly/commit/437787292670c20b4abe20160ebbe8428187f2b4"
+  },
+  {
+    "cve": "CVE-2013-10010",
+    "year": "2013",
+    "description": "A vulnerability classified as problematic has been found in zerochplus. This affects the function PrintResList of the file test/mordor/thread.res.pl. The manipulation leads to cross site scripting. It is possible to initiate the attack remotely. The patch is named 9ddf9ecca8565341d8d26a3b2f64540bde4fa273. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-218007.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/zerochplus/zerochplus/commit/9ddf9ecca8565341d8d26a3b2f64540bde4fa273"
+  },
+  {
+    "cve": "CVE-2013-10013",
+    "year": "2013",
+    "description": "A vulnerability was found in Bricco Authenticator Plugin. It has been declared as critical. This vulnerability affects the function authenticate/compare of the file src/java/talentum/escenic/plugins/authenticator/authenticators/DBAuthenticator.java. The manipulation leads to sql injection. Upgrading to version 1.39 is able to address this issue. The name of the patch is a5456633ff75e8f13705974c7ed1ce77f3f142d5. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-218428.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/Bricco/authenticator-plugin/commit/a5456633ff75e8f13705974c7ed1ce77f3f142d5"
+  },
+  {
+    "cve": "CVE-2013-10019",
+    "year": "2013",
+    "description": "A vulnerability was found in OCLC-Research OAICat 1.5.61. It has been rated as critical. This issue affects some unknown processing. The manipulation leads to sql injection. The attack may be initiated remotely. Upgrading to version 1.5.62 is able to address this issue. The identifier of the patch is 6cc65501869fa663bcd24a70b63f41f5cfe6b3e1. It is recommended to upgrade the affected component. The identifier VDB-221489 was assigned to this vulnerability.",
+    "severity": "CRITICAL",
+    "url": "https://code.google.com/archive/p/oaicat/issues/7"
+  },
+  {
+    "cve": "CVE-2013-10020",
+    "year": "2013",
+    "description": "A vulnerability, which was classified as problematic, was found in MMDeveloper A Forms Plugin up to 1.4.2 on WordPress. This affects an unknown part of the file a-forms.php. The manipulation leads to cross site scripting. It is possible to initiate the attack remotely. Upgrading to version 1.4.3 is able to address this issue. The identifier of the patch is 3e693197bd69b7173cc16d8d2e0a7d501a2a0b06. It is recommended to upgrade the affected component. The identifier VDB-222609 was assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/a-forms/commit/3e693197bd69b7173cc16d8d2e0a7d501a2a0b06"
+  },
+  {
+    "cve": "CVE-2013-10021",
+    "year": "2013",
+    "description": "A vulnerability was found in dd32 Debug Bar Plugin up to 0.8 on WordPress. It has been declared as problematic. Affected by this vulnerability is the function render of the file panels/class-debug-bar-queries.php. The manipulation leads to cross site scripting. The attack can be launched remotely. Upgrading to version 0.8.1 is able to address this issue. The patch is named 0842af8f8a556bc3e39b9ef758173b0a8a9ccbfc. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-222739.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/dd32/debug-bar/commit/0842af8f8a556bc3e39b9ef758173b0a8a9ccbfc"
+  },
+  {
+    "cve": "CVE-2013-10022",
+    "year": "2013",
+    "description": "A vulnerability, which was classified as problematic, has been found in BestWebSoft Contact Form Plugin 3.51 on WordPress. Affected by this issue is the function cntctfrm_display_form/cntctfrm_check_form of the file contact_form.php. The manipulation leads to cross site scripting. The attack may be launched remotely. Upgrading to version 3.52 is able to address this issue. The patch is identified as 642ef1dc1751ab6642ce981fe126325bb574f898. It is recommended to upgrade the affected component. VDB-225002 is the identifier assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/contact-form-plugin/commit/642ef1dc1751ab6642ce981fe126325bb574f898"
+  },
+  {
+    "cve": "CVE-2013-10023",
+    "year": "2013",
+    "description": "A vulnerability was found in Editorial Calendar Plugin up to 2.6 on WordPress. It has been declared as critical. Affected by this vulnerability is the function edcal_filter_where of the file edcal.php. The manipulation of the argument edcal_startDate/edcal_endDate leads to sql injection. The attack can be launched remotely. Upgrading to version 2.7 is able to address this issue. The patch is named a9277f13781187daee760b4dfd052b1b68e101cc. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-225151.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/wp-plugins/editorial-calendar/commit/a9277f13781187daee760b4dfd052b1b68e101cc"
+  },
+  {
+    "cve": "CVE-2013-10024",
+    "year": "2013",
+    "description": "A vulnerability has been found in Exit Strategy Plugin 1.55 on WordPress and classified as problematic. Affected by this vulnerability is an unknown functionality of the file exitpage.php. The manipulation leads to information disclosure. The attack can be launched remotely. Upgrading to version 1.59 is able to address this issue. The identifier of the patch is d964b8e961b2634158719f3328f16eda16ce93ac. It is recommended to upgrade the affected component. The identifier VDB-225265 was assigned to this vulnerability.",
+    "severity": "HIGH",
+    "url": "https://github.com/wp-plugins/exit-strategy/commit/d964b8e961b2634158719f3328f16eda16ce93ac"
+  },
+  {
+    "cve": "CVE-2013-10025",
+    "year": "2013",
+    "description": "A vulnerability was found in Exit Strategy Plugin 1.55 on WordPress and classified as problematic. Affected by this issue is the function exitpageadmin of the file exitpage.php. The manipulation leads to cross-site request forgery. The attack may be launched remotely. Upgrading to version 1.59 is able to address this issue. The patch is identified as d964b8e961b2634158719f3328f16eda16ce93ac. It is recommended to upgrade the affected component. VDB-225266 is the identifier assigned to this vulnerability.",
+    "severity": "HIGH",
+    "url": "https://github.com/wp-plugins/exit-strategy/commit/d964b8e961b2634158719f3328f16eda16ce93ac"
+  },
+  {
+    "cve": "CVE-2013-10026",
+    "year": "2013",
+    "description": "A vulnerability, which was classified as problematic, has been found in Mail Subscribe List Plugin up to 2.0.10 on WordPress. This issue affects some unknown processing of the file index.php. The manipulation of the argument sml_name/sml_email leads to cross site scripting. The attack may be initiated remotely. Upgrading to version 2.1 is able to address this issue. The identifier of the patch is 484970ef8285cae51d2de3bd4e4684d33c956c28. It is recommended to upgrade the affected component. The identifier VDB-227765 was assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/mail-subscribe-list/commit/484970ef8285cae51d2de3bd4e4684d33c956c28"
+  },
+  {
+    "cve": "CVE-2013-10027",
+    "year": "2013",
+    "description": "A vulnerability was found in Blogger Importer Plugin up to 0.5 on WordPress. It has been classified as problematic. Affected is the function start/restart of the file blogger-importer.php. The manipulation leads to cross-site request forgery. It is possible to launch the attack remotely. Upgrading to version 0.6 is able to address this issue. The patch is identified as b83fa4f862b0f19a54cfee76060ec9c2e7f7ca70. It is recommended to upgrade the affected component. VDB-230658 is the identifier assigned to this vulnerability.",
+    "severity": "HIGH",
+    "url": "https://github.com/wp-plugins/blogger-importer/commit/b83fa4f862b0f19a54cfee76060ec9c2e7f7ca70"
+  },
+  {
+    "cve": "CVE-2013-10028",
+    "year": "2013",
+    "description": "A vulnerability was found in EELV Newsletter Plugin 2.x on WordPress. It has been rated as problematic. Affected by this issue is the function style_newsletter of the file lettreinfo.php. The manipulation of the argument email leads to cross site scripting. The attack may be launched remotely. The name of the patch is 3339b42316c5edf73e56eb209b6a3bb3e868d6ed. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-230660.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/eelv-newsletter/commit/3339b42316c5edf73e56eb209b6a3bb3e868d6ed"
+  },
+  {
+    "cve": "CVE-2013-10029",
+    "year": "2013",
+    "description": "A vulnerability classified as problematic was found in Exit Box Lite Plugin up to 1.06 on WordPress. Affected by this vulnerability is the function exitboxadmin of the file wordpress-exit-box-lite.php. The manipulation leads to cross-site request forgery. The attack can be launched remotely. Upgrading to version 1.10 is able to address this issue. The patch is named fad26701addb862c51baf85c6e3cc136aa79c309. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-230671.",
+    "severity": "HIGH",
+    "url": "https://github.com/wp-plugins/wordpress-exit-box-lite/commit/fad26701addb862c51baf85c6e3cc136aa79c309"
+  },
+  {
+    "cve": "CVE-2013-10030",
+    "year": "2013",
+    "description": "A vulnerability, which was classified as problematic, has been found in Exit Box Lite Plugin up to 1.06 on WordPress. Affected by this issue is some unknown functionality of the file wordpress-exit-box-lite.php. The manipulation leads to information disclosure. The attack may be launched remotely. Upgrading to version 1.10 is able to address this issue. The name of the patch is fad26701addb862c51baf85c6e3cc136aa79c309. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-230672.",
+    "severity": "HIGH",
+    "url": "https://github.com/wp-plugins/wordpress-exit-box-lite/commit/fad26701addb862c51baf85c6e3cc136aa79c309"
+  },
+  {
+    "cve": "CVE-2013-1631",
+    "year": "2013",
+    "description": "Verax NMS prior to 2.1.0 leaks connection details when any user executes a Repair Table action",
+    "severity": "MEDIUM",
+    "url": "http://www.securityfocus.com/bid/58334"
+  },
+  {
+    "cve": "CVE-2013-1752",
+    "year": "2013",
+    "description": "Rejected reason: Various versions of Python do not properly restrict readline calls, which allows remote attackers to cause a denial of service (memory consumption) via a long string, related to (1) httplib - fixed in 2.7.4, 2.6.9, and 3.3.3; (2) ftplib - fixed in 2.7.6, 2.6.9, 3.3.3; (3) imaplib - not yet fixed in 2.7.x, fixed in 2.6.9, 3.3.3; (4) nntplib - fixed in 2.7.6, 2.6.9, 3.3.3; (5) poplib - not yet fixed in 2.7.x, fixed in 2.6.9, 3.3.3; and (6) smtplib - not yet fixed in 2.7.x, fixed in 2.6.9, not yet fixed in 3.3.x. NOTE: this was REJECTed because it is incompatible with CNT1 \"Independently Fixable\" in the CVE Counting Decisions",
+    "severity": "N/A",
+    "url": ""
+  },
+  {
+    "cve": "CVE-2013-1771",
+    "year": "2013",
+    "description": "The web server Monkeyd produces a world-readable log (/var/log/monkeyd/master.log) on gentoo.",
+    "severity": "HIGH",
+    "url": "http://www.openwall.com/lists/oss-security/2013/02/26/10"
+  },
+  {
+    "cve": "CVE-2013-1916",
+    "year": "2013",
+    "description": "In WordPress Plugin User Photo 0.9.4, when a photo is uploaded, it is only partially validated and it is possible to upload a backdoor on the server hosting WordPress. This backdoor can be called (executed) even if the photo has not been yet approved.",
+    "severity": "HIGH",
+    "url": "https://plugins.trac.wordpress.org/changeset/347137"
+  },
+  {
+    "cve": "CVE-2013-2233",
+    "year": "2013",
+    "description": "Ansible before 1.2.1 makes it easier for remote attackers to conduct man-in-the-middle attacks by leveraging failure to cache SSH host keys.",
+    "severity": "HIGH",
+    "url": "http://www.openwall.com/lists/oss-security/2013/07/01/2"
+  },
+  {
+    "cve": "CVE-2013-2294",
+    "year": "2013",
+    "description": "Multiple cross-site scripting (XSS) vulnerabilities in ViewGit before 0.0.7 allow remote repository users to inject arbitrary web script or HTML via a (1) tag name to the Shortlog table in templates/shortlog.php or branch name to the (2) Shortlog table in templates/shortlog.php or (3) Heads table in plates/summary.php.",
+    "severity": "MEDIUM",
+    "url": "http://freecode.com/projects/viewgit/releases/353086"
+  },
+  {
+    "cve": "CVE-2013-2516",
+    "year": "2013",
+    "description": "Vulnerability in FileUtils v0.7, Ruby Gem Fileutils <= v0.7 Command Injection vulnerability in user supplied url variable that is passed to the shell.",
+    "severity": "HIGH",
+    "url": "http://rubygems.org/gems/fileutils"
+  },
+  {
+    "cve": "CVE-2013-2569",
+    "year": "2013",
+    "description": "A Security Bypass vulnerability exists in Zavio IP Cameras through 1.6.3 because the RTSP protocol authentication is disabled by default, which could let a malicious user obtain unauthorized access to the live video stream.",
+    "severity": "HIGH",
+    "url": "http://www.securityfocus.com/bid/60191"
+  },
+  {
+    "cve": "CVE-2013-2675",
+    "year": "2013",
+    "description": "Brother MFC-9970CDW 1.10 devices with Firmware L contain a Frameable response (Clickjacking) vulnerability which could allow remote attackers to obtain sensitive information.",
+    "severity": "MEDIUM",
+    "url": "http://packetstormsecurity.com/files/121553/Brother-MFC-9970CDW-Firmware-0D-Cross-Site-Scripting.html"
+  },
+  {
+    "cve": "CVE-2013-2764",
+    "year": "2013",
+    "description": "Secure Entry Server before 4.7.0 contains a URI Redirection vulnerability which could allow remote attackers to conduct phishing attacks due to HSP_AbsoluteRedirects being disabled by default.",
+    "severity": "MEDIUM",
+    "url": "http://www.securityfocus.com/bid/64422"
+  },
+  {
+    "cve": "CVE-2013-2951",
+    "year": "2013",
+    "description": "IBM WebSphere Portal 7.0.0.x and 8.0.0.x write passwords to a trace file when tracing is enabled for the Selfcare Portlet (Profile Management), which allows local users to obtain sensitive information by reading the file. IBM X-Force ID: 83621.",
+    "severity": "HIGH",
+    "url": "http://www-01.ibm.com/support/docview.wss?uid=swg21642097"
+  },
+  {
+    "cve": "CVE-2013-3067",
+    "year": "2013",
+    "description": "Linksys WRT310Nv2 2.0.0.1 is vulnerable to XSS.",
+    "severity": "MEDIUM",
+    "url": "http://securityevaluators.com/knowledge/case_studies/routers/linksys_wrt310v2.php"
+  },
+  {
+    "cve": "CVE-2013-4184",
+    "year": "2013",
+    "description": "Perl module Data::UUID from CPAN version 1.219 vulnerable to symlink attacks",
+    "severity": "MEDIUM",
+    "url": "http://www.openwall.com/lists/oss-security/2013/07/31/4"
+  },
+  {
+    "cve": "CVE-2013-4317",
+    "year": "2013",
+    "description": "In Apache CloudStack 4.1.0 and 4.1.1, when calling the CloudStack API call listProjectAccounts as a regular, non-administrative user, the user is able to see information for accounts other than their own.",
+    "severity": "MEDIUM",
+    "url": "http://seclists.org/oss-sec/2018/q1/1"
+  },
+  {
+    "cve": "CVE-2013-4367",
+    "year": "2013",
+    "description": "ovirt-engine 3.2 running on Linux kernel 3.1 and newer creates certain files world-writeable due to an upstream kernel change which impacted how python's os.chmod() works when passed a mode of '-1'.",
+    "severity": "HIGH",
+    "url": "https://access.redhat.com/security/cve/cve-2013-4367"
+  },
+  {
+    "cve": "CVE-2013-4409",
+    "year": "2013",
+    "description": "An eval() vulnerability exists in Python Software Foundation Djblets 0.7.21 and Beanbag Review Board before 1.7.15 when parsing JSON requests.",
+    "severity": "CRITICAL",
+    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2013-November/120619.html"
+  },
+  {
+    "cve": "CVE-2013-4410",
+    "year": "2013",
+    "description": "ReviewBoard: has an access-control problem in REST API",
+    "severity": "HIGH",
+    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2013-November/120619.html"
+  },
+  {
+    "cve": "CVE-2013-4423",
+    "year": "2013",
+    "description": "CloudForms stores user passwords in recoverable format",
+    "severity": "MEDIUM",
+    "url": "https://access.redhat.com/security/cve/cve-2013-4423"
+  },
+  {
+    "cve": "CVE-2013-4441",
+    "year": "2013",
+    "description": "The Phonemes mode in Pwgen 2.06 generates predictable passwords, which makes it easier for context-dependent attackers to guess the password via a brute-force attack.",
+    "severity": "CRITICAL",
+    "url": "http://www.openwall.com/lists/oss-security/2013/06/06/1"
+  },
+  {
+    "cve": "CVE-2013-4451",
+    "year": "2013",
+    "description": "gitolite commit fa06a34 through 3.5.3 might allow attackers to have unspecified impact via vectors involving world-writable permissions when creating (1) ~/.gitolite.rc, (2) ~/.gitolite, or (3) ~/repositories/gitolite-admin.git on fresh installs.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/sitaramc/gitolite/commit/3dad4f8e3214d6ab5f71823019a624fa48b055a3"
+  },
+  {
+    "cve": "CVE-2013-4454",
+    "year": "2013",
+    "description": "WordPress Portable phpMyAdmin Plugin 1.4.1 has Multiple Security Bypass Vulnerabilities",
+    "severity": "CRITICAL",
+    "url": "http://www.openwall.com/lists/oss-security/2013/10/22/3"
+  },
+  {
+    "cve": "CVE-2013-4462",
+    "year": "2013",
+    "description": "WordPress Portable phpMyAdmin Plugin has an authentication bypass vulnerability",
+    "severity": "CRITICAL",
+    "url": "http://www.openwall.com/lists/oss-security/2013/10/24/1"
+  },
+  {
+    "cve": "CVE-2013-4518",
+    "year": "2013",
+    "description": "RHUI (Red Hat Update Infrastructure) 2.1.3 has world readable PKI entitlement certificates",
+    "severity": "MEDIUM",
+    "url": "https://access.redhat.com/security/cve/cve-2013-4518"
+  },
+  {
+    "cve": "CVE-2013-4536",
+    "year": "2013",
+    "description": "An user able to alter the savevm data (either on the disk or over the wire during migration) could use this flaw to to corrupt QEMU process memory on the (destination) host, which could potentially result in arbitrary code execution on the host with the privileges of the QEMU process.",
+    "severity": "HIGH",
+    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1066401"
+  },
+  {
+    "cve": "CVE-2013-5594",
+    "year": "2013",
+    "description": "Mozilla Firefox before 25 allows modification of anonymous content of pluginProblem.xml binding",
+    "severity": "MEDIUM",
+    "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=914618"
+  },
+  {
+    "cve": "CVE-2013-6234",
+    "year": "2013",
+    "description": "Unrestricted file upload vulnerability in the Worksheet designer in SpagoBI before 4.1 allows remote authenticated users to execute arbitrary code by uploading a file with an executable extension, then accessing it via a direct request to the file in an unspecified directory, aka \"XSS File Upload.\"",
+    "severity": "HIGH",
+    "url": "http://packetstormsecurity.com/files/125497"
+  },
+  {
+    "cve": "CVE-2013-6295",
+    "year": "2013",
+    "description": "PrestaShop 1.5.5 vulnerable to privilege escalation via a Salesman account via upload module",
+    "severity": "CRITICAL",
+    "url": "http://davidsopaslabs.blogspot.com/2013/"
+  },
+  {
+    "cve": "CVE-2013-6356",
+    "year": "2013",
+    "description": "Rejected reason: DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: none.  Reason: This candidate was withdrawn by its CNA.  Further investigation showed that it was not a security issue because of dependency on the victim's direct involvement in modifying the Windows registry to enable the attack.  Notes: none",
+    "severity": "N/A",
+    "url": ""
+  },
+  {
+    "cve": "CVE-2013-6360",
+    "year": "2013",
+    "description": "TRENDnet TS-S402 has a backdoor to enable TELNET.",
+    "severity": "HIGH",
+    "url": "http://firmware.re/usenixsec14/"
+  },
+  {
+    "cve": "CVE-2013-6811",
+    "year": "2013",
+    "description": "Multiple cross-site request forgery (CSRF) vulnerabilities in the D-Link DSL-6740U gateway (Rev. H1) allow remote attackers to hijack the authentication of administrators for requests that change administrator credentials or enable remote management services to (1) Custom Services in Port Forwarding, (2) Port Triggering Entries, (3) URL Filters in Parental Control, (4) Print Server settings, (5) QoS Queue Setup, or (6) QoS Classification Entries.",
+    "severity": "HIGH",
+    "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/89612"
+  },
+  {
+    "cve": "CVE-2013-7072",
+    "year": "2013",
+    "description": "Rejected reason: DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: none.  Reason: This candidate was withdrawn by its CNA.  Further investigation showed that it was not a unique security issue, and some vulnerability databases had associated inapplicable details with this ID.  Notes: none",
+    "severity": "N/A",
+    "url": ""
+  },
+  {
+    "cve": "CVE-2013-7089",
+    "year": "2013",
+    "description": "ClamAV before 0.97.7: dbg_printhex possible information leak",
+    "severity": "HIGH",
+    "url": "http://security.gentoo.org/glsa/glsa-201405-08.xml"
+  },
+  {
+    "cve": "CVE-2013-7171",
+    "year": "2013",
+    "description": "Slackware 14.0 and 14.1, and Slackware LLVM 3.0-i486-2 and 3.3-i486-2, contain world-writable permissions on the /tmp directory which could allow remote attackers to execute arbitrary code with root privileges.",
+    "severity": "CRITICAL",
+    "url": "http://www.openwall.com/lists/oss-security/2013/12/20/1"
+  },
+  {
+    "cve": "CVE-2013-7172",
+    "year": "2013",
+    "description": "Slackware 13.1, 13.37, 14.0 and 14.1 contain world-writable permissions on the iodbctest and iodbctestw programs within the libiodbc package, which could allow local users to use RPATH information to execute arbitrary code with root privileges.",
+    "severity": "HIGH",
+    "url": "http://www.openwall.com/lists/oss-security/2013/12/20/1"
+  },
+  {
+    "cve": "CVE-2013-7464",
+    "year": "2013",
+    "description": "In csrf-magic before 1.0.4, if $GLOBALS['csrf']['secret'] is not configured, the Anti-CSRF Token used is predictable and would permit an attacker to bypass the CSRF protections, because an automatically generated secret is not used.",
+    "severity": "HIGH",
+    "url": "http://csrf.htmlpurifier.org/news/2013/0717-1.0.4-released"
+  },
+  {
+    "cve": "CVE-2013-7470",
+    "year": "2013",
+    "description": "cipso_v4_validate in include/net/cipso_ipv4.h in the Linux kernel before 3.11.7, when CONFIG_NETLABEL is disabled, allows attackers to cause a denial of service (infinite loop and crash), as demonstrated by icmpsic, a different vulnerability than CVE-2013-0310.",
+    "severity": "MEDIUM",
+    "url": "https://cdn.kernel.org/pub/linux/kernel/v3.x/ChangeLog-3.11.7"
+  },
+  {
+    "cve": "CVE-2013-7484",
+    "year": "2013",
+    "description": "Zabbix before 5.0 represents passwords in the users table with unsalted MD5.",
+    "severity": "HIGH",
+    "url": "https://lists.debian.org/debian-lts-announce/2023/08/msg00027.html"
+  },
+  {
+    "cve": "CVE-2013-7487",
+    "year": "2013",
+    "description": "On Swann DVR04B, DVR08B, DVR-16CIF, and DVR16B devices, raysharpdvr application has a vulnerable call to \u201csystem\u201d, which allows remote attackers to execute arbitrary code via TCP port 9000.",
+    "severity": "CRITICAL",
+    "url": "http://console-cowboys.blogspot.com/2013/01/swann-song-dvr-insecurity.html"
+  }
+]

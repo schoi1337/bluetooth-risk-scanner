@@ -23,9 +23,11 @@ ENV/
 
 # Report outputs
 *.html
-*.json
+scan_report.json
+report.json
 example_reports/
 output/
+fingerprints/*.json
 
 # dotenv and secrets
 .env

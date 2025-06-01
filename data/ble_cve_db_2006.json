@@ -1,0 +1,16 @@
+[
+  {
+    "cve": "CVE-2006-10001",
+    "year": "2006",
+    "description": "A vulnerability, which was classified as problematic, was found in Subscribe to Comments Plugin up to 2.0.7 on WordPress. This affects an unknown part of the file subscribe-to-comments.php. The manipulation leads to cross site scripting. It is possible to initiate the attack remotely. Upgrading to version 2.0.8 is able to address this issue. The identifier of the patch is 9683bdf462fcac2f32b33be98f0b96497fbd1bb6. It is recommended to upgrade the affected component. The identifier VDB-222321 was assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/subscribe-to-comments/commit/9683bdf462fcac2f32b33be98f0b96497fbd1bb6"
+  },
+  {
+    "cve": "CVE-2006-4245",
+    "year": "2006",
+    "description": "archivemail 0.6.2 uses temporary files insecurely leading to a possible race condition.",
+    "severity": "HIGH",
+    "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=385253"
+  }
+]

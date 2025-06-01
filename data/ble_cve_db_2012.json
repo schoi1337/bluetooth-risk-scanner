@@ -1,0 +1,345 @@
+[
+  {
+    "cve": "CVE-2012-0051",
+    "year": "2012",
+    "description": "Tahoe-LAFS 1.9.0 fails to ensure integrity which allows remote attackers to corrupt mutable files or directories upon retrieval.",
+    "severity": "HIGH",
+    "url": "http://www.openwall.com/lists/oss-security/2012/01/15/11"
+  },
+  {
+    "cve": "CVE-2012-0785",
+    "year": "2012",
+    "description": "Hash collision attack vulnerability in Jenkins before 1.447, Jenkins LTS before 1.424.2, and Jenkins Enterprise by CloudBees 1.424.x before 1.424.2.1 and 1.400.x before 1.400.0.11 could allow remote attackers to cause a considerable CPU load, aka \"the Hash DoS attack.\"",
+    "severity": "HIGH",
+    "url": "http://www.openwall.com/lists/oss-security/2012/01/20/8"
+  },
+  {
+    "cve": "CVE-2012-0843",
+    "year": "2012",
+    "description": "uzbl: Information disclosure via world-readable cookies storage file",
+    "severity": "MEDIUM",
+    "url": "http://www.openwall.com/lists/oss-security/2012/02/11/3"
+  },
+  {
+    "cve": "CVE-2012-0844",
+    "year": "2012",
+    "description": "Information-disclosure vulnerability in Netsurf through 2.8 due to a world-readable cookie jar.",
+    "severity": "MEDIUM",
+    "url": "http://www.openwall.com/lists/oss-security/2012/02/11/3"
+  },
+  {
+    "cve": "CVE-2012-0877",
+    "year": "2012",
+    "description": "PyXML: Hash table collisions CPU usage Denial of Service",
+    "severity": "HIGH",
+    "url": "http://seclists.org/oss-sec/2014/q3/96"
+  },
+  {
+    "cve": "CVE-2012-0955",
+    "year": "2012",
+    "description": "software-properties was vulnerable to a person-in-the-middle attack due to incorrect TLS certificate validation in softwareproperties/ppa.py. software-properties didn't check TLS certificates under python2 and only checked certificates under python3 if a valid certificate bundle was provided. Fixed in software-properties version 0.92.",
+    "severity": "HIGH",
+    "url": "https://code.launchpad.net/~cyphermox/software-properties/lp1036839/+merge/119753"
+  },
+  {
+    "cve": "CVE-2012-10002",
+    "year": "2012",
+    "description": "A vulnerability was found in ahmyi RivetTracker. It has been declared as problematic. Affected by this vulnerability is the function changeColor of the file css.php. The manipulation of the argument set_css leads to cross site scripting. The attack can be launched remotely. The patch is named 45a0f33876d58cb7e4a0f17da149e58fc893b858. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-217267.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/ahmyi/rivettracker/commit/45a0f33876d58cb7e4a0f17da149e58fc893b858"
+  },
+  {
+    "cve": "CVE-2012-10003",
+    "year": "2012",
+    "description": "A vulnerability, which was classified as problematic, has been found in ahmyi RivetTracker. This issue affects some unknown processing. The manipulation of the argument $_SERVER['PHP_SELF'] leads to cross site scripting. The attack may be initiated remotely. The patch is named f053c5cc2bc44269b0496b5f275e349928a92ef9. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-217271.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/ahmyi/rivettracker/commit/f053c5cc2bc44269b0496b5f275e349928a92ef9"
+  },
+  {
+    "cve": "CVE-2012-10004",
+    "year": "2012",
+    "description": "A vulnerability was found in backdrop-contrib Basic Cart on Drupal. It has been classified as problematic. Affected is the function basic_cart_checkout_form_submit of the file basic_cart.cart.inc. The manipulation leads to cross site scripting. It is possible to launch the attack remotely. Upgrading to version 1.x-1.1.1 is able to address this issue. The patch is identified as a10424ccd4b3b4b433cf33b73c1ad608b11890b4. It is recommended to upgrade the affected component. VDB-217950 is the identifier assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/backdrop-contrib/basic_cart/commit/a10424ccd4b3b4b433cf33b73c1ad608b11890b4"
+  },
+  {
+    "cve": "CVE-2012-10005",
+    "year": "2012",
+    "description": "A vulnerability has been found in manikandan170890 php-form-builder-class and classified as problematic. Affected by this vulnerability is an unknown functionality of the file PFBC/Element/Textarea.php of the component Textarea Handler. The manipulation of the argument value leads to cross site scripting. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The patch is named 74897993818d826595fd5857038e6703456a594a. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-218155.",
+    "severity": "MEDIUM",
+    "url": "https://code.google.com/archive/p/php-form-builder-class/issues/184"
+  },
+  {
+    "cve": "CVE-2012-10007",
+    "year": "2012",
+    "description": "A vulnerability was found in madgicweb BuddyStream Plugin up to 3.2.7 on WordPress. It has been declared as problematic. Affected by this vulnerability is an unknown functionality of the file ShareBox.php. The manipulation of the argument content/link/shares leads to cross site scripting. The attack can be launched remotely. Upgrading to version 3.2.8 is able to address this issue. The patch is named 7d5b9a89a27711aad76fd55ab4cc4185b545a1d0. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-221479.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/madgicweb/buddystream/commit/7d5b9a89a27711aad76fd55ab4cc4185b545a1d0"
+  },
+  {
+    "cve": "CVE-2012-10008",
+    "year": "2012",
+    "description": "A vulnerability, which was classified as critical, has been found in uakfdotb oneapp. This issue affects some unknown processing. The manipulation leads to sql injection. The attack may be initiated remotely. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The patch is named 5413ac804f1b09f9decc46a6c37b08352c49669c. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-221483.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/uakfdotb/oneapp/commit/5413ac804f1b09f9decc46a6c37b08352c49669c"
+  },
+  {
+    "cve": "CVE-2012-10009",
+    "year": "2012",
+    "description": "A vulnerability was found in 404like Plugin up to 1.0.2 on WordPress. It has been classified as critical. Affected is the function checkPage of the file 404Like.php. The manipulation of the argument searchWord leads to sql injection. It is possible to launch the attack remotely. Upgrading to version 1.0.2 is able to address this issue. The name of the patch is 2c4b589d27554910ab1fd104ddbec9331b540f7f. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-223404.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/wp-plugins/404like/commit/2c4b589d27554910ab1fd104ddbec9331b540f7f"
+  },
+  {
+    "cve": "CVE-2012-10010",
+    "year": "2012",
+    "description": "A vulnerability was found in BestWebSoft Contact Form 3.21. It has been classified as problematic. This affects the function cntctfrm_settings_page of the file contact_form.php. The manipulation leads to cross-site request forgery. It is possible to initiate the attack remotely. Upgrading to version 3.22 is able to address this issue. The identifier of the patch is 8398d96ff0fe45ec9267d7259961c2ef89ed8005. It is recommended to upgrade the affected component. The identifier VDB-225321 was assigned to this vulnerability.",
+    "severity": "HIGH",
+    "url": "https://github.com/wp-plugins/contact-form-plugin/commit/8398d96ff0fe45ec9267d7259961c2ef89ed8005"
+  },
+  {
+    "cve": "CVE-2012-10011",
+    "year": "2012",
+    "description": "A vulnerability was found in HD FLV PLayer Plugin up to 1.7 on WordPress. It has been rated as critical. Affected by this issue is the function hd_add_media/hd_update_media of the file functions.php. The manipulation of the argument name leads to sql injection. The attack may be launched remotely. Upgrading to version 1.8 is able to address this issue. The patch is identified as 34d66b9f3231a0e2dc0e536a6fe615d736e863f7. It is recommended to upgrade the affected component. VDB-225350 is the identifier assigned to this vulnerability.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/wp-plugins/contus-hd-flv-player/commit/34d66b9f3231a0e2dc0e536a6fe615d736e863f7"
+  },
+  {
+    "cve": "CVE-2012-10012",
+    "year": "2012",
+    "description": "A vulnerability has been found in BestWebSoft Facebook Like Button up to 2.13 and classified as problematic. Affected by this vulnerability is the function fcbk_bttn_plgn_settings_page of the file facebook-button-plugin.php. The manipulation leads to cross-site request forgery. The attack can be launched remotely. The patch is named 33144ae5a45ed07efe7fceca901d91365fdbf7cb. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-225355.",
+    "severity": "HIGH",
+    "url": "https://github.com/wp-plugins/facebook-button-plugin/commit/33144ae5a45ed07efe7fceca901d91365fdbf7cb"
+  },
+  {
+    "cve": "CVE-2012-10013",
+    "year": "2012",
+    "description": "A vulnerability was found in Kau-Boy Backend Localization Plugin up to 1.6.1 on WordPress. It has been rated as problematic. This issue affects some unknown processing of the file backend_localization.php. The manipulation leads to cross site scripting. The attack may be initiated remotely. Upgrading to version 2.0 is able to address this issue. The patch is named 43dc96defd7944da12ff116476a6890acd7dd24b. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-227231.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/kau-boys-backend-localization/commit/43dc96defd7944da12ff116476a6890acd7dd24b"
+  },
+  {
+    "cve": "CVE-2012-10014",
+    "year": "2012",
+    "description": "A vulnerability classified as problematic has been found in Kau-Boy Backend Localization Plugin 2.0 on WordPress. Affected is the function backend_localization_admin_settings/backend_localization_save_setting/backend_localization_login_form/localize_backend of the file backend_localization.php. The manipulation leads to cross site scripting. It is possible to launch the attack remotely. Upgrading to version 2.0.1 is able to address this issue. The name of the patch is 36f457ee16dd114e510fd91a3ea9fbb3c1f87184. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-227232.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/kau-boys-backend-localization/commit/36f457ee16dd114e510fd91a3ea9fbb3c1f87184"
+  },
+  {
+    "cve": "CVE-2012-10015",
+    "year": "2012",
+    "description": "A vulnerability was found in BestWebSoft Twitter Plugin up to 2.14 on WordPress. It has been classified as problematic. Affected is the function twttr_settings_page of the file twitter.php of the component Settings Page. The manipulation leads to cross-site request forgery. It is possible to launch the attack remotely. Upgrading to version 2.15 is able to address this issue. The patch is identified as a6d4659cbb2cbf18ccb0fb43549d5113d74e0146. It is recommended to upgrade the affected component. VDB-230154 is the identifier assigned to this vulnerability.",
+    "severity": "HIGH",
+    "url": "https://github.com/wp-plugins/twitter-plugin/commit/a6d4659cbb2cbf18ccb0fb43549d5113d74e0146"
+  },
+  {
+    "cve": "CVE-2012-10016",
+    "year": "2012",
+    "description": "A vulnerability classified as problematic has been found in Halulu simple-download-button-shortcode Plugin 1.0 on WordPress. Affected is an unknown function of the file simple-download-button_dl.php of the component Download Handler. The manipulation of the argument file leads to information disclosure. It is possible to launch the attack remotely. Upgrading to version 1.1 is able to address this issue. The patch is identified as e648a8706818297cf02a665ae0bae1c069dea5f1. It is recommended to upgrade the affected component. VDB-242190 is the identifier assigned to this vulnerability.",
+    "severity": "HIGH",
+    "url": "https://github.com/wp-plugins/simple-download-button-shortcode/commit/e648a8706818297cf02a665ae0bae1c069dea5f1"
+  },
+  {
+    "cve": "CVE-2012-10017",
+    "year": "2012",
+    "description": "A vulnerability was found in BestWebSoft Portfolio Plugin up to 2.04 on WordPress. It has been classified as problematic. This affects an unknown part. The manipulation leads to cross-site request forgery. It is possible to initiate the attack remotely. Upgrading to version 2.06 is able to address this issue. The patch is named 68af950330c3202a706f0ae9bbb52ceaa17dda9d. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-248955.",
+    "severity": "HIGH",
+    "url": "https://github.com/wp-plugins/portfolio/commit/68af950330c3202a706f0ae9bbb52ceaa17dda9d"
+  },
+  {
+    "cve": "CVE-2012-10018",
+    "year": "2012",
+    "description": "The Mapplic and Mapplic Lite plugins for WordPress are vulnerable to Server-Side Request Forgery in versions up to, and including 6.1, 1.0 respectively. This makes it possible for attackers to forgery requests coming from a vulnerable site's server and ultimately perform an XSS attack if requesting an SVG file.",
+    "severity": "N/A",
+    "url": "https://packetstormsecurity.com/files/161919/"
+  },
+  {
+    "cve": "CVE-2012-1093",
+    "year": "2012",
+    "description": "The init script in the Debian x11-common package before 1:7.6+12 is vulnerable to a symlink attack that can lead to a privilege escalation during package installation.",
+    "severity": "HIGH",
+    "url": "http://vladz.devzero.fr/012_x11-common-vuln.html"
+  },
+  {
+    "cve": "CVE-2012-1102",
+    "year": "2012",
+    "description": "It was discovered that the XML::Atom Perl module before version 0.39 did not disable external entities when parsing XML from potentially untrusted sources. This may allow attackers to gain read access to otherwise protected resources, depending on how the library is used.",
+    "severity": "HIGH",
+    "url": "https://metacpan.org/release/MIYAGAWA/XML-Atom-0.39/source/Changes"
+  },
+  {
+    "cve": "CVE-2012-1157",
+    "year": "2012",
+    "description": "Moodle before 2.2.2 has a default repository capabilities issue where all repositories are viewable by all users by default",
+    "severity": "MEDIUM",
+    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2012-April/077635.html"
+  },
+  {
+    "cve": "CVE-2012-1158",
+    "year": "2012",
+    "description": "Moodle before 2.2.2 has a course information leak in gradebook where users are able to see hidden grade items in export",
+    "severity": "MEDIUM",
+    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2012-April/077635.html"
+  },
+  {
+    "cve": "CVE-2012-2092",
+    "year": "2012",
+    "description": "A Security Bypass vulnerability exists in Ubuntu Cobbler before 2,2,2 in the cobbler-ubuntu-import script due to an error when verifying the GPG signature.",
+    "severity": "MEDIUM",
+    "url": "http://www.openwall.com/lists/oss-security/2012/04/10/14"
+  },
+  {
+    "cve": "CVE-2012-2160",
+    "year": "2012",
+    "description": "IBM Rational Change 5.3 is vulnerable to cross-site scripting, caused by improper validation of user-supplied input. A remote attacker could exploit this vulnerability using the SUPP_TEMPLATE_FLAG parameter in a specially-crafted URL to execute script in a victim's Web browser within the security context of the hosting Web site, once the URL is clicked. An attacker could use this vulnerability to steal the victim's cookie-based authentication credentials.",
+    "severity": "MEDIUM",
+    "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/74753"
+  },
+  {
+    "cve": "CVE-2012-2201",
+    "year": "2012",
+    "description": "IBM WebSphere MQ 7.1 is vulnerable to a denial of service, caused by an error when handling user ids. A remote attacker could exploit this vulnerability to bypass the security configuration setup on a SVRCONN channel and flood the queue manager.",
+    "severity": "HIGH",
+    "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/76799"
+  },
+  {
+    "cve": "CVE-2012-2248",
+    "year": "2012",
+    "description": "An issue was discovered in dhclient 4.3.1-6 due to an embedded path variable.",
+    "severity": "HIGH",
+    "url": "http://www.openwall.com/lists/oss-security/2012/10/15/1"
+  },
+  {
+    "cve": "CVE-2012-2666",
+    "year": "2012",
+    "description": "golang/go in 1.0.2 fixes all.bash on shared machines. dotest() in src/pkg/debug/gosym/pclntab_test.go creates a temporary file with predicable name and executes it as shell script.",
+    "severity": "CRITICAL",
+    "url": "https://bugzilla.suse.com/show_bug.cgi?id=765455"
+  },
+  {
+    "cve": "CVE-2012-3336",
+    "year": "2012",
+    "description": "IBM InfoSphere Guardium 8.0, 8.01, and 8.2 is vulnerable to SQL injection. A remote authenticated attacker could send specially-crafted SQL statements to multiple scripts, which could allow the attacker to view, add, modify or delete information in the back-end database. IBM X-Force ID: 78282.",
+    "severity": "HIGH",
+    "url": "http://www-01.ibm.com/support/docview.wss?uid=swg21611130"
+  },
+  {
+    "cve": "CVE-2012-3340",
+    "year": "2012",
+    "description": "IBM InfoSphere Guardium 8.0, 8.01, and 8.2 is vulnerable to XML external entity injection, caused by improper validation of user-supplied input. A remote authenticated attacker could exploit this vulnerability to obtain sensitive information. IBM X-Force ID: 78291.",
+    "severity": "MEDIUM",
+    "url": "http://www-01.ibm.com/support/docview.wss?uid=swg21611128"
+  },
+  {
+    "cve": "CVE-2012-3341",
+    "year": "2012",
+    "description": "IBM InfoSphere Guardium 7.0, 8.0, 8.01, and 8.2 is vulnerable to cross-site scripting, caused by improper validation of user-supplied input. A remote attacker could exploit this vulnerability using a specially-crafted URL to execute script in a victim's Web browser within the security context of the hosting Web site, once the URL is clicked. An attacker could use this vulnerability to steal the victim's cookie-based authentication credentials. IBM X-Force ID: 78294.",
+    "severity": "MEDIUM",
+    "url": "http://www-01.ibm.com/support/docview.wss?uid=swg21611131"
+  },
+  {
+    "cve": "CVE-2012-3353",
+    "year": "2012",
+    "description": "The Apache Sling JCR ContentLoader 2.1.4 XmlReader used in the Sling JCR content loader module makes it possible to import arbitrary files in the content repository, including local files, causing potential information leaks. Users should upgrade to version 2.1.6 of the JCR ContentLoader",
+    "severity": "HIGH",
+    "url": "https://issues.apache.org/jira/browse/SLING-2512"
+  },
+  {
+    "cve": "CVE-2012-3409",
+    "year": "2012",
+    "description": "ecryptfs-utils: suid helper does not restrict mounting filesystems with nosuid,nodev which creates a possible privilege escalation",
+    "severity": "HIGH",
+    "url": "http://www.openwall.com/lists/oss-security/2012/07/11/23"
+  },
+  {
+    "cve": "CVE-2012-3824",
+    "year": "2012",
+    "description": "In Arial Campaign Enterprise before 11.0.551, multiple pages are accessible without authentication or authorization.",
+    "severity": "HIGH",
+    "url": "http://sadgeeksinsnow.blogspot.dk/2012/10/my-first-experiences-bug-hunting-part-2.html"
+  },
+  {
+    "cve": "CVE-2012-4480",
+    "year": "2012",
+    "description": "mom creates world-writable pid files in /var/run",
+    "severity": "HIGH",
+    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2012-October/089658.html"
+  },
+  {
+    "cve": "CVE-2012-5474",
+    "year": "2012",
+    "description": "The file /etc/openstack-dashboard/local_settings within Red Hat OpenStack Platform 2.0 and RHOS Essex Release (python-django-horizon package before 2012.1.1) is world readable and exposes the secret key value.",
+    "severity": "MEDIUM",
+    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2012-November/092841.html"
+  },
+  {
+    "cve": "CVE-2012-5476",
+    "year": "2012",
+    "description": "Within the RHOS Essex Preview (2012.2) of the OpenStack dashboard package, the file /etc/quantum/quantum.conf is world readable which exposes the admin password and token value.",
+    "severity": "MEDIUM",
+    "url": "https://access.redhat.com/security/cve/cve-2012-5476"
+  },
+  {
+    "cve": "CVE-2012-5577",
+    "year": "2012",
+    "description": "Python keyring lib before 0.10 created keyring files with world-readable permissions.",
+    "severity": "HIGH",
+    "url": "http://www.openwall.com/lists/oss-security/2012/11/27/3"
+  },
+  {
+    "cve": "CVE-2012-5578",
+    "year": "2012",
+    "description": "Python keyring has insecure permissions on new databases allowing world-readable files to be created",
+    "severity": "MEDIUM",
+    "url": "http://www.openwall.com/lists/oss-security/2012/11/27/4"
+  },
+  {
+    "cve": "CVE-2012-5628",
+    "year": "2012",
+    "description": "gofer before 0.68 uses world-writable permissions for /var/lib/gofer/journal/watchdog, which allows local users to cause a denial of service by removing journal entries.",
+    "severity": "MEDIUM",
+    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=884854"
+  },
+  {
+    "cve": "CVE-2012-5663",
+    "year": "2012",
+    "description": "The isearch package (textproc/isearch) before 1.47.01nb1 uses the tempnam() function to create insecure temporary files into a publicly-writable area (/tmp).",
+    "severity": "HIGH",
+    "url": "http://gnats.netbsd.org/47360"
+  },
+  {
+    "cve": "CVE-2012-6124",
+    "year": "2012",
+    "description": "A casting error in Chicken before 4.8.0 on 64-bit platform caused the random number generator to return a constant value. NOTE: the vendor states \"This function wasn't used for security purposes (and is advertised as being unsuitable).\"",
+    "severity": "MEDIUM",
+    "url": "http://www.openwall.com/lists/oss-security/2013/02/08/2"
+  },
+  {
+    "cve": "CVE-2012-6125",
+    "year": "2012",
+    "description": "Chicken before 4.8.0 is susceptible to algorithmic complexity attacks related to hash table collisions.",
+    "severity": "CRITICAL",
+    "url": "http://www.openwall.com/lists/oss-security/2013/02/08/2"
+  },
+  {
+    "cve": "CVE-2012-6685",
+    "year": "2012",
+    "description": "Nokogiri before 1.5.4 is vulnerable to XXE attacks",
+    "severity": "HIGH",
+    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1178970"
+  },
+  {
+    "cve": "CVE-2012-6708",
+    "year": "2012",
+    "description": "jQuery before 1.9.0 is vulnerable to Cross-site Scripting (XSS) attacks. The jQuery(strInput) function does not differentiate selectors from HTML in a reliable fashion. In vulnerable versions, jQuery determined whether the input was HTML by looking for the '<' character anywhere in the string, giving attackers more flexibility when attempting to construct a malicious payload. In fixed versions, jQuery only deems the input to be HTML if it explicitly starts with the '<' character, limiting exploitability only to attackers who can control the beginning of a string, which is far less common.",
+    "severity": "MEDIUM",
+    "url": "http://lists.opensuse.org/opensuse-security-announce/2020-03/msg00041.html"
+  },
+  {
+    "cve": "CVE-2012-6711",
+    "year": "2012",
+    "description": "A heap-based buffer overflow exists in GNU Bash before 4.3 when wide characters, not supported by the current locale set in the LC_CTYPE environment variable, are printed through the echo built-in function. A local attacker, who can provide data to print through the \"echo -e\" built-in function, may use this flaw to crash a script or execute code with the privileges of the bash process. This occurs because ansicstr() in lib/sh/strtrans.c mishandles u32cconv().",
+    "severity": "HIGH",
+    "url": "http://git.savannah.gnu.org/cgit/bash.git/commit/?h=devel&id=863d31ae775d56b785dc5b0105b6d251515d81d5"
+  }
+]

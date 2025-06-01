@@ -1,0 +1,205 @@
+[
+  {
+    "cve": "CVE-2010-0207",
+    "year": "2010",
+    "description": "In xpdf, the xref table contains an infinite loop which allows remote attackers to cause a denial of service (application crash) in xpdf-based PDF viewers.",
+    "severity": "MEDIUM",
+    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2010-0207"
+  },
+  {
+    "cve": "CVE-2010-10001",
+    "year": "2010",
+    "description": "A vulnerability, which was classified as problematic, was found in Shemes GrabIt up to 1.7.2 Beta 4. This affects the component NZB Date Parser. The manipulation of the argument date with the input 1000000000000000 as part of a NZB File leads to a denial of service. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used.",
+    "severity": "MEDIUM",
+    "url": "http://seclists.org/bugtraq/2010/Jul/60"
+  },
+  {
+    "cve": "CVE-2010-10002",
+    "year": "2010",
+    "description": "** UNSUPPORTED WHEN ASSIGNED ** A vulnerability classified as problematic has been found in SimpleSAMLphp simplesamlphp-module-openid. Affected is an unknown function of the file templates/consumer.php of the component OpenID Handler. The manipulation of the argument AuthState leads to cross site scripting. It is possible to launch the attack remotely. The complexity of an attack is rather high. The exploitability is told to be difficult. Upgrading to version 1.0 is able to address this issue. The patch is identified as d652d41ccaf8c45d5707e741c0c5d82a2365a9a3. It is recommended to upgrade the affected component. VDB-217170 is the identifier assigned to this vulnerability. NOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/simplesamlphp/simplesamlphp-module-openid/commit/d652d41ccaf8c45d5707e741c0c5d82a2365a9a3"
+  },
+  {
+    "cve": "CVE-2010-10004",
+    "year": "2010",
+    "description": "A vulnerability was found in Information Cards Module on simpleSAMLphp and classified as problematic. This issue affects some unknown processing. The manipulation leads to cross site scripting. The attack may be initiated remotely. Upgrading to version 1.0 is able to address this issue. The identifier of the patch is f6bfea49ae16dc6e179df8306d39c3694f1ef186. It is recommended to upgrade the affected component. The identifier VDB-217661 was assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/simplesamlphp/simplesamlphp-module-infocard/commit/f6bfea49ae16dc6e179df8306d39c3694f1ef186"
+  },
+  {
+    "cve": "CVE-2010-10006",
+    "year": "2010",
+    "description": "A vulnerability, which was classified as problematic, was found in michaelliao jopenid. Affected is the function getAuthentication of the file JOpenId/src/org/expressme/openid/OpenIdManager.java. The manipulation leads to observable timing discrepancy. The complexity of an attack is rather high. The exploitability is told to be difficult. Upgrading to version 1.08 is able to address this issue. The name of the patch is c9baaa976b684637f0d5a50268e91846a7a719ab. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-218460.",
+    "severity": "LOW",
+    "url": "https://github.com/michaelliao/jopenid/commit/c9baaa976b684637f0d5a50268e91846a7a719ab"
+  },
+  {
+    "cve": "CVE-2010-10008",
+    "year": "2010",
+    "description": "** UNSUPPORTED WHEN ASSIGNED ** A vulnerability was found in simplesamlphp simplesamlphp-module-openidprovider up to 0.8.x. It has been declared as problematic. Affected by this vulnerability is an unknown functionality of the file templates/trust.tpl.php. The manipulation of the argument StateID leads to cross site scripting. The attack can be launched remotely. Upgrading to version 0.9.0 is able to address this issue. The identifier of the patch is 8365d48c863cf06ccf1465cc0a161cefae29d69d. It is recommended to upgrade the affected component. The identifier VDB-218473 was assigned to this vulnerability. NOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/simplesamlphp/simplesamlphp-module-openidprovider/commit/8365d48c863cf06ccf1465cc0a161cefae29d69d"
+  },
+  {
+    "cve": "CVE-2010-10010",
+    "year": "2010",
+    "description": "A vulnerability classified as problematic has been found in Stars Alliance PsychoStats up to 3.2.2a. This affects an unknown part of the file upload/admin/login.php. The manipulation of the argument ref leads to cross site scripting. It is possible to initiate the attack remotely. Upgrading to version 3.2.2b is able to address this issue. The identifier of the patch is 5d3b7311fd5085ec6ea1b1bfa9a05285964e07e4. It is recommended to upgrade the affected component. The identifier VDB-230265 was assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "http://www.psychostats.com/forums/index.php?showtopic=20796&hl="
+  },
+  {
+    "cve": "CVE-2010-10011",
+    "year": "2010",
+    "description": "A vulnerability, which was classified as problematic, was found in Acritum Femitter Server 1.04. Affected is an unknown function. The manipulation leads to path traversal. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. VDB-250446 is the identifier assigned to this vulnerability.",
+    "severity": "HIGH",
+    "url": "https://vuldb.com/?ctiid.250446"
+  },
+  {
+    "cve": "CVE-2010-1432",
+    "year": "2010",
+    "description": "Joomla! Core is prone to an information disclosure vulnerability. Attackers can exploit this issue to obtain sensitive information that may help in launching further attacks. Joomla! Core versions 1.5.x ranging from 1.5.0 and up to and including 1.5.15 are vulnerable.",
+    "severity": "HIGH",
+    "url": "https://developer.joomla.org/security-centre/311-20100423-core-negative-values-for-limit-and-offset.html"
+  },
+  {
+    "cve": "CVE-2010-1433",
+    "year": "2010",
+    "description": "Joomla! Core is prone to a vulnerability that lets attackers upload arbitrary files because the application fails to properly verify user-supplied input. An attacker can exploit this vulnerability to upload arbitrary code and run it in the context of the webserver process. This may facilitate unauthorized access or privilege escalation; other attacks are also possible. Joomla! Core versions 1.5.x ranging from 1.5.0 and up to and including 1.5.15 are vulnerable.",
+    "severity": "CRITICAL",
+    "url": "https://developer.joomla.org/security-centre/310-20100423-core-installer-migration-script.html"
+  },
+  {
+    "cve": "CVE-2010-1434",
+    "year": "2010",
+    "description": "Joomla! Core is prone to a session fixation vulnerability. An attacker may leverage this issue to hijack an arbitrary session and gain access to sensitive information, which may help in launching further attacks. Joomla! Core versions 1.5.x ranging from 1.5.0 and up to and including 1.5.15 are vulnerable.",
+    "severity": "HIGH",
+    "url": "https://developer.joomla.org/security-centre/309-20100423-core-sessation-fixation.html"
+  },
+  {
+    "cve": "CVE-2010-1435",
+    "year": "2010",
+    "description": "Joomla! Core is prone to a security bypass vulnerability. Exploiting this issue may allow attackers to perform otherwise restricted actions and subsequently retrieve password reset tokens from the database through an already existing SQL injection vector. Joomla! Core versions 1.5.x ranging from 1.5.0 and up to and including 1.5.15 are vulnerable.",
+    "severity": "CRITICAL",
+    "url": "https://developer.joomla.org/security-centre/308-20100423-core-password-reset-tokens.html"
+  },
+  {
+    "cve": "CVE-2010-2449",
+    "year": "2010",
+    "description": "Gource through 0.26 logs to a predictable file name (/tmp/gource-$UID.tmp), enabling attackers to overwrite an arbitrary file via a symlink attack.",
+    "severity": "MEDIUM",
+    "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=577958"
+  },
+  {
+    "cve": "CVE-2010-2450",
+    "year": "2010",
+    "description": "The keygen.sh script in Shibboleth SP 2.0 (located in /usr/local/etc/shibboleth by default) uses OpenSSL to create a DES private key which is placed in sp-key.pm. It relies on the root umask (default 22) instead of chmoding the resulting file itself, so the generated private key is world readable by default.",
+    "severity": "HIGH",
+    "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=571631"
+  },
+  {
+    "cve": "CVE-2010-2490",
+    "year": "2010",
+    "description": "Mumble: murmur-server has DoS due to malformed client query",
+    "severity": "MEDIUM",
+    "url": "https://access.redhat.com/security/cve/cve-2010-2490"
+  },
+  {
+    "cve": "CVE-2010-2496",
+    "year": "2010",
+    "description": "stonith-ng in pacemaker and cluster-glue passed passwords as commandline parameters, making it possible for local attackers to gain access to passwords of the HA stack and potentially influence its operations. This is fixed in cluster-glue 1.0.6 and newer, and pacemaker 1.1.3 and newer.",
+    "severity": "MEDIUM",
+    "url": "https://bugzilla.suse.com/show_bug.cgi?id=CVE-2010-2496"
+  },
+  {
+    "cve": "CVE-2010-3282",
+    "year": "2010",
+    "description": "389 Directory Server before 1.2.7.1 (aka Red Hat Directory Server 8.2) and HP-UX Directory Server before B.08.10.03, when audit logging is enabled, logs the Directory Manager password (nsslapd-rootpw) in cleartext when changing cn=config:nsslapd-rootpw, which might allow local users to obtain sensitive information by reading the log.",
+    "severity": "LOW",
+    "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:6914"
+  },
+  {
+    "cve": "CVE-2010-3299",
+    "year": "2010",
+    "description": "The encrypt/decrypt functions in Ruby on Rails 2.3 are vulnerable to padding oracle attacks.",
+    "severity": "MEDIUM",
+    "url": "https://access.redhat.com/security/cve/cve-2010-3299"
+  },
+  {
+    "cve": "CVE-2010-3300",
+    "year": "2010",
+    "description": "It was found that all OWASP ESAPI for Java up to version 2.0 RC2 are vulnerable to padding oracle attacks.",
+    "severity": "MEDIUM",
+    "url": "https://seclists.org/oss-sec/2010/q3/357"
+  },
+  {
+    "cve": "CVE-2010-3359",
+    "year": "2010",
+    "description": "If LD_LIBRARY_PATH is undefined in gargoyle-free before 2009-08-25, the variable will point to the current directory. This can allow a local user to trick another user into running gargoyle in a directory with a cracked libgarglk.so and gain access to the user's account.",
+    "severity": "MEDIUM",
+    "url": "https://security-tracker.debian.org/tracker/CVE-2010-3359"
+  },
+  {
+    "cve": "CVE-2010-3439",
+    "year": "2010",
+    "description": "It is possible to cause a DoS condition by causing the server to crash in alien-arena 7.33 by supplying various invalid parameters to the download command.",
+    "severity": "MEDIUM",
+    "url": "https://access.redhat.com/security/cve/cve-2010-3439"
+  },
+  {
+    "cve": "CVE-2010-3440",
+    "year": "2010",
+    "description": "babiloo 2.0.9 before 2.0.11 creates temporary files with predictable names when downloading and unpacking dictionary files, allowing a local attacker to overwrite arbitrary files.",
+    "severity": "MEDIUM",
+    "url": "https://access.redhat.com/security/cve/cve-2010-3440"
+  },
+  {
+    "cve": "CVE-2010-3663",
+    "year": "2010",
+    "description": "TYPO3 before 4.1.14, 4.2.x before 4.2.13, 4.3.x before 4.3.4 and 4.4.x before 4.4.1 contains an insecure default value of the variable fileDenyPattern which could allow remote attackers to execute arbitrary code on the backend.",
+    "severity": "HIGH",
+    "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=590719"
+  },
+  {
+    "cve": "CVE-2010-4533",
+    "year": "2010",
+    "description": "offlineimap before 6.3.4 added support for SSL server certificate validation but it is still possible to use SSL v2 protocol, which is a flawed protocol with multiple security deficiencies.",
+    "severity": "CRITICAL",
+    "url": "https://access.redhat.com/security/cve/cve-2010-4533"
+  },
+  {
+    "cve": "CVE-2010-5305",
+    "year": "2010",
+    "description": "The potential exists for exposure of the product's password used to restrict unauthorized access to Rockwell PLC5/SLC5/0x/RSLogix 1785-Lx and 1747-L5x controllers. The potential exists for an unauthorized programming and configuration client to gain access to the product and allow changes to the product\u2019s configuration or program. When applicable, upgrade product firmware to a version that includes enhanced security functionality compatible with Rockwell Automation's FactoryTalk Security services.",
+    "severity": "CRITICAL",
+    "url": "https://ics-cert.us-cert.gov/advisories/ICSA-10-070-02"
+  },
+  {
+    "cve": "CVE-2010-5330",
+    "year": "2010",
+    "description": "On certain Ubiquiti devices, Command Injection exists via a GET request to stainfo.cgi (aka Show AP info) because the ifname variable is not sanitized, as demonstrated by shell metacharacters. The fixed version is v4.0.1 for 802.11 ISP products, v5.3.5 for AirMax ISP products, and v5.4.5 for AirSync firmware. For example, Nanostation5 (Air OS) is affected.",
+    "severity": "CRITICAL",
+    "url": "https://community.ubnt.com/t5/airMAX-General-Discussion/AirOS-Security-Exploit-Updated-Firmware/td-p/212974"
+  },
+  {
+    "cve": "CVE-2010-5331",
+    "year": "2010",
+    "description": "In the Linux kernel before 2.6.34, a range check issue in drivers/gpu/drm/radeon/atombios.c could cause an off by one (buffer overflow) problem. NOTE: At least one Linux maintainer believes that this CVE is incorrectly assigned and should be rejected because the value is hard coded and are not user-controllable where it is used",
+    "severity": "HIGH",
+    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2010-5331"
+  },
+  {
+    "cve": "CVE-2010-5332",
+    "year": "2010",
+    "description": "In the Linux kernel before 2.6.37, an out of bounds array access happened in drivers/net/mlx4/port.c. When searching for a free entry in either mlx4_register_vlan() or mlx4_register_mac(), and there is no free entry, the loop terminates without updating the local variable free thus causing out of array bounds access.",
+    "severity": "MEDIUM",
+    "url": "https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=0926f91083f34d047abc74f1ca4fa6a9c161f7db"
+  },
+  {
+    "cve": "CVE-2010-5333",
+    "year": "2010",
+    "description": "The web server in Integard Pro and Home before 2.0.0.9037 and 2.2.x before 2.2.0.9037 has a buffer overflow via a long password in an administration login POST request, leading to arbitrary code execution. An SEH-overwrite buffer overflow already existed for the vulnerable software. This CVE is to track an alternate exploitation method, utilizing an EIP-overwrite buffer overflow.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/purpl3-f0x/OSCE-prep/blob/master/eip_integard.py"
+  }
+]

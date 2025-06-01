@@ -1,0 +1,58 @@
+[
+  {
+    "cve": "CVE-2005-0203",
+    "year": "2005",
+    "description": "Rejected reason: DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: none.  Reason: This candidate has been revoked by its Candidate Numbering Authority (CNA) because it was initially assigned to a problem that was not a security issue.  Notes: none",
+    "severity": "N/A",
+    "url": ""
+  },
+  {
+    "cve": "CVE-2005-0395",
+    "year": "2005",
+    "description": "Rejected reason: DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: none.  Reason: This candidate has been revoked by its Candidate Numbering Authority (CNA) because it was initially assigned to a problem that was not a security issue.  Notes: none",
+    "severity": "N/A",
+    "url": ""
+  },
+  {
+    "cve": "CVE-2005-0751",
+    "year": "2005",
+    "description": "Rejected reason: DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: none.  Reason: This candidate has been revoked by its Candidate Numbering Authority (CNA) because it was initially assigned to a problem that was not a security issue.  Notes: none",
+    "severity": "N/A",
+    "url": ""
+  },
+  {
+    "cve": "CVE-2005-10002",
+    "year": "2005",
+    "description": "A vulnerability, which was classified as critical, was found in almosteffortless secure-files Plugin up to 1.1 on WordPress. Affected is the function sf_downloads of the file secure-files.php. The manipulation of the argument downloadfile leads to path traversal. Upgrading to version 1.2 is able to address this issue. The name of the patch is cab025e5fc2bcdad8032d833ebc38e6bd2a13c92. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-243804.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/wp-plugins/secure-files/commit/cab025e5fc2bcdad8032d833ebc38e6bd2a13c92"
+  },
+  {
+    "cve": "CVE-2005-10003",
+    "year": "2005",
+    "description": "A vulnerability classified as critical has been found in mikexstudios Xcomic up to 0.8.2. This affects an unknown part. The manipulation of the argument cmd leads to os command injection. It is possible to initiate the attack remotely. The complexity of an attack is rather high. The exploitability is told to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 0.8.3 is able to address this issue. The patch is named 6ed8e3cc336e29f09c7e791863d0559939da98bf. It is recommended to upgrade the affected component.",
+    "severity": "CRITICAL",
+    "url": "https://vuldb.com/?id.280359"
+  },
+  {
+    "cve": "CVE-2005-1032",
+    "year": "2005",
+    "description": "Rejected reason: cart.php in LiteCommerce might allow remote attackers to obtain sensitive information via invalid (1) category_id or (2) product_id parameters.  NOTE: this issue was originally claimed to be due to SQL injection, but the original researcher is known to be frequently inaccurate with respect to bug type and severity.  The vendor has disputed this issue, saying \"These reports are credited to malicious person we refused to hire. We have not taken legal action against him only because he is located in India.  The vulnerabilites reported can not be reproduced, hence information you provide is contrary to fact.\" Further investigation by CVE personnel shows that an invalid SQL syntax error could be generated, but it only reveals portions of underlying database structure, which is already available in documentation from the vendor, and it does not appear to lead to path disclosure.  Therefore, this issue is not a vulnerability or an exposure, and it probably should be REJECTED",
+    "severity": "N/A",
+    "url": ""
+  },
+  {
+    "cve": "CVE-2005-2942",
+    "year": "2005",
+    "description": "Rejected reason: DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: none.  Reason: This candidate has been revoked by its Candidate Numbering Authority (CNA) because it was initially assigned to a problem that was not a security issue.  Notes: none",
+    "severity": "N/A",
+    "url": ""
+  },
+  {
+    "cve": "CVE-2005-4890",
+    "year": "2005",
+    "description": "There is a possible tty hijacking in shadow 4.x before 4.1.5 and sudo 1.x before 1.7.4 via \"su - user -c program\". The user session can be escaped to the parent session by using the TIOCSTI ioctl to push characters into the input buffer to be read by the next process.",
+    "severity": "HIGH",
+    "url": "http://www.openwall.com/lists/oss-security/2012/11/06/8"
+  }
+]

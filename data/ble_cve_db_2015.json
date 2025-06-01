@@ -1,0 +1,1437 @@
+[
+  {
+    "cve": "CVE-2015-0565",
+    "year": "2015",
+    "description": "NaCl in 2015 allowed the CLFLUSH instruction, making rowhammer attacks possible.",
+    "severity": "CRITICAL",
+    "url": "https://googleprojectzero.blogspot.com/2015/03/exploiting-dram-rowhammer-bug-to-gain.html"
+  },
+  {
+    "cve": "CVE-2015-0837",
+    "year": "2015",
+    "description": "The mpi_powm function in Libgcrypt before 1.6.3 and GnuPG before 1.4.19 allows attackers to obtain sensitive information by leveraging timing differences when accessing a pre-computed table during modular exponentiation, related to a \"Last-Level Cache Side-Channel Attack.\"",
+    "severity": "MEDIUM",
+    "url": "http://www.debian.org/security/2015/dsa-3184"
+  },
+  {
+    "cve": "CVE-2015-0897",
+    "year": "2015",
+    "description": "LINE for Android version 5.0.2 and earlier and LINE for iOS version 5.0.0 and earlier are vulnerable to MITM (man-in-the-middle) attack since the application allows non-SSL/TLS communications. As a result, any API may be invoked from a script injected by a MITM (man-in-the-middle) attacker.",
+    "severity": "MEDIUM",
+    "url": "http://official-blog.line.me/ja/archives/24809761.html"
+  },
+  {
+    "cve": "CVE-2015-10002",
+    "year": "2015",
+    "description": "A vulnerability classified as problematic has been found in Kiddoware Kids Place. This affects the Home Button Protection. A repeated pressing of the button causes a local denial of service. It is recommended to upgrade the affected component.",
+    "severity": "MEDIUM",
+    "url": "https://vuldb.com/?id.118359"
+  },
+  {
+    "cve": "CVE-2015-10003",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as problematic, was found in FileZilla Server up to 0.9.50. This affects an unknown part of the component PORT Handler. The manipulation leads to unintended intermediary. It is possible to initiate the attack remotely. Upgrading to version 0.9.51 is able to address this issue. It is recommended to upgrade the affected component.",
+    "severity": "MEDIUM",
+    "url": "http://www.securitygalore.com/site3/filezilla_ftp_server_advisory"
+  },
+  {
+    "cve": "CVE-2015-10004",
+    "year": "2015",
+    "description": "Token validation methods are susceptible to a timing side-channel during HMAC comparison. With a large enough number of requests over a low latency connection, an attacker may use this to determine the expected HMAC.",
+    "severity": "HIGH",
+    "url": "https://github.com/robbert229/jwt/commit/ca1404ee6e83fcbafb66b09ed0d543850a15b654"
+  },
+  {
+    "cve": "CVE-2015-10005",
+    "year": "2015",
+    "description": "A vulnerability was found in markdown-it up to 2.x. It has been classified as problematic. Affected is an unknown function of the file lib/common/html_re.js. The manipulation leads to inefficient regular expression complexity. Upgrading to version 3.0.0 is able to address this issue. The name of the patch is 89c8620157d6e38f9872811620d25138fc9d1b0d. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-216852.",
+    "severity": "HIGH",
+    "url": "https://github.com/markdown-it/markdown-it/commit/89c8620157d6e38f9872811620d25138fc9d1b0d"
+  },
+  {
+    "cve": "CVE-2015-10006",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as problematic, has been found in admont28 Ingnovarq. Affected by this issue is some unknown functionality of the file app/controller/insertarSliderAjax.php. The manipulation of the argument imagetitle leads to cross site scripting. The attack may be launched remotely. The name of the patch is 9d18a39944d79dfedacd754a742df38f99d3c0e2. It is recommended to apply a patch to fix this issue. The identifier of this vulnerability is VDB-217172.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/admont28/ingnovarq/commit/9d18a39944d79dfedacd754a742df38f99d3c0e2"
+  },
+  {
+    "cve": "CVE-2015-10007",
+    "year": "2015",
+    "description": "** UNSUPPORTED WHEN ASSIGNED ** A vulnerability was found in 82Flex WEIPDCRM and classified as problematic. Affected by this issue is some unknown functionality. The manipulation leads to cross site scripting. The attack may be launched remotely. The name of the patch is 43bad79392332fa39e31b95268e76fbda9fec3a4. It is recommended to apply a patch to fix this issue. The identifier of this vulnerability is VDB-217184. NOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/82Flex/WEIPDCRM/commit/43bad79392332fa39e31b95268e76fbda9fec3a4"
+  },
+  {
+    "cve": "CVE-2015-10008",
+    "year": "2015",
+    "description": "** UNSUPPORTED WHEN ASSIGNED ** A vulnerability was found in 82Flex WEIPDCRM. It has been classified as critical. This affects an unknown part. The manipulation leads to sql injection. It is possible to initiate the attack remotely. The identifier of the patch is 43bad79392332fa39e31b95268e76fbda9fec3a4. It is recommended to apply a patch to fix this issue. The identifier VDB-217185 was assigned to this vulnerability. NOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/82Flex/WEIPDCRM/commit/43bad79392332fa39e31b95268e76fbda9fec3a4"
+  },
+  {
+    "cve": "CVE-2015-10009",
+    "year": "2015",
+    "description": "A vulnerability was found in nterchange up to 4.1.0. It has been rated as critical. This issue affects the function getContent of the file app/controllers/code_caller_controller.php. The manipulation of the argument q with the input %5C%27%29;phpinfo%28%29;/* leads to code injection. The exploit has been disclosed to the public and may be used. Upgrading to version 4.1.1 is able to address this issue. The patch is named fba7d89176fba8fe289edd58835fe45080797d99. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-217187.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/nonfiction/nterchange_backend/commit/fba7d89176fba8fe289edd58835fe45080797d99"
+  },
+  {
+    "cve": "CVE-2015-10010",
+    "year": "2015",
+    "description": "A vulnerability was found in OpenDNS OpenResolve. It has been rated as problematic. Affected by this issue is the function get of the file resolverapi/endpoints.py of the component API. The manipulation leads to cross site scripting. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The name of the patch is c680170d5583cd9342fe1af43001fe8b2b8004dd. It is recommended to apply a patch to fix this issue. The identifier of this vulnerability is VDB-217196.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/opendns/OpenResolve/commit/c680170d5583cd9342fe1af43001fe8b2b8004dd"
+  },
+  {
+    "cve": "CVE-2015-10011",
+    "year": "2015",
+    "description": "A vulnerability classified as problematic has been found in OpenDNS OpenResolve. This affects an unknown part of the file resolverapi/endpoints.py. The manipulation leads to improper output neutralization for logs. The identifier of the patch is 9eba6ba5abd89d0e36a008921eb307fcef8c5311. It is recommended to apply a patch to fix this issue. The identifier VDB-217197 was assigned to this vulnerability.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/opendns/OpenResolve/commit/9eba6ba5abd89d0e36a008921eb307fcef8c5311"
+  },
+  {
+    "cve": "CVE-2015-10012",
+    "year": "2015",
+    "description": "** UNSUPPORTED WHEN ASSIGNED ** A vulnerability was found in sumocoders FrameworkUserBundle up to 1.3.x. It has been rated as problematic. Affected by this issue is some unknown functionality of the file Resources/views/Security/login.html.twig. The manipulation leads to information exposure through error message. Upgrading to version 1.4.0 is able to address this issue. The name of the patch is abe4993390ba9bd7821ab12678270556645f94c8. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-217268. NOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+    "severity": "HIGH",
+    "url": "https://github.com/sumocoders/FrameworkUserBundle/commit/abe4993390ba9bd7821ab12678270556645f94c8"
+  },
+  {
+    "cve": "CVE-2015-10013",
+    "year": "2015",
+    "description": "A vulnerability was found in WebDevStudios taxonomy-switcher Plugin up to 1.0.3 on WordPress. It has been classified as problematic. Affected is the function taxonomy_switcher_init of the file taxonomy-switcher.php. The manipulation leads to cross site scripting. It is possible to launch the attack remotely. Upgrading to version 1.0.4 is able to address this issue. It is recommended to upgrade the affected component. VDB-217446 is the identifier assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/WebDevStudios/taxonomy-switcher/commit/e1a0d99f936e7427b31e210c67aeb4833d804099"
+  },
+  {
+    "cve": "CVE-2015-10018",
+    "year": "2015",
+    "description": "A vulnerability has been found in DBRisinajumi d2files and classified as critical. Affected by this vulnerability is the function actionUpload/actionDownloadFile of the file controllers/D2filesController.php. The manipulation leads to sql injection. Upgrading to version 1.0.0 is able to address this issue. The identifier of the patch is b5767f2ec9d0f3cbfda7f13c84740e2179c90574. It is recommended to upgrade the affected component. The identifier VDB-217561 was assigned to this vulnerability.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/DBRisinajumi/d2files/commit/b5767f2ec9d0f3cbfda7f13c84740e2179c90574"
+  },
+  {
+    "cve": "CVE-2015-10019",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as problematic, has been found in foxoverflow MySimplifiedSQL. This issue affects some unknown processing of the file MySimplifiedSQL_Examples.php. The manipulation of the argument FirstName/LastName leads to cross site scripting. The attack may be initiated remotely. The patch is named 3b7481c72786f88041b7c2d83bb4f219f77f1293. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-217595.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/foxoverflow/MySimplifiedSQL/commit/3b7481c72786f88041b7c2d83bb4f219f77f1293"
+  },
+  {
+    "cve": "CVE-2015-10021",
+    "year": "2015",
+    "description": "A vulnerability was found in ritterim definely. It has been classified as problematic. Affected is an unknown function of the file src/database.js. The manipulation leads to cross site scripting. It is possible to launch the attack remotely. The name of the patch is b31a022ba4d8d17148445a13ebb5a42ad593dbaa. It is recommended to apply a patch to fix this issue. The identifier of this vulnerability is VDB-217608.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/ritterim/definely/commit/b31a022ba4d8d17148445a13ebb5a42ad593dbaa"
+  },
+  {
+    "cve": "CVE-2015-10025",
+    "year": "2015",
+    "description": "A vulnerability has been found in luelista miniConf up to 1.7.6 and classified as problematic. Affected by this vulnerability is an unknown functionality of the file miniConf/MessageView.cs of the component URL Scanning. The manipulation leads to denial of service. Upgrading to version 1.7.7 and 1.8.0 is able to address this issue. The patch is named c06c2e5116c306e4e1bc79779f0eda2d1182f655. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-217615.",
+    "severity": "HIGH",
+    "url": "https://github.com/luelista/miniConf/commit/c06c2e5116c306e4e1bc79779f0eda2d1182f655"
+  },
+  {
+    "cve": "CVE-2015-10027",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as problematic, has been found in hydrian TTRSS-Auth-LDAP. Affected by this issue is some unknown functionality of the component Username Handler. The manipulation leads to ldap injection. Upgrading to version 2.0b1 is able to address this issue. The patch is identified as a7f7a5a82d9202a5c40d606a5c519ba61b224eb8. It is recommended to upgrade the affected component. VDB-217622 is the identifier assigned to this vulnerability.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/hydrian/TTRSS-Auth-LDAP/commit/a7f7a5a82d9202a5c40d606a5c519ba61b224eb8"
+  },
+  {
+    "cve": "CVE-2015-10028",
+    "year": "2015",
+    "description": "A vulnerability has been found in ss15-this-is-sparta and classified as problematic. This vulnerability affects unknown code of the file js/roomElement.js of the component Main Page. The manipulation leads to cross site scripting. The attack can be initiated remotely. The name of the patch is ba2f71ad3a46e5949ee0c510b544fa4ea973baaa. It is recommended to apply a patch to fix this issue. The identifier of this vulnerability is VDB-217624.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/mauriciosoares/ss15-this-is-sparta/commit/ba2f71ad3a46e5949ee0c510b544fa4ea973baaa"
+  },
+  {
+    "cve": "CVE-2015-10029",
+    "year": "2015",
+    "description": "A vulnerability classified as problematic was found in kelvinmo simplexrd up to 3.1.0. This vulnerability affects unknown code of the file simplexrd/simplexrd.class.php. The manipulation leads to xml external entity reference. Upgrading to version 3.1.1 is able to address this issue. The patch is identified as 4c9f2e028523ed705b555eca2c18c64e71f1a35d. It is recommended to upgrade the affected component. VDB-217630 is the identifier assigned to this vulnerability.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/kelvinmo/simplexrd/commit/4c9f2e028523ed705b555eca2c18c64e71f1a35d"
+  },
+  {
+    "cve": "CVE-2015-10030",
+    "year": "2015",
+    "description": "A vulnerability has been found in SUKOHI Surpass and classified as critical. This vulnerability affects unknown code of the file src/Sukohi/Surpass/Surpass.php. The manipulation of the argument dir leads to pathname traversal. Upgrading to version 1.0.0 is able to address this issue. The patch is identified as d22337d453a2a14194cdb02bf12cdf9d9f827aa7. It is recommended to upgrade the affected component. VDB-217642 is the identifier assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/SUKOHI/Surpass/commit/d22337d453a2a14194cdb02bf12cdf9d9f827aa7"
+  },
+  {
+    "cve": "CVE-2015-10032",
+    "year": "2015",
+    "description": "A vulnerability was found in HealthMateWeb. It has been declared as problematic. Affected by this vulnerability is an unknown functionality of the file createaccount.php. The manipulation of the argument username/password/first_name/last_name/company/phone leads to cross site scripting. The attack can be launched remotely. The patch is named 472776c25b1046ecaf962c46fed7c713c72c28e3. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-217663.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/StevenElberger/HealthMateWeb/commit/472776c25b1046ecaf962c46fed7c713c72c28e3"
+  },
+  {
+    "cve": "CVE-2015-10033",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as problematic, was found in jvvlee MerlinsBoard. This affects an unknown part of the component Grade Handler. The manipulation leads to improper authorization. The identifier of the patch is 134f5481e2914b7f096cd92a22b1e6bcb8e6dfe5. It is recommended to apply a patch to fix this issue. The identifier VDB-217713 was assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/jvvlee/MerlinsBoard/commit/134f5481e2914b7f096cd92a22b1e6bcb8e6dfe5"
+  },
+  {
+    "cve": "CVE-2015-10035",
+    "year": "2015",
+    "description": "A vulnerability was found in gperson angular-test-reporter and classified as critical. This issue affects the function getProjectTables/addTest of the file rest-server/data-server.js. The manipulation leads to sql injection. The patch is named a29d8ae121b46ebfa96a55a9106466ab2ef166ae. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-217715.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/gperson/angular-test-reporter/commit/a29d8ae121b46ebfa96a55a9106466ab2ef166ae"
+  },
+  {
+    "cve": "CVE-2015-10039",
+    "year": "2015",
+    "description": "A vulnerability was found in dobos domino. It has been rated as critical. Affected by this issue is some unknown functionality in the library src/Complex.Domino.Lib/Lib/EntityFactory.cs. The manipulation leads to sql injection. Upgrading to version 0.1.5524.38553 is able to address this issue. The name of the patch is 16f039073709a21a76526110d773a6cce0ce753a. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-218024.",
+    "severity": "HIGH",
+    "url": "https://github.com/dobos/domino/commit/16f039073709a21a76526110d773a6cce0ce753a"
+  },
+  {
+    "cve": "CVE-2015-10040",
+    "year": "2015",
+    "description": "A vulnerability was found in gitlearn. It has been declared as problematic. This vulnerability affects the function getGrade/getOutOf of the file scripts/config.sh of the component Escape Sequence Handler. The manipulation leads to injection. The attack can be initiated remotely. The patch is identified as 3faa5deaa509012069afe75cd03c21bda5050a64. It is recommended to apply a patch to fix this issue. VDB-218302 is the identifier assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/mikeizbicki/gitlearn/commit/3faa5deaa509012069afe75cd03c21bda5050a64"
+  },
+  {
+    "cve": "CVE-2015-10049",
+    "year": "2015",
+    "description": "A vulnerability was found in Overdrive Eletr\u00f4nica course-builder up to 1.7.x and classified as problematic. Affected by this issue is some unknown functionality of the file coursebuilder/modules/oeditor/oeditor.html. The manipulation leads to cross site scripting. The attack may be launched remotely. Upgrading to version 1.8.0 is able to address this issue. The name of the patch is e39645fd714adb7e549908780235911ae282b21b. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-218372.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/overdrive-diy/course-builder/commit/e39645fd714adb7e549908780235911ae282b21b"
+  },
+  {
+    "cve": "CVE-2015-10052",
+    "year": "2015",
+    "description": "** UNSUPPORTED WHEN ASSIGNED ** A vulnerability, which was classified as problematic, was found in calesanz gibb-modul-151. This affects the function bearbeiten/login. The manipulation leads to open redirect. It is possible to initiate the attack remotely. The patch is named 88a517dc19443081210c804b655e72770727540d. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-218379. NOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/calesanz/gibb-modul-151/commit/88a517dc19443081210c804b655e72770727540d"
+  },
+  {
+    "cve": "CVE-2015-10053",
+    "year": "2015",
+    "description": "A vulnerability classified as critical has been found in prodigasistemas curupira up to 0.1.3. Affected is an unknown function of the file app/controllers/curupira/passwords_controller.rb. The manipulation leads to sql injection. Upgrading to version 0.1.4 is able to address this issue. The patch is identified as 93a9a77896bb66c949acb8e64bceafc74bc8c271. It is recommended to upgrade the affected component. VDB-218394 is the identifier assigned to this vulnerability.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/prodigasistemas/curupira/commit/93a9a77896bb66c949acb8e64bceafc74bc8c271"
+  },
+  {
+    "cve": "CVE-2015-10057",
+    "year": "2015",
+    "description": "A vulnerability was found in Little Apps Little Software Stats. It has been declared as critical. Affected by this vulnerability is an unknown functionality of the file inc/class.securelogin.php of the component Password Reset Handler. The manipulation leads to improper access controls. The complexity of an attack is rather high. The exploitation appears to be difficult. Upgrading to version 0.2 is able to address this issue. The identifier of the patch is 07ba8273a9311d1383f3686ac7cb32f20770ab1e. It is recommended to upgrade the affected component. The identifier VDB-218401 was assigned to this vulnerability.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/little-apps/little-software-stats/commit/07ba8273a9311d1383f3686ac7cb32f20770ab1e"
+  },
+  {
+    "cve": "CVE-2015-10058",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as problematic, was found in Wikisource Category Browser. This affects an unknown part of the file index.php. The manipulation of the argument lang leads to cross site scripting. It is possible to initiate the attack remotely. The patch is named 764f4e8ce3f9242637df77530c70ae8a2ec4b6a1. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-218415.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wikisource/ws-cat-browser/commit/764f4e8ce3f9242637df77530c70ae8a2ec4b6a1"
+  },
+  {
+    "cve": "CVE-2015-10059",
+    "year": "2015",
+    "description": "A vulnerability has been found in s134328 Webapplication-Veganguide and classified as problematic. This vulnerability affects unknown code of the file p05-integration/app/shared/api/apiService.js. The manipulation of the argument country/city leads to cross site scripting. The attack can be initiated remotely. The name of the patch is 2aa760fa4e779e40a28206a32ac22ac10356f519. It is recommended to apply a patch to fix this issue. The identifier of this vulnerability is VDB-218416.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/s134328/Webapplication-Veganguide/commit/2aa760fa4e779e40a28206a32ac22ac10356f519"
+  },
+  {
+    "cve": "CVE-2015-1006",
+    "year": "2015",
+    "description": "A vulnerable file in Opto 22 PAC Project Professional versions prior to R9.4006, PAC Project Basic versions prior to R9.4006, PAC Display Basic versions prior to R9.4f, PAC Display Professional versions prior to R9.4f, OptoOPCServer versions prior to R9.4c, and OptoDataLink version R9.4d and prior versions that were installed by PAC Project installer, versions prior to R9.4006, is susceptible to a heap-based buffer overflow condition that may allow remote code execution on the target system. Opto 22 suggests upgrading to the new product version as soon as possible.",
+    "severity": "CRITICAL",
+    "url": "https://ics-cert.us-cert.gov/advisories/ICSA-15-120-01"
+  },
+  {
+    "cve": "CVE-2015-10062",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as problematic, was found in galaxy-data-resource up to 14.10.0. This affects an unknown part of the component Command Line Template. The manipulation leads to injection. Upgrading to version 14.10.1 is able to address this issue. The patch is named 50d65f45d3f5be5d1fbff2e45ac5cec075f07d42. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-218451.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/blankenberg/galaxy-data-resource/commit/50d65f45d3f5be5d1fbff2e45ac5cec075f07d42"
+  },
+  {
+    "cve": "CVE-2015-10065",
+    "year": "2015",
+    "description": "A vulnerability classified as critical was found in AenBleidd FiND. This vulnerability affects the function init_result of the file validator/my_validator.cpp. The manipulation leads to buffer overflow. The patch is identified as ee2eef34a83644f286c9adcaf30437f92e9c48f1. It is recommended to apply a patch to fix this issue. VDB-218458 is the identifier assigned to this vulnerability.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/AenBleidd/FiND/commit/ee2eef34a83644f286c9adcaf30437f92e9c48f1"
+  },
+  {
+    "cve": "CVE-2015-10067",
+    "year": "2015",
+    "description": "A vulnerability was found in oznetmaster SSharpSmartThreadPool. It has been classified as problematic. This affects an unknown part of the file SSharpSmartThreadPool/SmartThreadPool.cs. The manipulation leads to race condition within a thread. The complexity of an attack is rather high. The exploitability is told to be difficult. The patch is named 0e58073c831093aad75e077962e9fb55cad0dc5f. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-218463.",
+    "severity": "HIGH",
+    "url": "https://github.com/oznetmaster/SSharpSmartThreadPool/commit/0e58073c831093aad75e077962e9fb55cad0dc5f"
+  },
+  {
+    "cve": "CVE-2015-1007",
+    "year": "2015",
+    "description": "A specially crafted configuration file could be used to cause a stack-based buffer overflow condition in the OPCTest.exe, which may allow remote code execution on Opto 22 PAC Project Professional versions prior to R9.4008, PAC Project Basic versions prior to R9.4008, PAC Display Basic versions prior to R9.4g, PAC Display Professional versions prior to R9.4g, OptoOPCServer version R9.4c and prior that were installed by PAC Project installer, versions prior to R9.4008, and OptoDataLink version R9.4d and prior that were installed by PAC Project installer, versions prior to R9.4008. Opto 22 suggests upgrading to the new product version as soon as possible.",
+    "severity": "HIGH",
+    "url": "https://ics-cert.us-cert.gov/advisories/ICSA-15-120-01"
+  },
+  {
+    "cve": "CVE-2015-10071",
+    "year": "2015",
+    "description": "A vulnerability was found in gitter-badger ezpublish-modern-legacy. It has been rated as problematic. This issue affects some unknown processing of the file kernel/user/forgotpassword.php. The manipulation leads to weak password recovery. The complexity of an attack is rather high. The exploitation is known to be difficult. Upgrading to version 1.0 is able to address this issue. The patch is named 5908d5ee65fec61ce0e321d586530461a210bf2a. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-218951.",
+    "severity": "HIGH",
+    "url": "https://github.com/gitter-badger/ezpublish-modern-legacy/commit/5908d5ee65fec61ce0e321d586530461a210bf2a"
+  },
+  {
+    "cve": "CVE-2015-10072",
+    "year": "2015",
+    "description": "A vulnerability classified as problematic was found in NREL api-umbrella-web 0.7.1. This vulnerability affects unknown code of the component Flash Message Handler. The manipulation leads to cross site scripting. The attack can be initiated remotely. Upgrading to version 0.8.0 is able to address this issue. The name of the patch is bcc0e922c61d30367678c8f17a435950969315cd. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-220060.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/NREL/api-umbrella-web/commit/bcc0e922c61d30367678c8f17a435950969315cd"
+  },
+  {
+    "cve": "CVE-2015-10073",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as problematic, was found in tinymighty WikiSEO 1.2.1 on MediaWiki. This affects the function modifyHTML of the file WikiSEO.body.php of the component Meta Property Tag Handler. The manipulation of the argument content leads to cross site scripting. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 1.2.2 is able to address this issue. The patch is named 089a5797be612b18a820f9f1e6593ad9a91b1dba. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-220215.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/tinymighty/wiki-seo/commit/089a5797be612b18a820f9f1e6593ad9a91b1dba"
+  },
+  {
+    "cve": "CVE-2015-10074",
+    "year": "2015",
+    "description": "A vulnerability was found in OpenSeaMap online_chart 1.2. It has been classified as problematic. Affected is the function init of the file index.php. The manipulation of the argument mtext leads to cross site scripting. It is possible to launch the attack remotely. Upgrading to version staging is able to address this issue. The patch is identified as 8649157158f921590d650e2d2f4bdf0df1017e9d. It is recommended to upgrade the affected component. VDB-220218 is the identifier assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/OpenSeaMap/online_chart/commit/8649157158f921590d650e2d2f4bdf0df1017e9d"
+  },
+  {
+    "cve": "CVE-2015-10075",
+    "year": "2015",
+    "description": "A vulnerability was found in Custom-Content-Width 1.0. It has been declared as problematic. Affected by this vulnerability is the function override_content_width/register_settings of the file custom-content-width.php. The manipulation leads to cross site scripting. The attack can be launched remotely. The complexity of an attack is rather high. The exploitation appears to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.0.1 is able to address this issue. The patch is named e05e0104fc42ad13b57e2b2cb2d1857432624d39. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-220219. NOTE: This attack is not very likely.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/georgestephanis/Custom-Content-Width/commit/e05e0104fc42ad13b57e2b2cb2d1857432624d39"
+  },
+  {
+    "cve": "CVE-2015-10076",
+    "year": "2015",
+    "description": "A vulnerability was found in dimtion Shaarlier up to 1.2.2. It has been declared as critical. Affected by this vulnerability is the function createTag of the file app/src/main/java/com/dimtion/shaarlier/TagsSource.java of the component Tag Handler. The manipulation leads to sql injection. Upgrading to version 1.2.3 is able to address this issue. The identifier of the patch is 3d1d9b239d9b3cd87e8bed45a0f02da583ad371e. It is recommended to upgrade the affected component. The identifier VDB-220453 was assigned to this vulnerability.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/dimtion/Shaarlier/commit/3d1d9b239d9b3cd87e8bed45a0f02da583ad371e"
+  },
+  {
+    "cve": "CVE-2015-10077",
+    "year": "2015",
+    "description": "A vulnerability was found in webbuilders-group silverstripe-kapost-bridge 0.3.3. It has been declared as critical. Affected by this vulnerability is the function index/getPreview of the file code/control/KapostService.php. The manipulation leads to sql injection. The attack can be launched remotely. Upgrading to version 0.4.0 is able to address this issue. The patch is named 2e14b0fd0ea35034f90890f364b130fb4645ff35. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-220471.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/webbuilders-group/silverstripe-kapost-bridge/commit/2e14b0fd0ea35034f90890f364b130fb4645ff35"
+  },
+  {
+    "cve": "CVE-2015-10078",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as problematic, has been found in atwellpub Resend Welcome Email Plugin 1.0.1 on WordPress. This issue affects the function send_welcome_email_url of the file resend-welcome-email.php. The manipulation leads to cross site scripting. The attack may be initiated remotely. Upgrading to version 1.0.2 is able to address this issue. The identifier of the patch is b14c1f66d307783f0ae74f88088a85999107695c. It is recommended to upgrade the affected component. The identifier VDB-220637 was assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/atwellpub/resend-welcome-email/commit/b14c1f66d307783f0ae74f88088a85999107695c"
+  },
+  {
+    "cve": "CVE-2015-10079",
+    "year": "2015",
+    "description": "A vulnerability was found in juju2143 WalrusIRC 0.0.2. It has been rated as problematic. This issue affects the function parseLinks of the file public/parser.js. The manipulation of the argument text leads to cross site scripting. The attack may be initiated remotely. Upgrading to version 0.0.3 is able to address this issue. The patch is named 45fd885895ae13e8d9b3a71e89d59768914f60af. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-220751.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/juju2143/walrusirc/commit/45fd885895ae13e8d9b3a71e89d59768914f60af"
+  },
+  {
+    "cve": "CVE-2015-10080",
+    "year": "2015",
+    "description": "A vulnerability was found in NREL api-umbrella-web 0.7.1. It has been classified as problematic. This affects an unknown part of the component Admin Data Table Handler. The manipulation leads to cross site scripting. It is possible to initiate the attack remotely. Upgrading to version 0.8.0 is able to address this issue. The patch is named f53a9fb87e10c457f0f3dd4f2af24d3b2f21b3ca. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-221487.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/NREL/api-umbrella-web/commit/f53a9fb87e10c457f0f3dd4f2af24d3b2f21b3ca"
+  },
+  {
+    "cve": "CVE-2015-10081",
+    "year": "2015",
+    "description": "A vulnerability was found in arnoldle submitByMailPlugin 1.0b2.9 and classified as problematic. This issue affects some unknown processing of the file edit_list.php. The manipulation leads to cross-site request forgery. The attack may be initiated remotely. Upgrading to version 1.0b2.9a is able to address this issue. The patch is named a739f680a1623d22f52ff1371e86ca472e63756f. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-221495.",
+    "severity": "HIGH",
+    "url": "https://github.com/arnoldle/phplist-plugin-submitByMailPlugin/commit/a739f680a1623d22f52ff1371e86ca472e63756f"
+  },
+  {
+    "cve": "CVE-2015-10082",
+    "year": "2015",
+    "description": "A vulnerability classified as problematic has been found in UIKit0 libplist 1.12. This affects the function plist_from_xml of the file src/xplist.c of the component XML Handler. The manipulation leads to xml external entity reference. The patch is named c086cb139af7c82845f6d565e636073ff4b37440. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-221499.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/UIKit0/libplist/commit/c086cb139af7c82845f6d565e636073ff4b37440"
+  },
+  {
+    "cve": "CVE-2015-10083",
+    "year": "2015",
+    "description": "A vulnerability has been found in harrystech Dynosaur-Rails and classified as critical. Affected by this vulnerability is the function basic_auth of the file app/controllers/application_controller.rb. The manipulation leads to improper authentication. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The patch is named 04b223813f0e336aab50bff140d0f5889c31dbec. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-221503.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/harrystech/dynosaur-rails/commit/04b223813f0e336aab50bff140d0f5889c31dbec"
+  },
+  {
+    "cve": "CVE-2015-10084",
+    "year": "2015",
+    "description": "A vulnerability was found in irontec klear-library chloe and classified as critical. Affected by this issue is the function _prepareWhere of the file Controller/Rest/BaseController.php. The manipulation leads to sql injection. Upgrading to version marla is able to address this issue. The name of the patch is b25262de52fdaffde2a4434fc2a84408b304fbc5. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-221504.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/irontec/klear-library/commit/b25262de52fdaffde2a4434fc2a84408b304fbc5"
+  },
+  {
+    "cve": "CVE-2015-10085",
+    "year": "2015",
+    "description": "A vulnerability was found in GoPistolet. It has been declared as problematic. This vulnerability affects unknown code of the component MTA. The manipulation leads to denial of service. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. The patch is identified as b91aa4674d460993765884e8463c70e6d886bc90. It is recommended to apply a patch to fix this issue. VDB-221506 is the identifier assigned to this vulnerability.",
+    "severity": "HIGH",
+    "url": "https://github.com/gopistolet/gopistolet/commit/b91aa4674d460993765884e8463c70e6d886bc90"
+  },
+  {
+    "cve": "CVE-2015-10086",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as critical, was found in OpenCycleCompass server-php. Affected is an unknown function of the file api1/login.php. The manipulation of the argument user leads to sql injection. It is possible to launch the attack remotely. This product is using a rolling release to provide continious delivery. Therefore, no version details for affected nor updated releases are available. The name of the patch is fa0d9bcf81c711a88172ad0d37a842f029ac3782. It is recommended to apply a patch to fix this issue. The identifier of this vulnerability is VDB-221808.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/OpenCycleCompass/server-php/commit/fa0d9bcf81c711a88172ad0d37a842f029ac3782"
+  },
+  {
+    "cve": "CVE-2015-10087",
+    "year": "2015",
+    "description": "** UNSUPPORTED WHEN ASSIGNED ** A vulnerability has been found in UpThemes Theme DesignFolio Plus 1.2 on WordPress and classified as problematic. Affected by this vulnerability is an unknown functionality. The manipulation leads to unrestricted upload. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The identifier of the patch is 53f6ae62878076f99718e5feb589928e83c879a9. It is recommended to apply a patch to fix this issue. The identifier VDB-221809 was assigned to this vulnerability. NOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+    "severity": "HIGH",
+    "url": "https://github.com/CCrashBandicot/exploit/commit/53f6ae62878076f99718e5feb589928e83c879a9"
+  },
+  {
+    "cve": "CVE-2015-10088",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as critical, was found in ayttm up to 0.5.0.89. This affects the function http_connect in the library libproxy/proxy.c. The manipulation leads to format string. It is possible to initiate the attack remotely. The complexity of an attack is rather high. The exploitability is told to be difficult. The patch is named 40e04680018614a7d2b68566b261b061a0597046. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-222267.",
+    "severity": "HIGH",
+    "url": "https://github.com/ayttm/ayttm/commit/40e04680018614a7d2b68566b261b061a0597046"
+  },
+  {
+    "cve": "CVE-2015-10089",
+    "year": "2015",
+    "description": "A vulnerability classified as problematic has been found in flame.js. This affects an unknown part. The manipulation leads to cross site scripting. It is possible to initiate the attack remotely. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The patch is named e6c49b5f6179e31a534b7c3264e1d36aa99728ac. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-222291.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/flamejs/flame.js/commit/e6c49b5f6179e31a534b7c3264e1d36aa99728ac"
+  },
+  {
+    "cve": "CVE-2015-10090",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as problematic, has been found in Landing Pages Plugin up to 1.8.7 on WordPress. Affected by this issue is some unknown functionality. The manipulation leads to cross site scripting. The attack may be launched remotely. Upgrading to version 1.8.8 is able to address this issue. The name of the patch is c8e22c1340c11fedfb0a0a67ea690421bdb62b94. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-222320.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/landing-pages/commit/c8e22c1340c11fedfb0a0a67ea690421bdb62b94"
+  },
+  {
+    "cve": "CVE-2015-10091",
+    "year": "2015",
+    "description": "A vulnerability has been found in ByWater Solutions bywater-koha-xslt and classified as critical. This vulnerability affects the function StringSearch of the file admin/systempreferences.pl. The manipulation of the argument name leads to sql injection. The attack can be initiated remotely. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. The patch is identified as 9513b93c828dfbc4413f9e0df63647401aaf4e58. It is recommended to apply a patch to fix this issue. VDB-222322 is the identifier assigned to this vulnerability.",
+    "severity": "HIGH",
+    "url": "https://github.com/bywatersolutions/bywater-koha-xslt/commit/9513b93c828dfbc4413f9e0df63647401aaf4e58"
+  },
+  {
+    "cve": "CVE-2015-10092",
+    "year": "2015",
+    "description": "A vulnerability was found in Qtranslate Slug Plugin up to 1.1.16 on WordPress. It has been classified as problematic. Affected is the function add_slug_meta_box of the file includes/class-qtranslate-slug.php. The manipulation leads to cross site scripting. It is possible to launch the attack remotely. Upgrading to version 1.1.17 is able to address this issue. The name of the patch is 74b3932696f9868e14563e51b7d0bb68c53bf5e4. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-222324.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/qtranslate-slug/commit/74b3932696f9868e14563e51b7d0bb68c53bf5e4"
+  },
+  {
+    "cve": "CVE-2015-10093",
+    "year": "2015",
+    "description": "A vulnerability was found in Mark User as Spammer Plugin 1.0.0/1.0.1 on WordPress. It has been declared as problematic. Affected by this vulnerability is the function user_row_actions of the file plugin/plugin.php. The manipulation of the argument url leads to cross site scripting. The attack can be launched remotely. The complexity of an attack is rather high. The exploitation appears to be difficult. Upgrading to version 1.0.2 is able to address this issue. The identifier of the patch is e7059727274d2767c240c55c02c163eaa4ba6c62. It is recommended to upgrade the affected component. The identifier VDB-222325 was assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/korobochkin/mark-user-as-spammer/commit/e7059727274d2767c240c55c02c163eaa4ba6c62"
+  },
+  {
+    "cve": "CVE-2015-10094",
+    "year": "2015",
+    "description": "A vulnerability was found in Fastly Plugin up to 0.97 on WordPress. It has been rated as problematic. Affected by this issue is the function post of the file lib/api.php. The manipulation of the argument url leads to cross site scripting. The attack may be launched remotely. Upgrading to version 0.98 is able to address this issue. The patch is identified as d7fe42538f4d4af500e3af9678b6b06fba731656. It is recommended to upgrade the affected component. VDB-222326 is the identifier assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/fastly/commit/d7fe42538f4d4af500e3af9678b6b06fba731656"
+  },
+  {
+    "cve": "CVE-2015-10095",
+    "year": "2015",
+    "description": "A vulnerability classified as problematic has been found in woo-popup Plugin up to 1.2.2 on WordPress. This affects an unknown part of the file admin/class-woo-popup-admin.php. The manipulation leads to cross site scripting. It is possible to initiate the attack remotely. Upgrading to version 1.3.0 is able to address this issue. The patch is named 7c76ac78f3e16015991b612ff4fa616af4ce9292. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-222327.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/woo-popup/commit/7c76ac78f3e16015991b612ff4fa616af4ce9292"
+  },
+  {
+    "cve": "CVE-2015-10096",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as critical, was found in Zarthus IRC Twitter Announcer Bot up to 1.1.0. This affects the function get_tweets of the file lib/twitterbot/plugins/twitter_announcer.rb. The manipulation of the argument tweet leads to command injection. It is possible to initiate the attack remotely. The complexity of an attack is rather high. The exploitability is told to be difficult. Upgrading to version 1.1.1 is able to address this issue. The patch is named 6b1941b7fc2c70e1f40981b43c84a2c20cc12bd3. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-223383.",
+    "severity": "HIGH",
+    "url": "https://github.com/Zarthus/irc-twitter-bot/commit/6b1941b7fc2c70e1f40981b43c84a2c20cc12bd3"
+  },
+  {
+    "cve": "CVE-2015-10098",
+    "year": "2015",
+    "description": "A vulnerability was found in Broken Link Checker Plugin up to 1.10.5 on WordPress. It has been rated as problematic. Affected by this issue is the function print_module_list/show_warnings_section_notice/status_text/ui_get_action_links. The manipulation leads to cross site scripting. The attack may be launched remotely. Upgrading to version 1.10.6 is able to address this issue. The name of the patch is f30638869e281461b87548e40b517738b4350e47. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-225152.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/broken-link-checker/commit/f30638869e281461b87548e40b517738b4350e47"
+  },
+  {
+    "cve": "CVE-2015-10099",
+    "year": "2015",
+    "description": "A vulnerability classified as critical has been found in CP Appointment Calendar Plugin up to 1.1.5 on WordPress. This affects the function dex_process_ready_to_go_appointment of the file dex_appointments.php. The manipulation of the argument itemnumber leads to sql injection. It is possible to initiate the attack remotely. The patch is named e29a9cdbcb0f37d887dd302a05b9e8bf213da01d. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-225351.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/wp-plugins/cp-appointment-calendar/commit/e29a9cdbcb0f37d887dd302a05b9e8bf213da01d"
+  },
+  {
+    "cve": "CVE-2015-10100",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as critical, has been found in Dynamic Widgets Plugin up to 1.5.10 on WordPress. This issue affects some unknown processing of the file classes/dynwid_class.php. The manipulation leads to sql injection. The attack may be initiated remotely. Upgrading to version 1.5.11 is able to address this issue. The identifier of the patch is d0a19c6efcdc86d7093b369bc9e29a0629e57795. It is recommended to upgrade the affected component. The identifier VDB-225353 was assigned to this vulnerability.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/wp-plugins/dynamic-widgets/commit/d0a19c6efcdc86d7093b369bc9e29a0629e57795"
+  },
+  {
+    "cve": "CVE-2015-10101",
+    "year": "2015",
+    "description": "A vulnerability classified as problematic was found in Google Analytics Top Content Widget Plugin up to 1.5.6 on WordPress. Affected by this vulnerability is an unknown functionality of the file class-tgm-plugin-activation.php. The manipulation leads to cross site scripting. The attack can be launched remotely. Upgrading to version 1.5.7 is able to address this issue. The identifier of the patch is 25bb1dea113716200a6f0f3135801d84a7a65540. It is recommended to upgrade the affected component. The identifier VDB-226117 was assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/google-analytics-top-posts-widget/commit/25bb1dea113716200a6f0f3135801d84a7a65540"
+  },
+  {
+    "cve": "CVE-2015-10102",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as critical, has been found in Freshdesk Plugin 1.7 on WordPress. Affected by this issue is some unknown functionality. The manipulation leads to open redirect. The attack may be launched remotely. Upgrading to version 1.8 is able to address this issue. The patch is identified as 2aaecd4e0c7c6c1dc4e6a593163d5f7aa0fa5d5b. It is recommended to upgrade the affected component. VDB-226118 is the identifier assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/freshdesk-support/commit/2aaecd4e0c7c6c1dc4e6a593163d5f7aa0fa5d5b"
+  },
+  {
+    "cve": "CVE-2015-10103",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as problematic, was found in InternalError503 Forget It up to 1.3. This affects an unknown part of the file js/settings.js. The manipulation of the argument setForgetTime with the input 0 leads to infinite loop. It is possible to launch the attack on the local host. Upgrading to version 1.4 is able to address this issue. The patch is named adf0c7fd59b9c935b4fd675c556265620124999c. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-226119.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/InternalError503/forget-it/commit/adf0c7fd59b9c935b4fd675c556265620124999c"
+  },
+  {
+    "cve": "CVE-2015-10104",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as problematic, has been found in Icons for Features Plugin 1.0.0 on WordPress. Affected by this issue is some unknown functionality of the file classes/class-icons-for-features-admin.php. The manipulation of the argument redirect_url leads to open redirect. The attack may be launched remotely. Upgrading to version 1.0.1 is able to address this issue. The name of the patch is 63124c021ae24b68e56872530df26eb4268ad633. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-227756.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/icons-for-features/commit/63124c021ae24b68e56872530df26eb4268ad633"
+  },
+  {
+    "cve": "CVE-2015-10105",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as critical, was found in IP Blacklist Cloud Plugin up to 3.42 on WordPress. This affects the function valid_js_identifier of the file ip_blacklist_cloud.php of the component CSV File Import. The manipulation of the argument filename leads to path traversal. It is possible to initiate the attack remotely. Upgrading to version 3.43 is able to address this issue. The identifier of the patch is 6e6fe8c6fda7cbc252eef083105e08d759c07312. It is recommended to upgrade the affected component. The identifier VDB-227757 was assigned to this vulnerability.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/wp-plugins/ip-blacklist-cloud/commit/6e6fe8c6fda7cbc252eef083105e08d759c07312"
+  },
+  {
+    "cve": "CVE-2015-10106",
+    "year": "2015",
+    "description": "** UNSUPPORTED WHEN ASSIGNED ** A vulnerability classified as critical was found in mback2k mh_httpbl Extension up to 1.1.7 on TYPO3. This vulnerability affects the function moduleContent of the file mod1/index.php. The manipulation leads to sql injection. The attack can be initiated remotely. Upgrading to version 1.1.8 is able to address this issue. The patch is identified as 429f50f4e4795b20dae06735b41fb94f010722bf. It is recommended to upgrade the affected component. VDB-230086 is the identifier assigned to this vulnerability. NOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+    "severity": "HIGH",
+    "url": "https://github.com/mback2k/mh_httpbl/commit/429f50f4e4795b20dae06735b41fb94f010722bf"
+  },
+  {
+    "cve": "CVE-2015-10107",
+    "year": "2015",
+    "description": "A vulnerability was found in Simplr Registration Form Plus+ Plugin up to 2.3.4 on WordPress and classified as problematic. This issue affects some unknown processing. The manipulation leads to cross site scripting. The attack may be initiated remotely. Upgrading to version 2.3.5 is able to address this issue. The identifier of the patch is d588446844dd49232ab400ef213ff5b92121c33e. It is recommended to upgrade the affected component. The identifier VDB-230153 was assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/simplr-registration-form/commit/d588446844dd49232ab400ef213ff5b92121c33e"
+  },
+  {
+    "cve": "CVE-2015-10108",
+    "year": "2015",
+    "description": "A vulnerability was found in meitar Inline Google Spreadsheet Viewer Plugin up to 0.9.6 on WordPress and classified as problematic. Affected by this issue is the function displayShortcode of the file inline-gdocs-viewer.php. The manipulation leads to cross-site request forgery. The attack may be launched remotely. Upgrading to version 0.9.6.1 is able to address this issue. The patch is identified as 2a8057df8ca30adc859cecbe5cad21ac28c5b747. It is recommended to upgrade the affected component. VDB-230234 is the identifier assigned to this vulnerability.",
+    "severity": "HIGH",
+    "url": "https://github.com/wp-plugins/inline-google-spreadsheet-viewer/commit/2a8057df8ca30adc859cecbe5cad21ac28c5b747"
+  },
+  {
+    "cve": "CVE-2015-10109",
+    "year": "2015",
+    "description": "A vulnerability was found in Video Playlist and Gallery Plugin up to 1.136 on WordPress. It has been rated as problematic. Affected by this issue is some unknown functionality of the file wp-media-cincopa.php. The manipulation leads to cross-site request forgery. The attack may be launched remotely. Upgrading to version 1.137 is able to address this issue. The name of the patch is ee28e91f4d5404905204c43b7b84a8ffecad932e. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-230264.",
+    "severity": "HIGH",
+    "url": "https://github.com/wp-plugins/video-playlist-and-gallery-plugin/commit/ee28e91f4d5404905204c43b7b84a8ffecad932e"
+  },
+  {
+    "cve": "CVE-2015-10110",
+    "year": "2015",
+    "description": "A vulnerability classified as problematic was found in ruddernation TinyChat Room Spy Plugin up to 1.2.8 on WordPress. This vulnerability affects the function wp_show_room_spy of the file room-spy.php. The manipulation of the argument room leads to cross site scripting. The attack can be initiated remotely. Upgrading to version 1.2.9 is able to address this issue. The name of the patch is ab72627a963d61fb3bc31018e3855b08dc94a979. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-230392.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/tinychat-roomspy/commit/ab72627a963d61fb3bc31018e3855b08dc94a979"
+  },
+  {
+    "cve": "CVE-2015-10111",
+    "year": "2015",
+    "description": "A vulnerability was found in Watu Quiz Plugin up to 2.6.7 on WordPress. It has been rated as critical. This issue affects the function watu_exams of the file controllers/exam.php of the component Exam Handler. The manipulation of the argument quiz leads to sql injection. The attack may be initiated remotely. Upgrading to version 2.6.8 is able to address this issue. The patch is named bf42e7cfd819a3e76cf3e1465697e89f4830590c. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-230651.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/wp-plugins/watu/commit/bf42e7cfd819a3e76cf3e1465697e89f4830590c"
+  },
+  {
+    "cve": "CVE-2015-10112",
+    "year": "2015",
+    "description": "A vulnerability classified as problematic has been found in WooFramework Branding Plugin up to 1.0.1 on WordPress. Affected is the function admin_screen_logic of the file wooframework-branding.php. The manipulation of the argument url leads to open redirect. It is possible to launch the attack remotely. Upgrading to version 1.0.2 is able to address this issue. The name of the patch is f12fccd7b5eaf66442346f748c901ef504742f78. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-230652.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/wooframework-branding/commit/f12fccd7b5eaf66442346f748c901ef504742f78"
+  },
+  {
+    "cve": "CVE-2015-10113",
+    "year": "2015",
+    "description": "A vulnerability classified as problematic was found in WooFramework Tweaks Plugin up to 1.0.1 on WordPress. Affected by this vulnerability is the function admin_screen_logic of the file wooframework-tweaks.php. The manipulation of the argument url leads to open redirect. The attack can be launched remotely. Upgrading to version 1.0.2 is able to address this issue. The identifier of the patch is 3b57d405149c1a59d1119da6e0bb8212732c9c88. It is recommended to upgrade the affected component. The identifier VDB-230653 was assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/wooframework-tweaks/commit/3b57d405149c1a59d1119da6e0bb8212732c9c88"
+  },
+  {
+    "cve": "CVE-2015-10114",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as problematic, has been found in WooSidebars Plugin up to 1.4.1 on WordPress. Affected by this issue is the function enable_custom_post_sidebars of the file classes/class-woo-sidebars.php. The manipulation of the argument sendback leads to open redirect. The attack may be launched remotely. Upgrading to version 1.4.2 is able to address this issue. The patch is identified as 1ac6d6ac26e185673f95fc1ccc56a392169ba601. It is recommended to upgrade the affected component. VDB-230654 is the identifier assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/woosidebars/commit/1ac6d6ac26e185673f95fc1ccc56a392169ba601"
+  },
+  {
+    "cve": "CVE-2015-10115",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as problematic, was found in WooSidebars Sidebar Manager Converter Plugin up to 1.1.1 on WordPress. This affects the function process_request of the file classes/class-woosidebars-sbm-converter.php. The manipulation leads to open redirect. It is possible to initiate the attack remotely. Upgrading to version 1.1.2 is able to address this issue. The patch is named a0efb4ffb9dfe2925b889c1aa5ea40b4abbbda8a. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-230655.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/woosidebars-sbm-converter/commit/a0efb4ffb9dfe2925b889c1aa5ea40b4abbbda8a"
+  },
+  {
+    "cve": "CVE-2015-10116",
+    "year": "2015",
+    "description": "A vulnerability classified as problematic has been found in RealFaviconGenerator Favicon Plugin up to 1.2.12 on WordPress. This affects the function install_new_favicon of the file admin/class-favicon-by-realfavicongenerator-admin.php. The manipulation leads to cross-site request forgery. It is possible to initiate the attack remotely. Upgrading to version 1.2.13 is able to address this issue. The identifier of the patch is 949a1ae7216216350458844f50a72f100b56d4e7. It is recommended to upgrade the affected component. The identifier VDB-230661 was assigned to this vulnerability.",
+    "severity": "HIGH",
+    "url": "https://github.com/wp-plugins/favicon-by-realfavicongenerator/commit/949a1ae7216216350458844f50a72f100b56d4e7"
+  },
+  {
+    "cve": "CVE-2015-10117",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as problematic, was found in Gravity Forms DPS PxPay Plugin up to 1.4.2 on WordPress. Affected is an unknown function. The manipulation leads to cross site scripting. It is possible to launch the attack remotely. Upgrading to version 1.4.3 is able to address this issue. The name of the patch is 5966a5e6343e3d5610bdfa126a5cfbae95e629b6. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-230664.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/gravity-forms-dps-pxpay/commit/5966a5e6343e3d5610bdfa126a5cfbae95e629b6"
+  },
+  {
+    "cve": "CVE-2015-10118",
+    "year": "2015",
+    "description": "A vulnerability classified as problematic was found in cchetanonline WP-CopyProtect up to 3.0.0. This vulnerability affects the function CopyProtect_options_page of the file wp-copyprotect.php. The manipulation of the argument CopyProtect_nrc_text leads to cross site scripting. The attack can be initiated remotely. Upgrading to version 3.1.0 is able to address this issue. The patch is identified as 8b8fe4102886b326330dc1ff06b17313fb10aee5. It is recommended to upgrade the affected component. VDB-231202 is the identifier assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/wp-copyprotect/commit/8b8fe4102886b326330dc1ff06b17313fb10aee5"
+  },
+  {
+    "cve": "CVE-2015-10119",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as problematic, has been found in View All Posts Page Plugin up to 0.9.0 on WordPress. This issue affects the function action_admin_notices_activation of the file view-all-posts-pages.php. The manipulation leads to cross site scripting. The attack may be initiated remotely. Upgrading to version 0.9.1 is able to address this issue. The patch is named bf914f3a59063fa4df8fd4925ae18a5d852396d7. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-233363.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/view-all-posts-pages/commit/bf914f3a59063fa4df8fd4925ae18a5d852396d7"
+  },
+  {
+    "cve": "CVE-2015-10120",
+    "year": "2015",
+    "description": "A vulnerability, which was classified as problematic, was found in WDS Multisite Aggregate Plugin up to 1.0.0 on WordPress. Affected is the function update_options of the file includes/WDS_Multisite_Aggregate_Options.php. The manipulation leads to cross site scripting. It is possible to launch the attack remotely. Upgrading to version 1.0.1 is able to address this issue. The name of the patch is 49e0bbcb6ff70e561365d9e0d26426598f63ca12. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-233364.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/wds-multisite-aggregate/commit/49e0bbcb6ff70e561365d9e0d26426598f63ca12"
+  },
+  {
+    "cve": "CVE-2015-10121",
+    "year": "2015",
+    "description": "A vulnerability has been found in Beeliked Microsite Plugin up to 1.0.1 on WordPress and classified as problematic. Affected by this vulnerability is the function embed_handler of the file beelikedmicrosite.php. The manipulation leads to cross site scripting. The attack can be launched remotely. Upgrading to version 1.0.2 is able to address this issue. The identifier of the patch is d23bafb5d05fb2636a2b78331f9d3fca152903dc. It is recommended to upgrade the affected component. The identifier VDB-233365 was assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/beeliked-microsite/commit/d23bafb5d05fb2636a2b78331f9d3fca152903dc"
+  },
+  {
+    "cve": "CVE-2015-10122",
+    "year": "2015",
+    "description": "A vulnerability was found in wp-donate Plugin up to 1.4 on WordPress. It has been classified as critical. This affects an unknown part of the file includes/donate-display.php. The manipulation leads to sql injection. It is possible to initiate the attack remotely. Upgrading to version 1.5 is able to address this issue. The identifier of the patch is 019114cb788d954c5d1b36d6c62418619e93a757. It is recommended to upgrade the affected component. The identifier VDB-234249 was assigned to this vulnerability.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/wp-plugins/wp-donate/commit/019114cb788d954c5d1b36d6c62418619e93a757"
+  },
+  {
+    "cve": "CVE-2015-10124",
+    "year": "2015",
+    "description": "A vulnerability was found in Most Popular Posts Widget Plugin up to 0.8 on WordPress. It has been classified as critical. Affected is the function add_views/show_views of the file functions.php. The manipulation leads to sql injection. It is possible to launch the attack remotely. Upgrading to version 0.9 is able to address this issue. The patch is identified as a99667d11ac8d320006909387b100e9a8b5c12e1. It is recommended to upgrade the affected component. VDB-241026 is the identifier assigned to this vulnerability.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/wp-plugins/most-popular-posts-widget-lite/commit/a99667d11ac8d320006909387b100e9a8b5c12e1"
+  },
+  {
+    "cve": "CVE-2015-10125",
+    "year": "2015",
+    "description": "A vulnerability classified as problematic has been found in WP Ultimate CSV Importer Plugin 3.7.2 on WordPress. This affects an unknown part. The manipulation leads to cross-site request forgery. It is possible to initiate the attack remotely. Upgrading to version 3.7.3 is able to address this issue. The identifier of the patch is 13c30af721d3f989caac72dd0f56cf0dc40fad7e. It is recommended to upgrade the affected component. The identifier VDB-241317 was assigned to this vulnerability.",
+    "severity": "HIGH",
+    "url": "https://github.com/wp-plugins/wp-ultimate-csv-importer/commit/13c30af721d3f989caac72dd0f56cf0dc40fad7e"
+  },
+  {
+    "cve": "CVE-2015-10126",
+    "year": "2015",
+    "description": "A vulnerability classified as critical was found in Easy2Map Photos Plugin 1.0.1 on WordPress. This vulnerability affects unknown code. The manipulation leads to sql injection. The attack can be initiated remotely. Upgrading to version 1.1.0 is able to address this issue. The patch is identified as 503d9ee2482d27c065f78d9546f076a406189908. It is recommended to upgrade the affected component. VDB-241318 is the identifier assigned to this vulnerability.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/wp-plugins/easy2map-photos/commit/503d9ee2482d27c065f78d9546f076a406189908"
+  },
+  {
+    "cve": "CVE-2015-10127",
+    "year": "2015",
+    "description": "A vulnerability was found in PlusCaptcha Plugin up to 2.0.6 on WordPress and classified as problematic. Affected by this issue is some unknown functionality. The manipulation leads to cross site scripting. The attack may be launched remotely. Upgrading to version 2.0.14 is able to address this issue. The patch is identified as 1274afc635170daafd38306487b6bb8a01f78ecd. It is recommended to upgrade the affected component. VDB-248954 is the identifier assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/pluscaptcha/commit/1274afc635170daafd38306487b6bb8a01f78ecd"
+  },
+  {
+    "cve": "CVE-2015-10128",
+    "year": "2015",
+    "description": "A vulnerability was found in rt-prettyphoto Plugin up to 1.2 on WordPress and classified as problematic. Affected by this issue is the function royal_prettyphoto_plugin_links of the file rt-prettyphoto.php. The manipulation leads to cross site scripting. The attack may be launched remotely. Upgrading to version 1.3 is able to address this issue. The patch is identified as 0d3d38cfa487481b66869e4212df1cefc281ecb7. It is recommended to upgrade the affected component. VDB-249422 is the identifier assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/rt-prettyphoto/commit/0d3d38cfa487481b66869e4212df1cefc281ecb7"
+  },
+  {
+    "cve": "CVE-2015-10129",
+    "year": "2015",
+    "description": "A vulnerability was found in planet-freo up to 20150116 and classified as problematic. Affected by this issue is some unknown functionality of the file admin/inc/auth.inc.php. The manipulation of the argument auth leads to incorrect comparison. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. This product is using a rolling release to provide continious delivery. Therefore, no version details for affected nor updated releases are available. The name of the patch is 6ad38c58a45642eb8c7844e2f272ef199f59550d. It is recommended to apply a patch to fix this issue. The identifier of this vulnerability is VDB-252716.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/samwilson/planet-freo/commit/6ad38c58a45642eb8c7844e2f272ef199f59550d"
+  },
+  {
+    "cve": "CVE-2015-10130",
+    "year": "2015",
+    "description": "The Team Circle Image Slider With Lightbox plugin for WordPress is vulnerable to Cross-Site Request Forgery in version 1.0. This is due to missing or incorrect nonce validation on the circle_thumbnail_slider_with_lightbox_image_management_func() function. This makes it possible for unauthenticated attackers to edit image data which can be used to inject malicious JavaScript, along with deleting images, and uploading malicious files via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.",
+    "severity": "MEDIUM",
+    "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=1269993%40circle-image-slider-with-lightbox&new=1269993%40circle-image-slider-with-lightbox&sfp_email=&sfph_mail="
+  },
+  {
+    "cve": "CVE-2015-10131",
+    "year": "2015",
+    "description": "A vulnerability was found in chrisy TFO Graphviz Plugin up to 1.9 on WordPress and classified as problematic. Affected by this issue is the function admin_page_load/admin_page of the file tfo-graphviz-admin.php. The manipulation leads to cross site scripting. The attack may be launched remotely. Upgrading to version 1.10 is able to address this issue. The name of the patch is 594c953a345f79e26003772093b0caafc14b92c2. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-258620.",
+    "severity": "N/A",
+    "url": "https://github.com/wp-plugins/tfo-graphviz/commit/594c953a345f79e26003772093b0caafc14b92c2"
+  },
+  {
+    "cve": "CVE-2015-10132",
+    "year": "2015",
+    "description": "A vulnerability classified as problematic was found in Thimo Grauerholz WP-Spreadplugin up to 3.8.6.1 on WordPress. This vulnerability affects unknown code of the file spreadplugin.php. The manipulation of the argument Spreadplugin leads to cross site scripting. The attack can be initiated remotely. Upgrading to version 3.8.6.6 is able to address this issue. The name of the patch is a9b9afc641854698e80aa5dd9ababfc8e0e57d69. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-261676.",
+    "severity": "N/A",
+    "url": "https://github.com/wp-plugins/wp-spreadplugin/commit/a9b9afc641854698e80aa5dd9ababfc8e0e57d69"
+  },
+  {
+    "cve": "CVE-2015-1014",
+    "year": "2015",
+    "description": "A successful exploit of these vulnerabilities requires the local user to load a crafted DLL file in the system directory on servers running Schneider Electric OFS v3.5 with version v7.40 of SCADA Expert Vijeo Citect/CitectSCADA, OFS v3.5 with version v7.30 of Vijeo Citect/CitectSCADA, and OFS v3.5 with version v7.20 of Vijeo Citect/CitectSCADA.. If the application attempts to open that file, the application could crash or allow the attacker to execute arbitrary code. Schneider Electric recommends vulnerable users upgrade the OFS to V3.5 and install the latest service pack (SP 6 or newer) for their associated version.",
+    "severity": "HIGH",
+    "url": "https://ics-cert.us-cert.gov/advisories/ICSA-15-141-01"
+  },
+  {
+    "cve": "CVE-2015-1142857",
+    "year": "2015",
+    "description": "On multiple SR-IOV cars it is possible for VF's assigned to guests to send ethernet flow control pause frames via the PF. This includes Linux kernel ixgbe driver before commit f079fa005aae08ee0e1bc32699874ff4f02e11c1, the Linux Kernel i40e/i40evf driver before e7358f54a3954df16d4f87e3cad35063f1c17de5 and the DPDK before commit 3f12b9f23b6499ff66ec8b0de941fb469297e5d0, additionally Multiple vendor NIC firmware is affected.",
+    "severity": "HIGH",
+    "url": "http://seclists.org/oss-sec/2015/q4/425"
+  },
+  {
+    "cve": "CVE-2015-1850",
+    "year": "2015",
+    "description": "Rejected reason: DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: none. Reason: This candidate was withdrawn by its CNA. Further investigation showed that it was not an exploitable issue. Notes: none.",
+    "severity": "N/A",
+    "url": ""
+  },
+  {
+    "cve": "CVE-2015-1853",
+    "year": "2015",
+    "description": "chrony before 1.31.1 does not properly protect state variables in authenticated symmetric NTP associations, which allows remote attackers with knowledge of NTP peering to cause a denial of service (inability to synchronize) via random timestamps in crafted NTP data packets.",
+    "severity": "MEDIUM",
+    "url": "http://chrony.tuxfamily.org/News.html"
+  },
+  {
+    "cve": "CVE-2015-1877",
+    "year": "2015",
+    "description": "The open_generic_xdg_mime function in xdg-open in xdg-utils 1.1.0 rc1 in Debian, when using dash, does not properly handle local variables, which allows remote attackers to execute arbitrary commands via a crafted file.",
+    "severity": "HIGH",
+    "url": "http://www.debian.org/security/2015/dsa-3165"
+  },
+  {
+    "cve": "CVE-2015-2000",
+    "year": "2015",
+    "description": "The Jumio SDK before 1.5.0 for Android might allow attackers to execute arbitrary code by leveraging a finalize method in a Serializable class that improperly passes an attacker-controlled pointer to a native function.",
+    "severity": "CRITICAL",
+    "url": "https://alephsecurity.com/vulns/aleph-2015001"
+  },
+  {
+    "cve": "CVE-2015-2001",
+    "year": "2015",
+    "description": "The MetaIO SDK before 6.0.2.1 for Android might allow attackers to execute arbitrary code by leveraging a finalize method in a Serializable class that improperly passes an attacker-controlled pointer to a native function.",
+    "severity": "CRITICAL",
+    "url": "https://alephsecurity.com/vulns/aleph-2015002"
+  },
+  {
+    "cve": "CVE-2015-2002",
+    "year": "2015",
+    "description": "The ESRI ArcGis Runtime SDK before 10.2.6-2 for Android might allow attackers to execute arbitrary code by leveraging a finalize method in a Serializable class that improperly passes an attacker-controlled pointer to a native function.",
+    "severity": "CRITICAL",
+    "url": "https://alephsecurity.com/vulns/aleph-2015003"
+  },
+  {
+    "cve": "CVE-2015-2003",
+    "year": "2015",
+    "description": "The PJSIP PJSUA2 SDK before SVN Changeset 51322 for Android might allow attackers to execute arbitrary code by leveraging a finalize method in a Serializable class that improperly passes an attacker-controlled pointer to a native function.",
+    "severity": "CRITICAL",
+    "url": "https://alephsecurity.com/vulns/aleph-2015004"
+  },
+  {
+    "cve": "CVE-2015-2004",
+    "year": "2015",
+    "description": "The GraceNote GNSDK SDK before SVN Changeset 1.1.7 for Android might allow attackers to execute arbitrary code by leveraging a finalize method in a Serializable class that improperly passes an attacker-controlled pointer to a native function.",
+    "severity": "CRITICAL",
+    "url": "https://alephsecurity.com/vulns/aleph-2015005"
+  },
+  {
+    "cve": "CVE-2015-20110",
+    "year": "2015",
+    "description": "JHipster generator-jhipster before 2.23.0 allows a timing attack against validateToken due to a string comparison that stops at the first character that is different. Attackers can guess tokens by brute forcing one character at a time and observing the timing. This of course drastically reduces the search space to a linear amount of guesses based on the token length times the possible characters.",
+    "severity": "HIGH",
+    "url": "https://github.com/jhipster/generator-jhipster/commit/79fe5626cb1bb80f9ac86cf46980748e65d2bdbc"
+  },
+  {
+    "cve": "CVE-2015-20111",
+    "year": "2015",
+    "description": "miniupnp before 4c90b87, as used in Bitcoin Core before 0.12 and other products, lacks checks for snprintf return values, leading to a buffer overflow and significant data leak, a different vulnerability than CVE-2019-12107. In Bitcoin Core before 0.12, remote code execution was possible in conjunction with CVE-2015-6031 exploitation.",
+    "severity": "N/A",
+    "url": "https://bitcoincore.org/en/2024/07/03/disclose_upnp_rce/"
+  },
+  {
+    "cve": "CVE-2015-2020",
+    "year": "2015",
+    "description": "The MyScript SDK before 1.3 for Android might allow attackers to execute arbitrary code by leveraging a finalize method in a Serializable class that improperly passes an attacker-controlled pointer to a native function.",
+    "severity": "CRITICAL",
+    "url": "https://alephsecurity.com/vulns/aleph-2015006"
+  },
+  {
+    "cve": "CVE-2015-2186",
+    "year": "2015",
+    "description": "The Ansible edxapp role in the Configuration Repo in edX allows remote websites to spoof edX accounts by leveraging use of the string literal \"False\" instead of a boolean False for the CORS_ORIGIN_ALLOW_ALL setting. Note: this vulnerability was fixed on 2015-03-06, but the version number was not changed.",
+    "severity": "HIGH",
+    "url": "https://github.com/edx/configuration/pull/1885/files"
+  },
+  {
+    "cve": "CVE-2015-2207",
+    "year": "2015",
+    "description": "Multiple cross-site scripting (XSS) vulnerabilities in NetCracker Resource Management System before 8.2 allow remote authenticated users to inject arbitrary web script or HTML via the (1) ctrl, (2) t90001_0_theform_selection, (3) _scroll, (4) tableName, (5) parent, (6) circuit, (7) return, (8) xname, or (9) mpTransactionId parameter.",
+    "severity": "MEDIUM",
+    "url": "http://packetstormsecurity.com/files/132807/NetCracker-Resource-Management-System-8.0-Cross-Site-Scripting.html"
+  },
+  {
+    "cve": "CVE-2015-2968",
+    "year": "2015",
+    "description": "LINE@ for Android version 1.0.0 and LINE@ for iOS version 1.0.0 are vulnerable to MITM (man-in-the-middle) attack since the application allows non-SSL/TLS communications. As a result, any API may be invoked from a script injected by a MITM (man-in-the-middle) attacker.",
+    "severity": "MEDIUM",
+    "url": "http://official-blog.line.me/ja/archives/36495925.html"
+  },
+  {
+    "cve": "CVE-2015-3147",
+    "year": "2015",
+    "description": "daemon/abrt-handle-upload.in in Automatic Bug Reporting Tool (ABRT), when moving problem reports from /var/spool/abrt-upload, allows local users to write to arbitrary files or possibly have other unspecified impact via a symlink attack on (1) /var/spool/abrt or (2) /var/tmp/abrt.",
+    "severity": "MEDIUM",
+    "url": "http://rhn.redhat.com/errata/RHSA-2015-1083.html"
+  },
+  {
+    "cve": "CVE-2015-3150",
+    "year": "2015",
+    "description": "abrt-dbus in Automatic Bug Reporting Tool (ABRT) allows local users to delete or change the ownership of arbitrary files via the problem directory argument to the (1) ChownProblemDir, (2) DeleteElement, or (3) DeleteProblem method.",
+    "severity": "HIGH",
+    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1214457"
+  },
+  {
+    "cve": "CVE-2015-3151",
+    "year": "2015",
+    "description": "Directory traversal vulnerability in abrt-dbus in Automatic Bug Reporting Tool (ABRT) allows local users to read, write to, or change ownership of arbitrary files via unspecified vectors to the (1) NewProblem, (2) GetInfo, (3) SetElement, or (4) DeleteElement method.",
+    "severity": "HIGH",
+    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2015-3151"
+  },
+  {
+    "cve": "CVE-2015-3172",
+    "year": "2015",
+    "description": "EidoGo is susceptible to Cross-Site Scripting (XSS) attacks via maliciously crafted SGF input.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/jkk/eidogo/issues/27"
+  },
+  {
+    "cve": "CVE-2015-3619",
+    "year": "2015",
+    "description": "Cross-site scripting (XSS) vulnerability in assets/js/vm2admin.js in the VirtueMart component before 3.0.8 for Joomla! allows remote attackers to inject arbitrary web script or HTML via vectors involving a \"double encode combination of first_name, last_name and company.\"",
+    "severity": "MEDIUM",
+    "url": "http://dev.virtuemart.net/projects/virtuemart/repository/diff/trunk/virtuemart/administrator/components/com_virtuemart/assets/js/vm2admin.js?utf8=%E2%9C%93&rev=8828&rev_to=8670"
+  },
+  {
+    "cve": "CVE-2015-3641",
+    "year": "2015",
+    "description": "bitcoind and Bitcoin-Qt prior to 0.10.2 allow attackers to cause a denial of service (disabled functionality such as a client application crash) via an \"Easy\" attack.",
+    "severity": "HIGH",
+    "url": "https://en.bitcoin.it/wiki/Common_Vulnerabilities_and_Exposures"
+  },
+  {
+    "cve": "CVE-2015-3952",
+    "year": "2015",
+    "description": "Wireless keys are stored in plain text on Hospira Plum A+ Infusion System version 13.4 and prior, Plum A+3 Infusion System version 13.6 and prior, and Symbiq Infusion System, version 3.13 and prior. Hospira recommends that customers close Port 20/FTP and Port 23/TELNET on the affected devices. Hospira has also released the Plum 360 Infusion System which is not vulnerable to this issue.",
+    "severity": "HIGH",
+    "url": "https://ics-cert.us-cert.gov/advisories/ICSA-15-161-01"
+  },
+  {
+    "cve": "CVE-2015-3953",
+    "year": "2015",
+    "description": "Hard-coded accounts may be used to access Hospira Plum A+ Infusion System version 13.4 and prior, Plum A+3 Infusion System version 13.6 and prior, and Symbiq Infusion System, version 3.13 and prior. Hospira recommends that customers close Port 20/FTP and Port 23/TELNET on the affected devices. Hospira has also released the Plum 360 Infusion System which is not vulnerable to this issue.",
+    "severity": "CRITICAL",
+    "url": "https://ics-cert.us-cert.gov/advisories/ICSA-15-161-01"
+  },
+  {
+    "cve": "CVE-2015-3954",
+    "year": "2015",
+    "description": "Hospira Plum A+ Infusion System version 13.4 and prior, Plum A+3 Infusion System version 13.6 and prior, and Symbiq Infusion System, version 3.13 and prior give unauthenticated users root privileges on Port 23/TELNET by default. An unauthorized user could issue commands to the pump. Hospira recommends that customers close Port 23/TELNET on the affected devices. Hospira has also released the Plum 360 Infusion System which is not vulnerable to this issue.",
+    "severity": "CRITICAL",
+    "url": "https://ics-cert.us-cert.gov/advisories/ICSA-15-161-01"
+  },
+  {
+    "cve": "CVE-2015-3956",
+    "year": "2015",
+    "description": "Hospira Plum A+ Infusion System version 13.4 and prior, Plum A+3 Infusion System version 13.6 and prior, and Symbiq Infusion System, version 3.13 and prior accept drug libraries, firmware updates, pump commands, and unauthorized configuration changes from unauthenticated devices on the host network. Hospira recommends that customers close Port 20/FTP and Port 23/TELNET on the affected devices. Hospira has also released the Plum 360 Infusion System which is not vulnerable to this issue.",
+    "severity": "CRITICAL",
+    "url": "https://ics-cert.us-cert.gov/advisories/ICSA-15-161-01"
+  },
+  {
+    "cve": "CVE-2015-4615",
+    "year": "2015",
+    "description": "Vulnerability in Easy2map-photos WordPress Plugin v1.09 allows SQL Injection via unsanitized mapTemplateName, mapName, mapSettingsXML, parentCSSXML, photoCSSXML, mapCSSXML, mapHTML,mapID variables",
+    "severity": "CRITICAL",
+    "url": "http://www.vapid.dhs.org/advisory.php?v=130"
+  },
+  {
+    "cve": "CVE-2015-5201",
+    "year": "2015",
+    "description": "VDSM and libvirt in Red Hat Enterprise Virtualization Hypervisor (aka RHEV-H) 7-7.x before 7-7.2-20151119.0 and 6-6.x before 6-6.7-20151117.0 as packaged in Red Hat Enterprise Virtualization before 3.5.6 when VSDM is run with -spice disable-ticketing and a VM is suspended and then restored, allows remote attackers to log in without authentication via unspecified vectors.",
+    "severity": "HIGH",
+    "url": "https://access.redhat.com/security/cve/cve-2015-5201"
+  },
+  {
+    "cve": "CVE-2015-5215",
+    "year": "2015",
+    "description": "The default configuration of the Jinja templating engine used in the Identity Provider (IdP) server in Ipsilon 0.1.0 before 1.0.1 does not enable auto-escaping, which makes it easier for remote attackers to conduct cross-site scripting (XSS) attacks via template variables. NOTE: This may be a duplicate of CVE-2015-5216. Moreover, the Jinja development team does not enable auto-escape by default for performance issues as explained in https://jinja.palletsprojects.com/en/master/faq/#why-is-autoescaping-not-the-default.",
+    "severity": "MEDIUM",
+    "url": "http://www.openwall.com/lists/oss-security/2015/10/23/10"
+  },
+  {
+    "cve": "CVE-2015-5314",
+    "year": "2015",
+    "description": "The eap_pwd_process function in eap_server/eap_server_pwd.c in hostapd 2.x before 2.6 does not validate that the reassembly buffer is large enough for the final fragment when used with (1) an internal EAP server or (2) a RADIUS server and EAP-pwd is enabled in a runtime configuration, which allows remote attackers to cause a denial of service (process termination) via a large final fragment in an EAP-pwd message.",
+    "severity": "MEDIUM",
+    "url": "http://w1.fi/security/2015-7/eap-pwd-missing-last-fragment-length-validation.txt"
+  },
+  {
+    "cve": "CVE-2015-5315",
+    "year": "2015",
+    "description": "The eap_pwd_process function in eap_peer/eap_pwd.c in wpa_supplicant 2.x before 2.6 does not validate that the reassembly buffer is large enough for the final fragment when EAP-pwd is enabled in a network configuration profile, which allows remote attackers to cause a denial of service (process termination) via a large final fragment in an EAP-pwd message.",
+    "severity": "MEDIUM",
+    "url": "http://w1.fi/security/2015-7/eap-pwd-missing-last-fragment-length-validation.txt"
+  },
+  {
+    "cve": "CVE-2015-5316",
+    "year": "2015",
+    "description": "The eap_pwd_perform_confirm_exchange function in eap_peer/eap_pwd.c in wpa_supplicant 2.x before 2.6, when EAP-pwd is enabled in a network configuration profile, allows remote attackers to cause a denial of service (NULL pointer dereference and daemon crash) via an EAP-pwd Confirm message followed by the Identity exchange.",
+    "severity": "MEDIUM",
+    "url": "http://w1.fi/security/2015-8/eap-pwd-unexpected-confirm.txt"
+  },
+  {
+    "cve": "CVE-2015-5334",
+    "year": "2015",
+    "description": "Off-by-one error in the OBJ_obj2txt function in LibreSSL before 2.3.1 allows remote attackers to cause a denial of service (program crash) or possible execute arbitrary code via a crafted X.509 certificate, which triggers a stack-based buffer overflow. Note: this vulnerability exists because of an incorrect fix for CVE-2014-3508.",
+    "severity": "CRITICAL",
+    "url": "http://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-2.3.1-relnotes.txt"
+  },
+  {
+    "cve": "CVE-2015-5350",
+    "year": "2015",
+    "description": "In Garden versions 0.22.0-0.329.0, a vulnerability has been discovered in the garden-linux nstar executable that allows access to files on the host system. By staging an application on Cloud Foundry using Diego and Garden installations with a malicious custom buildpack an end user could read files on the host system that the BOSH-created vcap user has permissions to read and then package them into their app droplet.",
+    "severity": "HIGH",
+    "url": "https://pivotal.io/security/cve-2015-5350"
+  },
+  {
+    "cve": "CVE-2015-5361",
+    "year": "2015",
+    "description": "Background For regular, unencrypted FTP traffic, the FTP ALG can inspect the unencrypted control channel and open related sessions for the FTP data channel. These related sessions (gates) are specific to source and destination IPs and ports of client and server. The design intent of the ftps-extensions option (which is disabled by default) is to provide similar functionality when the SRX secures the FTP/FTPS client. As the control channel is encrypted, the FTP ALG cannot inspect the port specific information and will open a wider TCP data channel (gate) from client IP to server IP on all destination TCP ports. In FTP/FTPS client environments to an enterprise network or the Internet, this is the desired behavior as it allows firewall policy to be written to FTP/FTPS servers on well-known control ports without using a policy with destination IP ANY and destination port ANY. Issue The ftps-extensions option is not intended or recommended where the SRX secures the FTPS server, as the wide data channel session (gate) will allow the FTPS client temporary access to all TCP ports on the FTPS server. The data session is associated to the control channel and will be closed when the control channel session closes. Depending on the configuration of the FTPS server, supporting load-balancer, and SRX inactivity-timeout values, the server/load-balancer and SRX may keep the control channel open for an extended period of time, allowing an FTPS client access for an equal duration.? Note that the ftps-extensions option is not enabled by default.",
+    "severity": "MEDIUM",
+    "url": "https://kb.juniper.net/JSA10706"
+  },
+  {
+    "cve": "CVE-2015-5384",
+    "year": "2015",
+    "description": "AxiomSL's Axiom Google Web Toolkit module 9.5.3 and earlier is vulnerable to a Session Fixation attack.",
+    "severity": "HIGH",
+    "url": "https://www.excellium-services.com/cert-xlm-advisory/cve-2015-5384/"
+  },
+  {
+    "cve": "CVE-2015-5686",
+    "year": "2015",
+    "description": "Parts of the Puppet Enterprise Console 3.x were found to be susceptible to clickjacking and CSRF (Cross-Site Request Forgery) attacks. This would allow an attacker to redirect user input to an untrusted site or hijack a user session.",
+    "severity": "HIGH",
+    "url": "https://puppet.com/security/cve/CVE-2015-5686/"
+  },
+  {
+    "cve": "CVE-2015-5725",
+    "year": "2015",
+    "description": "SQL injection vulnerability in the offset method in the Active Record class in CodeIgniter before 2.2.4 allows remote attackers to execute arbitrary SQL commands via vectors involving the offset variable.",
+    "severity": "CRITICAL",
+    "url": "https://forum.codeigniter.com/thread-62743.html"
+  },
+  {
+    "cve": "CVE-2015-6000",
+    "year": "2015",
+    "description": "Unrestricted file upload vulnerability in the Settings_Vtiger_CompanyDetailsSave_Action class in modules/Settings/Vtiger/actions/CompanyDetailsSave.php in Vtiger CRM 6.3.0 and earlier allows remote authenticated users to execute arbitrary code by uploading a file with an executable extension, then accessing it via a direct request to the file in test/logo/.",
+    "severity": "HIGH",
+    "url": "http://b.fl7.de/2015/09/vtiger-crm-authenticated-rce-cve-2015-6000.html"
+  },
+  {
+    "cve": "CVE-2015-6457",
+    "year": "2015",
+    "description": "Moxa SoftCMS 1.3 and prior is susceptible to a buffer overflow condition that may crash or allow remote code execution. Moxa released SoftCMS version 1.4 on June 1, 2015, to address the vulnerability.",
+    "severity": "HIGH",
+    "url": "https://ics-cert.us-cert.gov/advisories/ICSA-15-239-01"
+  },
+  {
+    "cve": "CVE-2015-6458",
+    "year": "2015",
+    "description": "Moxa SoftCMS 1.3 and prior is susceptible to a buffer overflow condition that may crash or allow remote code execution. Moxa released SoftCMS version 1.4 on June 1, 2015, to address the vulnerability.",
+    "severity": "HIGH",
+    "url": "https://ics-cert.us-cert.gov/advisories/ICSA-15-239-01"
+  },
+  {
+    "cve": "CVE-2015-6591",
+    "year": "2015",
+    "description": "Directory traversal vulnerability in application/templates/amelia/loadjs.php in Free Reprintables ArticleFR 3.0.7 and earlier allows local users to read arbitrary files via the s parameter.",
+    "severity": "MEDIUM",
+    "url": "http://packetstormsecurity.com/files/134081/articleFR-3.0.7-Arbitrary-File-Read.html"
+  },
+  {
+    "cve": "CVE-2015-6964",
+    "year": "2015",
+    "description": "MultiBit HD before 0.1.2 allows attackers to conduct bit-flipping attacks that insert unspendable Bitcoin addresses into the list that MultiBit uses to send fees to the developers. (Attackers cannot realistically steal these fees for themselves.) This occurs because there is no message authentication code (MAC).",
+    "severity": "MEDIUM",
+    "url": "https://web.archive.org/web/20160506095434/https://multibit.org/blog/2015/07/25/bit-flipping-attack.html"
+  },
+  {
+    "cve": "CVE-2015-7333",
+    "year": "2015",
+    "description": "MITRE is populating this ID because it was assigned prior to Lenovo becoming a CNA. A local privilege escalation vulnerability was reported (fixed and publicly disclosed in 2015) in Lenovo System Update version 5.07.0008 and prior where the SUService.exe /type INF and INF_BY_COMPATIBLE_ID command types could allow a user to execute arbitrary code with elevated privileges.",
+    "severity": "HIGH",
+    "url": "https://support.lenovo.com/us/en/product_security/lsu_privilege"
+  },
+  {
+    "cve": "CVE-2015-7507",
+    "year": "2015",
+    "description": "libnsbmp.c in Libnsbmp 0.1.2 allows context-dependent attackers to cause a denial of service (out-of-bounds read) via a crafted color table to the (1) bmp_decode_rgb or (2) bmp_decode_rle function.",
+    "severity": "HIGH",
+    "url": "http://seclists.org/fulldisclosure/2015/Dec/73"
+  },
+  {
+    "cve": "CVE-2015-7596",
+    "year": "2015",
+    "description": "SafeNet Authentication Service End User Software Tools for Windows uses a weak ACL for unspecified installation directories and executable modules, which allows local users to gain privileges by modifying an executable module.",
+    "severity": "HIGH",
+    "url": "https://labs.nettitude.com/blog/cve-2015-7596-through-cve-2015-7598-cve-2015-7961-through-cve-2015-7967-safenet-authentication-service-agent-vulnerabilities/"
+  },
+  {
+    "cve": "CVE-2015-7597",
+    "year": "2015",
+    "description": "SafeNet Authentication Service IIS Agent uses a weak ACL for unspecified installation directories and executable modules, which allows local users to gain privileges by modifying an executable module.",
+    "severity": "HIGH",
+    "url": "https://labs.nettitude.com/blog/cve-2015-7596-through-cve-2015-7598-cve-2015-7961-through-cve-2015-7967-safenet-authentication-service-agent-vulnerabilities/"
+  },
+  {
+    "cve": "CVE-2015-7598",
+    "year": "2015",
+    "description": "SafeNet Authentication Service TokenValidator Proxy Agent uses a weak ACL for unspecified installation directories and executable modules, which allows local users to gain privileges by modifying an executable module.",
+    "severity": "HIGH",
+    "url": "https://labs.nettitude.com/blog/cve-2015-7596-through-cve-2015-7598-cve-2015-7961-through-cve-2015-7967-safenet-authentication-service-agent-vulnerabilities/"
+  },
+  {
+    "cve": "CVE-2015-7874",
+    "year": "2015",
+    "description": "Buffer overflow in the chat server in KiTTY Portable 0.65.0.2p and earlier allows remote attackers to execute arbitrary code via a long nickname.",
+    "severity": "CRITICAL",
+    "url": "https://www.exploit-db.com/exploits/39119/"
+  },
+  {
+    "cve": "CVE-2015-7946",
+    "year": "2015",
+    "description": "Information Exposure vulnerability in Unity8 as used on the Ubuntu phone and possibly also in Unity8 shipped elsewhere. This allows an attacker to enable the MTP service by opening the emergency dialer. Fixed in 8.11+16.04.20160111.1-0ubuntu1 and 8.11+15.04.20160122-0ubuntu1.",
+    "severity": "MEDIUM",
+    "url": "https://launchpad.net/bugs/1525981"
+  },
+  {
+    "cve": "CVE-2015-7961",
+    "year": "2015",
+    "description": "SafeNet Authentication Service Remote Web Workplace Agent uses a weak ACL for unspecified installation directories and executable modules, which allows local users to gain privileges by modifying an executable module.",
+    "severity": "HIGH",
+    "url": "https://labs.nettitude.com/blog/cve-2015-7596-through-cve-2015-7598-cve-2015-7961-through-cve-2015-7967-safenet-authentication-service-agent-vulnerabilities/"
+  },
+  {
+    "cve": "CVE-2015-7962",
+    "year": "2015",
+    "description": "SafeNet Authentication Service for Outlook Web App Agent uses a weak ACL for unspecified installation directories and executable modules, which allows local users to gain privileges by modifying an executable module.",
+    "severity": "HIGH",
+    "url": "https://labs.nettitude.com/blog/cve-2015-7596-through-cve-2015-7598-cve-2015-7961-through-cve-2015-7967-safenet-authentication-service-agent-vulnerabilities/"
+  },
+  {
+    "cve": "CVE-2015-7963",
+    "year": "2015",
+    "description": "SafeNet Authentication Service for AD FS Agent uses a weak ACL for unspecified installation directories and executable modules, which allows local users to gain privileges by modifying an executable module.",
+    "severity": "HIGH",
+    "url": "https://labs.nettitude.com/blog/cve-2015-7596-through-cve-2015-7598-cve-2015-7961-through-cve-2015-7967-safenet-authentication-service-agent-vulnerabilities/"
+  },
+  {
+    "cve": "CVE-2015-7964",
+    "year": "2015",
+    "description": "SafeNet Authentication Service for NPS Agent uses a weak ACL for unspecified installation directories and executable modules, which allows local users to gain privileges by modifying an executable module.",
+    "severity": "HIGH",
+    "url": "https://labs.nettitude.com/blog/cve-2015-7596-through-cve-2015-7598-cve-2015-7961-through-cve-2015-7967-safenet-authentication-service-agent-vulnerabilities/"
+  },
+  {
+    "cve": "CVE-2015-7965",
+    "year": "2015",
+    "description": "SafeNet Authentication Service Windows Logon Agent uses a weak ACL for unspecified installation directories and executable modules, which allows local users to gain privileges by modifying an executable module, a different vulnerability than CVE-2015-7966.",
+    "severity": "HIGH",
+    "url": "https://labs.nettitude.com/blog/cve-2015-7596-through-cve-2015-7598-cve-2015-7961-through-cve-2015-7967-safenet-authentication-service-agent-vulnerabilities/"
+  },
+  {
+    "cve": "CVE-2015-7966",
+    "year": "2015",
+    "description": "SafeNet Authentication Service Windows Logon Agent uses a weak ACL for unspecified installation directories and executable modules, which allows local users to gain privileges by modifying an executable module, a different vulnerability than CVE-2015-7965.",
+    "severity": "HIGH",
+    "url": "https://labs.nettitude.com/blog/cve-2015-7596-through-cve-2015-7598-cve-2015-7961-through-cve-2015-7967-safenet-authentication-service-agent-vulnerabilities/"
+  },
+  {
+    "cve": "CVE-2015-7967",
+    "year": "2015",
+    "description": "SafeNet Authentication Service for Citrix Web Interface Agent uses a weak ACL for unspecified installation directories and executable modules, which allows local users to gain privileges by modifying an executable module.",
+    "severity": "HIGH",
+    "url": "https://labs.nettitude.com/blog/cve-2015-7596-through-cve-2015-7598-cve-2015-7961-through-cve-2015-7967-safenet-authentication-service-agent-vulnerabilities/"
+  },
+  {
+    "cve": "CVE-2015-8546",
+    "year": "2015",
+    "description": "An issue was discovered on Samsung mobile devices with software through 2015-11-12, affecting the Galaxy S6/S6 Edge, Galaxy S6 Edge+, and Galaxy Note5 with the Shannon333 chipset. There is a stack-based buffer overflow in the baseband process that is exploitable for remote code execution via a fake base station. The Samsung ID is SVE-2015-5123 (December 2015).",
+    "severity": "CRITICAL",
+    "url": "https://security.samsungmobile.com/securityUpdate.smsb"
+  },
+  {
+    "cve": "CVE-2015-9016",
+    "year": "2015",
+    "description": "In blk_mq_tag_to_rq in blk-mq.c in the upstream kernel, there is a possible use after free due to a race condition when a request has been previously freed by blk_mq_complete_request. This could lead to local escalation of privilege. Product: Android. Versions: Android kernel. Android ID: A-63083046.",
+    "severity": "HIGH",
+    "url": "https://github.com/torvalds/linux/commit/0048b4837affd153897ed1222283492070027aa9"
+  },
+  {
+    "cve": "CVE-2015-9122",
+    "year": "2015",
+    "description": "In Android before 2018-04-05 or earlier security patch level on Qualcomm Snapdragon Mobile and Snapdragon Wear MDM9206, MDM9607, MDM9635M, MDM9640, MDM9645, MDM9655, MSM8909W, SD 210/SD 212/SD 205, SD 400, SD 410/12, SD 425, SD 430, SD 450, SD 615/16/SD 415, SD 617, SD 625, SD 650/52, SD 800, SD 808, SD 810, SD 820, and SD 835, possible buffer overflow if SIM card sends a response greater than 64KB of data for stream APDU command.",
+    "severity": "CRITICAL",
+    "url": "http://www.securityfocus.com/bid/103671"
+  },
+  {
+    "cve": "CVE-2015-9124",
+    "year": "2015",
+    "description": "In Android before 2018-04-05 or earlier security patch level on Qualcomm Snapdragon Mobile MDM9625, MDM9635M, MDM9640, MDM9645, SD 210/SD 212/SD 205, SD 400, SD 410/12, SD 615/16/SD 415, SD 800, SD 808, and SD 810, the device may crash while accessing an invalid pointer or expose otherwise inaccessible memory contents.",
+    "severity": "CRITICAL",
+    "url": "http://www.securityfocus.com/bid/103671"
+  },
+  {
+    "cve": "CVE-2015-9126",
+    "year": "2015",
+    "description": "In Android before 2018-04-05 or earlier security patch level on Qualcomm Snapdragon Mobile and Snapdragon Wear MDM9607, MDM9635M, MDM9640, MDM9645, MDM9650, MDM9655, MSM8909W, SD 210/SD 212/SD 205, SD 425, SD 430, SD 450, SD 617, SD 625, SD 650/52, SD 808, SD 810, SD 820, SD 835, SD 845, SD 850, and SDX20, possible buffer overflow when processing 1X circuit service message.",
+    "severity": "CRITICAL",
+    "url": "http://www.securityfocus.com/bid/103671"
+  },
+  {
+    "cve": "CVE-2015-9127",
+    "year": "2015",
+    "description": "In Android before 2018-04-05 or earlier security patch level on Qualcomm Snapdragon Mobile and Snapdragon Wear MSM8909W, SD 210/SD 212/SD 205, SD 400, SD 410/12, SD 615/16/SD 415, and SD 810, possible null pointer dereference occurs due to failure of memory allocation when a large value is passed for buffer allocation in the Playready App.",
+    "severity": "CRITICAL",
+    "url": "http://www.securityfocus.com/bid/103671"
+  },
+  {
+    "cve": "CVE-2015-9132",
+    "year": "2015",
+    "description": "In Android before 2018-04-05 or earlier security patch level on Qualcomm Snapdragon Mobile and Small Cell SoC FSM9055, SD 210/SD 212/SD 205, SD 400, SD 410/12, SD 615/16/SD 415, SD 800, and SD 810, possible arbitrary memory read due to untrusted pointer dereference when handling HLOS controlled values passed to the QSEE syscall helper.",
+    "severity": "HIGH",
+    "url": "http://www.securityfocus.com/bid/103671"
+  },
+  {
+    "cve": "CVE-2015-9140",
+    "year": "2015",
+    "description": "In Android before 2018-04-05 or earlier security patch level on Qualcomm Snapdragon Mobile, Snapdragon Wear, and Small Cell SoC FSM9055, MDM9206, MDM9607, MDM9625, MDM9635M, MDM9640, MDM9645, MDM9650, MDM9655, MSM8909W, SD 210/SD 212/SD 205, SD 400, SD 410/12, SD 600, SD 615/16/SD 415, SD 617, SD 650/52, SD 800, SD 808, SD 810, and SDX20, unauthorized memory access possible in online memory dump feature.",
+    "severity": "HIGH",
+    "url": "http://www.securityfocus.com/bid/103671"
+  },
+  {
+    "cve": "CVE-2015-9141",
+    "year": "2015",
+    "description": "In Android before 2018-04-05 or earlier security patch level on Qualcomm Snapdragon Mobile and Snapdragon Wear MDM9206, MDM9607, MDM9635M, MSM8909W, SD 210/SD 212/SD 205, SD 400, SD 410/12, SD 425, SD 430, SD 615/16/SD 415, SD 617, SD 800, SD 808, and SD 810, in HHO scenarios, during the ACQ procedure, there are possible instances where the search database is incorrectly updated resulting in memory corruption due to buffer overflow.",
+    "severity": "CRITICAL",
+    "url": "http://www.securityfocus.com/bid/103671"
+  },
+  {
+    "cve": "CVE-2015-9142",
+    "year": "2015",
+    "description": "In Android before 2018-04-05 or earlier security patch level on Qualcomm Snapdragon Mobile MDM9645, MDM9650, SD 210/SD 212/SD 205, SD 400, SD 410/12, SD 425, SD 427, SD 430, SD 435, SD 450, SD 615/16/SD 415, SD 625, SD 650/52, SD 800, SD 808, SD 810, SD 820, SDM630, SDM636, SDM660, and Snapdragon_High_Med_2016, bounds check is missing for vtable index in DAL-TO-QDI conversion framework.",
+    "severity": "CRITICAL",
+    "url": "http://www.securityfocus.com/bid/103671"
+  },
+  {
+    "cve": "CVE-2015-9148",
+    "year": "2015",
+    "description": "In Android before 2018-04-05 or earlier security patch level on Qualcomm Snapdragon Automobile and Snapdragon Mobile MDM9625, MDM9635M, MDM9640, MDM9645, MDM9650, MDM9655, SD 400, SD 425, SD 430, SD 450, SD 600, SD 617, SD 625, SD 650/52, SD 800, SD 808, SD 810, SD 820, SD 820A, SD 835, SD 845, SD 850, and SDX20, in the Diag User-PD command registration function, a length variable used during buffer allocation is not checked, so if it is very large, an integer overflow followed by a buffer overflow occurs.",
+    "severity": "CRITICAL",
+    "url": "http://www.securityfocus.com/bid/103671"
+  },
+  {
+    "cve": "CVE-2015-9152",
+    "year": "2015",
+    "description": "In Android before 2018-04-05 or earlier security patch level on Qualcomm Snapdragon Automobile and Snapdragon Mobile IPQ4019, SD 210/SD 212/SD 205, SD 400, SD 410/12, SD 425, SD 427, SD 430, SD 435, SD 450, SD 615/16/SD 415, SD 625, SD 800, SD 810, SD 820, SD 820A, SD 835, and Snapdragon_High_Med_2016, modem owned regions are accessible from secure side.",
+    "severity": "CRITICAL",
+    "url": "http://www.securityfocus.com/bid/103671"
+  },
+  {
+    "cve": "CVE-2015-9165",
+    "year": "2015",
+    "description": "In Android before 2018-04-05 or earlier security patch level on Qualcomm Snapdragon Mobile and Snapdragon Wear IPQ4019, MDM9206, MDM9607, MSM8909W, SD 210/SD 212/SD 205, SD 400, SD 410/12, SD 615/16/SD 415, SD 617, SD 650/52, SD 808, and SD 810, incorrect error handling could lead to a double free in QTEE file service API.",
+    "severity": "CRITICAL",
+    "url": "http://www.securityfocus.com/bid/103671"
+  },
+  {
+    "cve": "CVE-2015-9166",
+    "year": "2015",
+    "description": "In Android before 2018-04-05 or earlier security patch level on Qualcomm Snapdragon Automobile, Snapdragon Mobile, and Snapdragon Wear IPQ4019, MDM9206, MDM9607, MDM9650, MSM8909W, SD 210/SD 212/SD 205, SD 400, SD 410/12, SD 425, SD 430, SD 450, SD 615/16/SD 415, SD 617, SD 625, SD 650/52, SD 808, SD 810, SD 820, SD 820A, SD 835, SD 845, and SD 850, DRM provisioning mechanisms used in QSEE applications have a feature to prevent further provisioning. This is done by creating an SFS file called 'finalize_prov_flag.data' at the end of provisioning. When this feature is enabled, provisioning calls check for the existence of the file in order to decide whether to do provisioning or not. Current implementation allows provisioning without sufficient checks.",
+    "severity": "HIGH",
+    "url": "http://www.securityfocus.com/bid/103671"
+  },
+  {
+    "cve": "CVE-2015-9222",
+    "year": "2015",
+    "description": "In Android before 2018-04-05 or earlier security patch level on Qualcomm Snapdragon Mobile and Snapdragon Wear MSM8909W, SD 210/SD 212/SD 205, SD 400, SD 410/12, SD 425, SD 427, SD 430, SD 435, SD 450, SD 625, SD 650/52, SD 800, SD 808, SD 810, SD 820, SD 835, SD 845, SDM630, SDM636, SDM660, and Snapdragon_High_Med_2016, processing erroneous bitstreams may result in a HW freeze. FW should detect the HW freeze based on watchdog timer, but because the watchdog timer is not enabled, an infinite loop occurs, resulting in a device freeze.",
+    "severity": "HIGH",
+    "url": "http://www.securityfocus.com/bid/103671"
+  },
+  {
+    "cve": "CVE-2015-9235",
+    "year": "2015",
+    "description": "In jsonwebtoken node module before 4.2.2 it is possible for an attacker to bypass verification when a token digitally signed with an asymmetric key (RS/ES family) of algorithms but instead the attacker send a token digitally signed with a symmetric algorithm (HS* family).",
+    "severity": "CRITICAL",
+    "url": "https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/"
+  },
+  {
+    "cve": "CVE-2015-9236",
+    "year": "2015",
+    "description": "Hapi versions less than 11.0.0 implement CORS incorrectly and allowed for configurations that at best returned inconsistent headers and at worst allowed cross-origin activities that were expected to be forbidden. If the connection has CORS enabled but one route has it off, and the route is not GET, the OPTIONS prefetch request will return the default CORS headers and then the actual request will go through and return no CORS headers. This defeats the purpose of turning CORS on the route.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/hapijs/hapi/issues/2840"
+  },
+  {
+    "cve": "CVE-2015-9239",
+    "year": "2015",
+    "description": "ansi2html is vulnerable to regular expression denial of service (ReDoS) when certain types of user input is passed in.",
+    "severity": "HIGH",
+    "url": "https://nodesecurity.io/advisories/51"
+  },
+  {
+    "cve": "CVE-2015-9251",
+    "year": "2015",
+    "description": "jQuery before 3.0.0 is vulnerable to Cross-site Scripting (XSS) attacks when a cross-domain Ajax request is performed without the dataType option, causing text/javascript responses to be executed.",
+    "severity": "MEDIUM",
+    "url": "http://lists.opensuse.org/opensuse-security-announce/2020-03/msg00041.html"
+  },
+  {
+    "cve": "CVE-2015-9258",
+    "year": "2015",
+    "description": "In Docker Notary before 0.1, gotuf/signed/verify.go has a Signature Algorithm Not Matched to Key vulnerability. Because an attacker controls the field specifying the signature algorithm, they might (for example) be able to forge a signature by forcing a misinterpretation of an RSA-PSS key as Ed25519 elliptic-curve data.",
+    "severity": "HIGH",
+    "url": "https://docs.docker.com/notary/changelog/"
+  },
+  {
+    "cve": "CVE-2015-9267",
+    "year": "2015",
+    "description": "Nullsoft Scriptable Install System (NSIS) before 2.49 uses temporary folder locations that allow unprivileged local users to overwrite files. This allows a local attack in which either a plugin or the uninstaller can be replaced by a Trojan horse program.",
+    "severity": "MEDIUM",
+    "url": "http://jvn.jp/en/jp/JVN68418039/index.html"
+  },
+  {
+    "cve": "CVE-2015-9268",
+    "year": "2015",
+    "description": "Nullsoft Scriptable Install System (NSIS) before 2.49 has unsafe implicit linking against Version.dll. In other words, there is no protection mechanism in which a wrapper function resolves the dependency at an appropriate time during runtime.",
+    "severity": "HIGH",
+    "url": "http://jvn.jp/en/jp/JVN68418039/index.html"
+  },
+  {
+    "cve": "CVE-2015-9274",
+    "year": "2015",
+    "description": "HarfBuzz before 1.0.4 allows remote attackers to cause a denial of service (invalid read of two bytes and application crash) because of GPOS and GSUB table mishandling, related to hb-ot-layout-gpos-table.hh, hb-ot-layout-gsub-table.hh, and hb-ot-layout-gsubgpos-private.hh.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/harfbuzz/harfbuzz/commit/c917965b9e6fe2b21ed6c51559673288fa3af4b7"
+  },
+  {
+    "cve": "CVE-2015-9276",
+    "year": "2015",
+    "description": "SmarterTools SmarterMail before 13.3.5535 was vulnerable to stored XSS by bypassing the anti-XSS mechanisms. It was possible to run JavaScript code when a victim user opens or replies to the attacker's email, which contained a malicious payload. Therefore, users' passwords could be reset by using an XSS attack, as the password reset page did not need the current password.",
+    "severity": "MEDIUM",
+    "url": "https://www.nccgroup.trust/globalassets/our-research/uk/technical-advisories/2015/technical-advisory-smartermail-stored-xss-in-emails-v2.pdf"
+  },
+  {
+    "cve": "CVE-2015-9277",
+    "year": "2015",
+    "description": "MailEnable before 8.60 allows Directory Traversal for reading the messages of other users, uploading files, and deleting files because \"/../\" and \"/.. /\" are mishandled.",
+    "severity": "CRITICAL",
+    "url": "https://web.archive.org/web/20150329173628/http://www.mailenable.com/Standard-ReleaseNotes.txt"
+  },
+  {
+    "cve": "CVE-2015-9278",
+    "year": "2015",
+    "description": "MailEnable before 8.60 allows Privilege Escalation because admin accounts could be created as a consequence of %0A mishandling in AUTH.TAB after a password-change request.",
+    "severity": "CRITICAL",
+    "url": "https://web.archive.org/web/20150329173628/http://www.mailenable.com/Standard-ReleaseNotes.txt"
+  },
+  {
+    "cve": "CVE-2015-9279",
+    "year": "2015",
+    "description": "MailEnable before 8.60 allows Stored XSS via malformed use of \"<img/src\" with no \">\" character in the body of an e-mail message.",
+    "severity": "MEDIUM",
+    "url": "https://web.archive.org/web/20150329173628/http://www.mailenable.com/Standard-ReleaseNotes.txt"
+  },
+  {
+    "cve": "CVE-2015-9280",
+    "year": "2015",
+    "description": "MailEnable before 8.60 allows XXE via an XML document in the request.aspx Options parameter.",
+    "severity": "CRITICAL",
+    "url": "https://web.archive.org/web/20150329173628/http://www.mailenable.com/Standard-ReleaseNotes.txt"
+  },
+  {
+    "cve": "CVE-2015-9282",
+    "year": "2015",
+    "description": "The Pie Chart Panel plugin through 2019-01-02 for Grafana is vulnerable to XSS via legend data or tooltip data. When a chart is included in a Grafana dashboard, this vulnerability could allow an attacker to gain remote unauthenticated access to the dashboard.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/grafana/grafana/issues/4117"
+  },
+  {
+    "cve": "CVE-2015-9284",
+    "year": "2015",
+    "description": "The request phase of the OmniAuth Ruby gem (1.9.1 and earlier) is vulnerable to Cross-Site Request Forgery when used as part of the Ruby on Rails framework, allowing accounts to be connected without user intent, user interaction, or feedback to the user. This permits a secondary account to be able to sign into the web application as the primary account.",
+    "severity": "HIGH",
+    "url": "https://github.com/omniauth/omniauth/pull/809"
+  },
+  {
+    "cve": "CVE-2015-9287",
+    "year": "2015",
+    "description": "Directory Traversal was discovered in University of Cambridge mod_ucam_webauth before 2.0.2. The key identification field (\"kid\") of the IdP's HTTP response message (\"WLS-Response\") can be manipulated by an attacker. The \"kid\" field is not signed like the rest of the message, and manipulation is therefore trivial. The \"kid\" field should only ever represent an integer. However, it is possible to provide any string value. An attacker could use this to their advantage to force the application agent to load the RSA public key required for message integrity checking from an unintended location.",
+    "severity": "CRITICAL",
+    "url": "https://doi.org/10.1007/978-3-030-03251-7_1"
+  },
+  {
+    "cve": "CVE-2015-9290",
+    "year": "2015",
+    "description": "In FreeType before 2.6.1, a buffer over-read occurs in type1/t1parse.c on function T1_Get_Private_Dict where there is no check that the new values of cur and limit are sensible before going to Again.",
+    "severity": "CRITICAL",
+    "url": "http://git.savannah.gnu.org/cgit/freetype/freetype2.git/commit/src/type1/t1parse.c?id=e3058617f384cb6709f3878f753fa17aca9e3a30"
+  },
+  {
+    "cve": "CVE-2015-9332",
+    "year": "2015",
+    "description": "The uninstall plugin before 1.2 for WordPress has CSRF to delete all tables via the wp-admin/admin-ajax.php?action=uninstall URI.",
+    "severity": "MEDIUM",
+    "url": "https://wordpress.org/plugins/uninstall/#developers"
+  },
+  {
+    "cve": "CVE-2015-9351",
+    "year": "2015",
+    "description": "The feed-them-social plugin before 1.7.0 for WordPress has possible shortcode execution in the Facebook Feeds load more button.",
+    "severity": "CRITICAL",
+    "url": "https://wordpress.org/plugins/feed-them-social/#developers"
+  },
+  {
+    "cve": "CVE-2015-9375",
+    "year": "2015",
+    "description": "Table Rate Shipping Add-on for iThemes Exchange before 1.1.0 for WordPress has XSS via add_query_arg() and remove_query_arg().",
+    "severity": "MEDIUM",
+    "url": "https://blog.sucuri.net/2015/04/security-advisory-xss-vulnerability-affecting-multiple-wordpress-plugins.html"
+  },
+  {
+    "cve": "CVE-2015-9401",
+    "year": "2015",
+    "description": "The websimon-tables plugin through 1.3.4 for WordPress has wp-admin/tools.php edit_style id XSS.",
+    "severity": "MEDIUM",
+    "url": "http://cinu.pl/research/wp-plugins/mail_ae9e4b6fefceaebd216ddcf003f88bdd.html"
+  },
+  {
+    "cve": "CVE-2015-9432",
+    "year": "2015",
+    "description": "The alpine-photo-tile-for-instagram plugin before 1.2.7.6 for WordPress has CSRF with resultant XSS via the wp-admin/options-general.php?page=alpine-photo-tile-for-instagram-settings tab parameter.",
+    "severity": "MEDIUM",
+    "url": "http://cinu.pl/research/wp-plugins/mail_8af3902b4f3a5d06304937c7eab1ee35.html"
+  },
+  {
+    "cve": "CVE-2015-9458",
+    "year": "2015",
+    "description": "The searchterms-tagging-2 plugin through 1.535 for WordPress has SQL injection via the pk_stt2_db_get_popular_terms count parameter exploitable via CSRF.",
+    "severity": "HIGH",
+    "url": "http://cinu.pl/research/wp-plugins/mail_d14e213879cd60e80e538bde21c0359b.html"
+  },
+  {
+    "cve": "CVE-2015-9461",
+    "year": "2015",
+    "description": "The awesome-filterable-portfolio plugin before 1.9 for WordPress has afp_get_new_portfolio_item_page SQL injection via the item_id parameter.",
+    "severity": "HIGH",
+    "url": "http://cinu.pl/research/wp-plugins/mail_082287dbf7a24d415ff71581fc248330.html"
+  },
+  {
+    "cve": "CVE-2015-9462",
+    "year": "2015",
+    "description": "The awesome-filterable-portfolio plugin before 1.9 for WordPress has afp_get_new_category_page SQL injection via the cat_id parameter.",
+    "severity": "HIGH",
+    "url": "http://cinu.pl/research/wp-plugins/mail_082287dbf7a24d415ff71581fc248330.html"
+  },
+  {
+    "cve": "CVE-2015-9463",
+    "year": "2015",
+    "description": "The s3bubble-amazon-s3-audio-streaming plugin 2.0 for WordPress has directory traversal via the adverts/assets/plugins/ultimate/content/downloader.php path parameter.",
+    "severity": "HIGH",
+    "url": "http://packetstormsecurity.com/files/132578/"
+  },
+  {
+    "cve": "CVE-2015-9464",
+    "year": "2015",
+    "description": "The s3bubble-amazon-s3-html-5-video-with-adverts plugin 0.7 for WordPress has directory traversal via the adverts/assets/plugins/ultimate/content/downloader.php path parameter.",
+    "severity": "HIGH",
+    "url": "https://wordpress.org/plugins/s3bubble-amazon-s3-html-5-video-with-adverts/#developers"
+  },
+  {
+    "cve": "CVE-2015-9466",
+    "year": "2015",
+    "description": "The wti-like-post plugin before 1.4.3 for WordPress has WtiLikePostProcessVote SQL injection via the HTTP_CLIENT_IP, HTTP_X_FORWARDED_FOR, HTTP_X_FORWARDED, HTTP_FORWARDED_FOR, or HTTP_FORWARDED variable.",
+    "severity": "CRITICAL",
+    "url": "http://cinu.pl/research/wp-plugins/mail_576345187f5867ec8921b12de5884fb1.html"
+  },
+  {
+    "cve": "CVE-2015-9491",
+    "year": "2015",
+    "description": "The ThemeMakers Blessing Premium Responsive theme through 2015-05-15 for WordPress allows remote attackers to obtain sensitive information (such as user_login, user_pass, and user_email values) via a direct request for the wp-content/uploads/tmm_db_migrate/wp_users.dat URI.",
+    "severity": "HIGH",
+    "url": "https://packetstormsecurity.com/files/131957/"
+  },
+  {
+    "cve": "CVE-2015-9542",
+    "year": "2015",
+    "description": "add_password in pam_radius_auth.c in pam_radius 1.4.0 does not correctly check the length of the input password, and is vulnerable to a stack-based buffer overflow during memcpy(). An attacker could send a crafted password to an application (loading the pam_radius library) and crash it. Arbitrary code execution might be possible, depending on the application, C library, compiler, and other factors.",
+    "severity": "HIGH",
+    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2015-9542"
+  },
+  {
+    "cve": "CVE-2015-9544",
+    "year": "2015",
+    "description": "An issue was discovered in xdLocalStorage through 2.0.5. The receiveMessage() function in xdLocalStoragePostMessageApi.js does not implement any validation of the origin of web messages. Remote attackers who can entice a user to load a malicious site can exploit this issue to impact the confidentiality and integrity of data in the local storage of the vulnerable site via malicious web messages.",
+    "severity": "HIGH",
+    "url": "https://github.com/ofirdagan/cross-domain-local-storage"
+  },
+  {
+    "cve": "CVE-2015-9545",
+    "year": "2015",
+    "description": "An issue was discovered in xdLocalStorage through 2.0.5. The receiveMessage() function in xdLocalStorage.js does not implement any validation of the origin of web messages. Remote attackers who can entice a user to load a malicious site can exploit this issue to impact the confidentiality and integrity of data in the local storage of the vulnerable site via malicious web messages.",
+    "severity": "HIGH",
+    "url": "https://github.com/ofirdagan/cross-domain-local-storage"
+  },
+  {
+    "cve": "CVE-2015-9547",
+    "year": "2015",
+    "description": "An issue was discovered on Samsung mobile devices with JBP(4.3) and KK(4.4.2) software. Because the READ_LOGS permission is mishandled, sensitive information is disclosed in a world-readable copy of the log file if the error message is \"Unhandled exception in Dalvik VM,\" \"Application not responding ANR event,\" or \"Crash on an application's native code.\" The Samsung ID is SVE-2015-2885 (October 2015).",
+    "severity": "HIGH",
+    "url": "https://security.samsungmobile.com/securityUpdate.smsb"
+  },
+  {
+    "cve": "CVE-2015-9550",
+    "year": "2015",
+    "description": "An issue was discovered on TOTOLINK A850R-V1 through 1.0.1-B20150707.1612 and F1-V2 through 1.1-B20150708.1646 devices. By sending a specific hel,xasf packet to the WAN interface, it is possible to open the web management interface on the WAN interface.",
+    "severity": "HIGH",
+    "url": "https://pierrekim.github.io/blog/2015-07-16-backdoor-and-RCE-found-in-8-TOTOLINK-products.html"
+  }
+]

@@ -1,0 +1,317 @@
+[
+  {
+    "cve": "CVE-2011-0467",
+    "year": "2011",
+    "description": "A vulnerability in the listing of available software of SUSE Studio Onsite, SUSE Studio Onsite 1.1 Appliance allows authenticated users to execute arbitrary SQL statements via SQL injection. Affected releases are SUSE Studio Onsite: versions prior to 1.0.3-0.18.1, SUSE Studio Onsite 1.1 Appliance: versions prior to 1.1.2-0.25.1.",
+    "severity": "HIGH",
+    "url": "https://bugzilla.suse.com/show_bug.cgi?id=675039"
+  },
+  {
+    "cve": "CVE-2011-10002",
+    "year": "2011",
+    "description": "A vulnerability classified as critical has been found in weblabyrinth 0.3.1. This affects the function Labyrinth of the file labyrinth.inc.php. The manipulation leads to sql injection. Upgrading to version 0.3.2 is able to address this issue. The identifier of the patch is 60793fd8c8c4759596d3510641e96ea40e7f60e9. It is recommended to upgrade the affected component. The identifier VDB-220221 was assigned to this vulnerability.",
+    "severity": "CRITICAL",
+    "url": "https://code.google.com/archive/p/weblabyrinth/issues/1"
+  },
+  {
+    "cve": "CVE-2011-10003",
+    "year": "2011",
+    "description": "A vulnerability was found in XpressEngine up to 1.4.4. It has been rated as critical. This issue affects some unknown processing of the component Update Query Handler. The manipulation leads to sql injection. Upgrading to version 1.4.5 is able to address this issue. The patch is named c6e94449f21256d6362450b29c7847305e756ad5. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-220247.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/haegyung/xe-core/commit/c6e94449f21256d6362450b29c7847305e756ad5"
+  },
+  {
+    "cve": "CVE-2011-10004",
+    "year": "2011",
+    "description": "A vulnerability was found in reciply Plugin up to 1.1.7 on WordPress. It has been rated as critical. This issue affects some unknown processing of the file uploadImage.php. The manipulation leads to unrestricted upload. The attack may be initiated remotely. Upgrading to version 1.1.8 is able to address this issue. The identifier of the patch is e3ff616dc08d3aadff9253f1085e13f677d0c676. It is recommended to upgrade the affected component. The identifier VDB-242189 was assigned to this vulnerability.",
+    "severity": "CRITICAL",
+    "url": "https://github.com/wp-plugins/reciply/commit/e3ff616dc08d3aadff9253f1085e13f677d0c676"
+  },
+  {
+    "cve": "CVE-2011-10005",
+    "year": "2011",
+    "description": "A vulnerability, which was classified as critical, was found in EasyFTP 1.7.0.2. Affected is an unknown function of the component MKD Command Handler. The manipulation leads to buffer overflow. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-250716.",
+    "severity": "HIGH",
+    "url": "https://vuldb.com/?ctiid.250716"
+  },
+  {
+    "cve": "CVE-2011-10006",
+    "year": "2011",
+    "description": "A vulnerability was found in GamerZ WP-PostRatings up to 1.64. It has been classified as problematic. This affects an unknown part of the file wp-postratings.php. The manipulation leads to cross site scripting. It is possible to initiate the attack remotely. Upgrading to version 1.65 is able to address this issue. The identifier of the patch is 6182a5682b12369ced0becd3b505439ce2eb8132. It is recommended to upgrade the affected component. The identifier VDB-259629 was assigned to this vulnerability.",
+    "severity": "MEDIUM",
+    "url": "https://github.com/wp-plugins/wp-postratings/commit/6182a5682b12369ced0becd3b505439ce2eb8132"
+  },
+  {
+    "cve": "CVE-2011-1028",
+    "year": "2011",
+    "description": "The $smarty.template variable in Smarty3 allows attackers to possibly execute arbitrary PHP code via the sysplugins/smarty_internal_compile_private_special_variable.php file.",
+    "severity": "CRITICAL",
+    "url": "https://access.redhat.com/security/cve/cve-2011-1028"
+  },
+  {
+    "cve": "CVE-2011-1145",
+    "year": "2011",
+    "description": "The SQLDriverConnect() function in unixODBC before 2.2.14p2 have a possible buffer overflow condition when specifying a large value for SAVEFILE parameter in the connection string.",
+    "severity": "HIGH",
+    "url": "https://access.redhat.com/security/cve/cve-2011-1145"
+  },
+  {
+    "cve": "CVE-2011-1151",
+    "year": "2011",
+    "description": "Joomla! 1.6.0 is vulnerable to SQL Injection via the filter_order and filer_order_Dir parameters.",
+    "severity": "CRITICAL",
+    "url": "https://packetstormsecurity.com/files/101835/Joomla-1.6.0-SQL-Injection.html"
+  },
+  {
+    "cve": "CVE-2011-1474",
+    "year": "2011",
+    "description": "A locally locally exploitable DOS vulnerability was found in pax-linux versions 2.6.32.33-test79.patch, 2.6.38-test3.patch, and 2.6.37.4-test14.patch. A bad bounds check in arch_get_unmapped_area_topdown triggered by programs doing an mmap after a MAP_GROWSDOWN mmap will create an infinite loop condition without releasing the VM semaphore eventually leading to a system crash.",
+    "severity": "MEDIUM",
+    "url": "http://seclists.org/oss-sec/2011/q1/579"
+  },
+  {
+    "cve": "CVE-2011-1488",
+    "year": "2011",
+    "description": "A memory leak in rsyslog before 5.7.6 was found in the way deamon processed log messages are logged when $RepeatedMsgReduction was enabled. A local attacker could use this flaw to cause a denial of the rsyslogd daemon service by crashing the service via a sequence of repeated log messages sent within short periods of time.",
+    "severity": "MEDIUM",
+    "url": "http://lists.opensuse.org/opensuse-security-announce/2011-04/msg00005.html"
+  },
+  {
+    "cve": "CVE-2011-1934",
+    "year": "2011",
+    "description": "lilo-uuid-diskid causes lilo.conf to be world-readable in lilo 23.1.",
+    "severity": "MEDIUM",
+    "url": "https://access.redhat.com/security/cve/cve-2011-1934"
+  },
+  {
+    "cve": "CVE-2011-1939",
+    "year": "2011",
+    "description": "SQL injection vulnerability in Zend Framework 1.10.x before 1.10.9 and 1.11.x before 1.11.6 when using non-ASCII-compatible encodings in conjunction PDO_MySql in PHP before 5.3.6.",
+    "severity": "CRITICAL",
+    "url": "http://security.gentoo.org/glsa/glsa-201408-01.xml"
+  },
+  {
+    "cve": "CVE-2011-2187",
+    "year": "2011",
+    "description": "xscreensaver before 5.14 crashes during activation and leaves the screen unlocked when in Blank Only Mode and when DPMS is disabled, which allows local attackers to access resources without authentication.",
+    "severity": "HIGH",
+    "url": "https://access.redhat.com/security/cve/cve-2011-2187"
+  },
+  {
+    "cve": "CVE-2011-2195",
+    "year": "2011",
+    "description": "A flaw was found in WebSVN 2.3.2. Without prior authentication, if the 'allowDownload' option is enabled in config.php, an attacker can invoke the dl.php script and pass a well formed 'path' argument to execute arbitrary commands against the underlying operating system.",
+    "severity": "CRITICAL",
+    "url": "https://seclists.org/bugtraq/2011/Jun/34"
+  },
+  {
+    "cve": "CVE-2011-2335",
+    "year": "2011",
+    "description": "A double-free vulnerability exists in WebKit in Google Chrome before Blink M12 in the WebCore::CSSSelector function.",
+    "severity": "HIGH",
+    "url": "https://bugs.chromium.org/p/chromium/issues/detail?id=81351"
+  },
+  {
+    "cve": "CVE-2011-2343",
+    "year": "2011",
+    "description": "The Bluetooth stack in Android before 2.3.6 allows a physically proximate attacker to obtain contact information via an AT phonebook transfer.",
+    "severity": "LOW",
+    "url": "https://code.google.com/p/android/issues/detail?id=21347"
+  },
+  {
+    "cve": "CVE-2011-2487",
+    "year": "2011",
+    "description": "The implementations of PKCS#1 v1.5 key transport mechanism for XMLEncryption in JBossWS and Apache WSS4J before 1.6.5 is susceptible to a Bleichenbacher attack.",
+    "severity": "MEDIUM",
+    "url": "http://cxf.apache.org/note-on-cve-2011-2487.html"
+  },
+  {
+    "cve": "CVE-2011-2670",
+    "year": "2011",
+    "description": "Mozilla Firefox before 3.6 is vulnerable to XSS via the rendering of Cascading Style Sheets",
+    "severity": "MEDIUM",
+    "url": "http://jvn.jp/en/jp/JVN74649877/index.html"
+  },
+  {
+    "cve": "CVE-2011-2714",
+    "year": "2011",
+    "description": "A Cross-Site Scripting vulnerability exists in Drupal 6.20 with Data 6.x-1.0-alpha14 due to insufficient sanitization of table descriptions, field names, or labels before display.",
+    "severity": "MEDIUM",
+    "url": "https://seclists.org/fulldisclosure/2011/Feb/219"
+  },
+  {
+    "cve": "CVE-2011-2715",
+    "year": "2011",
+    "description": "An SQL Injection vulnerability exists in Drupal 6.20 with Data 6.x-1.0-alpha14 due to insufficient sanitization of table names or column names.",
+    "severity": "CRITICAL",
+    "url": "https://www.drupal.org/node/1056470"
+  },
+  {
+    "cve": "CVE-2011-2897",
+    "year": "2011",
+    "description": "gdk-pixbuf through 2.31.1 has GIF loader buffer overflow when initializing decompression tables due to an input validation flaw",
+    "severity": "CRITICAL",
+    "url": "https://access.redhat.com/security/cve/cve-2011-2897"
+  },
+  {
+    "cve": "CVE-2011-2902",
+    "year": "2011",
+    "description": "zxpdf in xpdf before 3.02-19 as packaged in Debian unstable and 3.02-12+squeeze1 as packaged in Debian squeeze deletes temporary files insecurely, which allows remote attackers to delete arbitrary files via a crafted .pdf.gz file name.",
+    "severity": "MEDIUM",
+    "url": "http://www.openwall.com/lists/oss-security/2014/02/08/5"
+  },
+  {
+    "cve": "CVE-2011-2910",
+    "year": "2011",
+    "description": "The AX.25 daemon (ax25d) in ax25-tools before 0.0.8-13 does not check the return value of a setuid call. The setuid call is responsible for dropping privileges but if the call fails the daemon would continue to run with root privileges which can allow possible privilege escalation.",
+    "severity": "MEDIUM",
+    "url": "https://access.redhat.com/security/cve/cve-2011-2910"
+  },
+  {
+    "cve": "CVE-2011-2916",
+    "year": "2011",
+    "description": "qtnx 0.9 stores non-custom SSH keys in a world-readable configuration file. If a user has a world-readable or world-executable home directory, another local system user could obtain the private key used to connect to remote NX sessions.",
+    "severity": "MEDIUM",
+    "url": "https://access.redhat.com/security/cve/cve-2011-2916"
+  },
+  {
+    "cve": "CVE-2011-2922",
+    "year": "2011",
+    "description": "ktsuss versions 1.4 and prior spawns the GTK interface to run as root. This can allow a local attacker to escalate privileges to root and use the \"GTK_MODULES\" environment variable to possibly execute arbitrary code.",
+    "severity": "HIGH",
+    "url": "https://access.redhat.com/security/cve/cve-2011-2922"
+  },
+  {
+    "cve": "CVE-2011-2923",
+    "year": "2011",
+    "description": "foomatic-rip filter, all versions, used insecurely creates temporary files for storage of PostScript data by rendering the data when the debug mode was enabled. This flaw may be exploited by a local attacker to conduct symlink attacks by overwriting arbitrary files accessible with the privileges of the user running the foomatic-rip universal print filter.",
+    "severity": "MEDIUM",
+    "url": "https://access.redhat.com/security/cve/cve-2011-2923"
+  },
+  {
+    "cve": "CVE-2011-2924",
+    "year": "2011",
+    "description": "foomatic-rip filter v4.0.12 and prior used insecurely creates temporary files for storage of PostScript data by rendering the data when the debug mode was enabled. This flaw may be exploited by a local attacker to conduct symlink attacks by overwriting arbitrary files accessible with the privileges of the user running the foomatic-rip universal print filter.",
+    "severity": "MEDIUM",
+    "url": "https://access.redhat.com/security/cve/cve-2011-2924"
+  },
+  {
+    "cve": "CVE-2011-3151",
+    "year": "2011",
+    "description": "The Ubuntu SELinux initscript before version 1:0.10 used touch to create a lockfile in a world-writable directory. If the OS kernel does not have symlink protections then an attacker can cause a zero byte file to be allocated on any writable filesystem.",
+    "severity": "MEDIUM",
+    "url": "https://launchpadlibrarian.net/88098106/selinux_0.10~10.04.1.debdiff"
+  },
+  {
+    "cve": "CVE-2011-3172",
+    "year": "2011",
+    "description": "A vulnerability in pam_modules of SUSE Linux Enterprise allows attackers to log into accounts that should have been disabled. Affected releases are SUSE Linux Enterprise: versions prior to 12.",
+    "severity": "CRITICAL",
+    "url": "https://bugzilla.suse.com/show_bug.cgi?id=707645"
+  },
+  {
+    "cve": "CVE-2011-3336",
+    "year": "2011",
+    "description": "regcomp in the BSD implementation of libc is vulnerable to denial of service due to stack exhaustion.",
+    "severity": "HIGH",
+    "url": "http://seclists.org/fulldisclosure/2014/Mar/166"
+  },
+  {
+    "cve": "CVE-2011-3349",
+    "year": "2011",
+    "description": "lightdm before 0.9.6 writes in .dmrc and Xauthority files using root permissions while the files are in user controlled folders. A local user can overwrite root-owned files via a symlink, which can allow possible privilege escalation.",
+    "severity": "HIGH",
+    "url": "https://access.redhat.com/security/cve/cve-2011-3349"
+  },
+  {
+    "cve": "CVE-2011-3351",
+    "year": "2011",
+    "description": "openvas-scanner before 2011-09-11 creates a temporary file insecurely when generating OVAL system characteristics document with the ovaldi integrated tool enabled. A local attacker could use this flaw to conduct symlink attacks to overwrite arbitrary files on the system.",
+    "severity": "HIGH",
+    "url": "https://access.redhat.com/security/cve/cve-2011-3351"
+  },
+  {
+    "cve": "CVE-2011-3373",
+    "year": "2011",
+    "description": "Drupal Views Builk Operations (VBO) module 6.x-1.0 through 6.x-1.10 does not properly escape the vocabulary help when the vocabulary has had user tagging enabled and the \"Modify node taxonomy terms\" action is used. A remote attacker could provide a specially-crafted URL that could lead to cross-site scripting (XSS) attack.",
+    "severity": "MEDIUM",
+    "url": "https://access.redhat.com/security/cve/cve-2011-3373"
+  },
+  {
+    "cve": "CVE-2011-3584",
+    "year": "2011",
+    "description": "The TYPO3 Core wec_discussion extension before 2.1.1 is vulnerable to SQL Injection due to improper sanitation of user-supplied input.",
+    "severity": "CRITICAL",
+    "url": "https://access.redhat.com/security/cve/cve-2011-3584"
+  },
+  {
+    "cve": "CVE-2011-3600",
+    "year": "2011",
+    "description": "The /webtools/control/xmlrpc endpoint in OFBiz XML-RPC event handler is exposed to External Entity Injection by passing DOCTYPE declarations with executable payloads that discloses the contents of files in the filesystem. In addition, it can also be used to probe for open network ports, and figure out from returned error messages whether a file exists or not. This affects OFBiz 16.11.01 to 16.11.04.",
+    "severity": "HIGH",
+    "url": "http://mail-archives.apache.org/mod_mbox/ofbiz-user/201810.mbox/%3Cfad45546-af86-0293-9ea7-014553474b30%40apache.org%3E"
+  },
+  {
+    "cve": "CVE-2011-3617",
+    "year": "2011",
+    "description": "Tahoe-LAFS v1.3.0 through v1.8.2 could allow unauthorized users to delete immutable files in some cases.",
+    "severity": "MEDIUM",
+    "url": "https://access.redhat.com/security/cve/cve-2011-3617"
+  },
+  {
+    "cve": "CVE-2011-3618",
+    "year": "2011",
+    "description": "atop: symlink attack possible due to insecure tempfile handling",
+    "severity": "HIGH",
+    "url": "https://access.redhat.com/security/cve/cve-2011-3618"
+  },
+  {
+    "cve": "CVE-2011-3621",
+    "year": "2011",
+    "description": "A reverse proxy issue exists in FluxBB before 1.4.7 when FORUM_BEHIND_REVERSE_PROXY is enabled.",
+    "severity": "CRITICAL",
+    "url": "https://fluxbb.org/forums/viewtopic.php?id=5751"
+  },
+  {
+    "cve": "CVE-2011-3630",
+    "year": "2011",
+    "description": "Hardlink before 0.1.2 suffer from multiple stack-based buffer overflow flaws because of the way directory trees with deeply nested directories are processed. A remote attacker could provide a specially-crafted directory tree, and trick the local user into consolidating it, leading to hardlink executable crash, or, potentially arbitrary code execution with the privileges of the user running the hardlink executable.",
+    "severity": "HIGH",
+    "url": "https://access.redhat.com/security/cve/cve-2011-3630"
+  },
+  {
+    "cve": "CVE-2011-3631",
+    "year": "2011",
+    "description": "Hardlink before 0.1.2 has multiple integer overflows leading to heap-based buffer overflows because of the way string lengths concatenation is done in the calculation of the required memory space to be used. A remote attacker could provide a specially-crafted directory tree and trick the local user into consolidating it, leading to hardlink executable crash or potentially arbitrary code execution with user privileges.",
+    "severity": "HIGH",
+    "url": "https://access.redhat.com/security/cve/cve-2011-3631"
+  },
+  {
+    "cve": "CVE-2011-4181",
+    "year": "2011",
+    "description": "A vulnerability in open build service allows remote attackers to gain access to source files even though source access is disabled. Affected releases are SUSE open build service up to and including version 2.1.15 (for 2.1) and before version 2.3.",
+    "severity": "HIGH",
+    "url": "https://bugzilla.suse.com/show_bug.cgi?id=734003"
+  },
+  {
+    "cve": "CVE-2011-4574",
+    "year": "2011",
+    "description": "PolarSSL versions prior to v1.1 use the HAVEGE random number generation algorithm. At its heart, this uses timing information based on the processor's high resolution timer (the RDTSC instruction). This instruction can be virtualized, and some virtual machine hosts have chosen to disable this instruction, returning 0s or predictable results.",
+    "severity": "CRITICAL",
+    "url": "https://tls.mbed.org/tech-updates/security-advisories/polarssl-security-advisory-2011-02"
+  },
+  {
+    "cve": "CVE-2011-4952",
+    "year": "2011",
+    "description": "cobbler: Web interface lacks CSRF protection when using Django framework",
+    "severity": "HIGH",
+    "url": "http://www.openwall.com/lists/oss-security/2012/04/12/10"
+  },
+  {
+    "cve": "CVE-2011-4954",
+    "year": "2011",
+    "description": "cobbler has local privilege escalation via the use of insecure location for PYTHON_EGG_CACHE",
+    "severity": "HIGH",
+    "url": "http://www.openwall.com/lists/oss-security/2012/04/12/10"
+  }
+]
