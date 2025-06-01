@@ -62,3 +62,6 @@ Network Trash Folder
 
 # GitHub Desktop merge conflict files
 *.orig
+
+# User-specific files
+.todo
