@@ -2,12 +2,14 @@
 
 import yaml
 from pathlib import Path
+import os
 
 def load_risk_weights(filepath="data/risk_weights.yaml"):
-    """Load risk weights from a YAML config file."""
-    with open(filepath, "r", encoding="utf-8") as f:
+    """Load risk weights from YAML file (path relative to project root)."""
+    base = Path(__file__).resolve().parent.parent  # → 프로젝트 루트
+    full_path = base / filepath
+    with full_path.open("r", encoding="utf-8") as f:
         return yaml.safe_load(f)
-
 
 def analyze_device_risk(device, risk_weights):
     """Calculate risk score and reasons based on YAML-defined risk weights."""

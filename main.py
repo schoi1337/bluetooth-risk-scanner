@@ -2,6 +2,7 @@ import argparse
 import asyncio
 from src.ble_sniffer import scan_ble_devices
 from src.risk_analyzer import load_risk_weights, analyze_device_risk, analyze_privacy_risks
+from src.cve_checker import query_nvd
 from src.report_generator import save_html_report, save_json_report
 
 async def main():
@@ -24,12 +25,18 @@ async def main():
     # Load risk scoring weights
     weights = load_risk_weights()
 
-    # Enrich each device with risk score, reason, and privacy risks
     for dev in devices:
+        # Risk score & reasons
         score, reasons = analyze_device_risk(dev, weights)
         dev["risk_score"] = score
         dev["risk_reason"] = ", ".join(reasons)
+
+        # Privacy risk detection
         dev["privacy_risks"] = analyze_privacy_risks(dev)
+
+        # CVE auto-query via NVD API
+        keyword = dev.get("name") or dev.get("vendor")
+        dev["cve_summary"] = query_nvd(keyword) if keyword else []
 
     # Save reports
     save_json_report(devices, "output/scan_report.json")

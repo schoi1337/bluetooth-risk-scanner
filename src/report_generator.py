@@ -15,7 +15,7 @@ def save_json_report(devices, output_path="output/report.json"):
 
 
 def save_html_report(devices, output_path="output/report.html"):
-    """Save the scan results as a dark-themed portfolio-style HTML report."""
+    """Save the scan results as a dark-themed HTML report with CVE and fingerprint data."""
     risk_levels = {"Low": "#90caf9", "Medium": "#ffb74d", "High": "#ef5350", "Critical": "#d32f2f"}
     risk_count = {level: 0 for level in risk_levels}
 
@@ -39,7 +39,6 @@ def save_html_report(devices, output_path="output/report.html"):
         ".filter-btn:hover { background-color: #555; }",
     ]
 
-    # Dynamic CSS badge colors
     for level, color in risk_levels.items():
         html.append(f".badge-{level.lower()} {{ background-color: {color}; }}")
 
@@ -65,7 +64,6 @@ def save_html_report(devices, output_path="output/report.html"):
         html.append(f"<li>{level}: {risk_count[level]}</li>")
     html += ["</ul></div>"]
 
-    # Filter buttons
     html += [
         "<div style='margin-bottom: 20px;'>",
         "<button class='filter-btn' onclick=\"filterRisk('All')\">Show All</button>",
@@ -76,11 +74,12 @@ def save_html_report(devices, output_path="output/report.html"):
         "</div>"
     ]
 
-    # Table headers
     html += [
         "<table>",
         "<thead><tr>",
-        "<th>Risk Score</th><th>Risk Level</th><th>Recommendation</th><th>Risk Explanation</th><th>Fingerprint Summary</th>",
+        "<th>Risk Score</th><th>Risk Level</th><th>Recommendation</th><th>Risk Explanation</th>",
+        "<th>CVE Summary</th>",
+        "<th>Fingerprint Summary</th>",
         "</tr></thead><tbody>"
     ]
 
@@ -93,8 +92,9 @@ def save_html_report(devices, output_path="output/report.html"):
         name = dev.get("name", "Unknown")
         mac = dev.get("mac", "Unknown")
         vendor = dev.get("vendor", "Unknown")
+        row_class = f"risk-{level.lower()}"
 
-        # Fingerprint summary formatting
+        # Fingerprint summary
         fp_lines = [
             f"<strong>Name:</strong> {name}",
             f"<strong>MAC:</strong> {mac}",
@@ -107,14 +107,20 @@ def save_html_report(devices, output_path="output/report.html"):
             fp_lines.append("</ul>")
         else:
             fp_lines.append("<strong>UUIDs:</strong> None")
-
         fingerprint_html = "<br>".join(fp_lines)
-        row_class = f"risk-{level.lower()}"
+
+        # CVE summary
+        cves = dev.get("cve_summary", [])
+        if cves:
+            cve_lines = [f"<li>{c['id']} (CVSS: {c['cvss']})</li>" for c in cves]
+            cve_html = "<ul>" + "".join(cve_lines) + "</ul>"
+        else:
+            cve_html = "None"
 
         html.append(f"<tr class='{row_class}'>")
         html.append(f"<td>{score}</td>")
         html.append(f"<td><span class='badge badge-{level.lower()}'>{level}</span></td>")
-        html.append(f"<td>{rec}</td><td>{reason}</td><td>{fingerprint_html}</td>")
+        html.append(f"<td>{rec}</td><td>{reason}</td><td>{cve_html}</td><td>{fingerprint_html}</td>")
         html.append("</tr>")
 
     html += ["</tbody></table></body></html>"]
