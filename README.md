@@ -6,8 +6,6 @@ Unlike simple scanners, this tool classifies threats based on proximity, vendor 
 
 ## 🚀 Features
 
-## 🚀 Features
-
 - Passive BLE scanning using [`bleak`](https://github.com/hbldh/bleak)  
   (Supported on Windows, Linux, and macOS)
 - Device information collection: Name, RSSI, UUIDs, Manufacturer ID, MAC address (when available)
