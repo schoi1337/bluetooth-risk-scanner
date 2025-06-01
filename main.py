@@ -27,66 +27,76 @@ def convert_bytes_to_hex(obj):
         return obj
 
 
-async def main():
-    print("[INFO] Starting BLE device scan...")
+async def run_scan(timeout=10, json_only=False, html_only=False, offline=None):
+    """
+    Core scan and analysis function.
+    If offline is set, analyze the given JSON file instead of scanning.
+    """
     weights = load_risk_weights()
-
-    devices_raw = await scan_devices(return_advertisement=True)
-
-    # Remove duplicates by MAC address
-    unique_devices = {}
-    for device_info, advertisement_data in devices_raw:
-        mac = device_info.address
-        if mac not in unique_devices:
-            unique_devices[mac] = (device_info, advertisement_data)
-
     enriched_devices = []
 
-    for device_info, advertisement_data in unique_devices.values():
-        mac = device_info.address
-        name = device_info.name or "Unknown"
-        rssi = advertisement_data.rssi
-        manufacturer_data = advertisement_data.manufacturer_data
+    if offline:
+        import json
+        with open(offline, "r", encoding="utf-8") as f:
+            devices_raw = json.load(f)
+        # Assume devices_raw is already enriched JSON data
+        enriched_devices = devices_raw
+    else:
+        devices_raw = await scan_devices(return_advertisement=True, timeout=timeout)
 
-        vendor_name = get_vendor_name(mac)
+        # Remove duplicates by MAC address
+        unique_devices = {}
+        for device_info, advertisement_data in devices_raw:
+            mac = device_info.address
+            if mac not in unique_devices:
+                unique_devices[mac] = (device_info, advertisement_data)
 
-        dev = {
-            "mac": mac,
-            "name": name,
-            "rssi": rssi,
-            "vendor_name": vendor_name,
-            "mac_randomized": False,  # Placeholder; implement actual check later
-            "manufacturer_data": manufacturer_data
-        }
+        for device_info, advertisement_data in unique_devices.values():
+            mac = device_info.address
+            name = device_info.name or "Unknown"
+            rssi = advertisement_data.rssi
+            manufacturer_data = advertisement_data.manufacturer_data
 
-        score, reasons = analyze_device_risk(dev, weights)
-        dev["score"] = score
-        dev["risk_reasons"] = reasons
-        dev["privacy_risks"] = analyze_privacy_risks(dev)
+            vendor_name = get_vendor_name(mac)
 
-        rotating_mac = check_mac_rotation(dev)
-        name_switch = check_name_switching(dev)
+            dev = {
+                "mac": mac,
+                "name": name,
+                "rssi": rssi,
+                "vendor_name": vendor_name,
+                "mac_randomized": False,
+                "manufacturer_data": manufacturer_data
+            }
 
-        anomalies = []
-        if rotating_mac:
-            anomalies.append("Rotating MAC detected")
-        if name_switch:
-            anomalies.append("Name switching detected")
+            score, reasons = analyze_device_risk(dev, weights)
+            dev["score"] = score
+            dev["risk_reasons"] = reasons
+            dev["privacy_risks"] = analyze_privacy_risks(dev)
 
-        dev["anomaly"] = ", ".join(anomalies) if anomalies else "Normal"
+            rotating_mac = check_mac_rotation(dev)
+            name_switch = check_name_switching(dev)
 
-        save_device_profile(dev)
-        enriched_devices.append(dev)
+            anomalies = []
+            if rotating_mac:
+                anomalies.append("Rotating MAC detected")
+            if name_switch:
+                anomalies.append("Name switching detected")
 
+            dev["anomaly"] = ", ".join(anomalies) if anomalies else "Normal"
+
+            save_device_profile(dev)
+            enriched_devices.append(dev)
+
+    # Clean bytes for serialization
     cleaned_devices = convert_bytes_to_hex(enriched_devices)
 
     output_dir = Path("output")
     output_dir.mkdir(exist_ok=True)
 
-    save_json_report(cleaned_devices, output_path=output_dir / "scan_report.json")
-    save_html_report(cleaned_devices, output_path=output_dir / "report.html")
-    print(f"[INFO] Reports saved to {output_dir.resolve()}")
+    if not json_only:
+        save_html_report(cleaned_devices, output_path=output_dir / "report.html")
+        print(f"[INFO] HTML report saved to {output_dir / 'report.html'}")
 
-
-if __name__ == "__main__":
-    asyncio.run(main())
+    if not html_only:
+        save_json_report(cleaned_devices, output_path=output_dir / "scan_report.json")
+        print(f"[INFO] JSON report saved to {output_dir / 'scan_report.json'}")
