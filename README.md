@@ -6,7 +6,7 @@ Unlike simple scanners, this tool classifies threats based on proximity, vendor 
 
 ## 🚀 Features
 
-- Passive BLE scanning using [`bleak`](https://github.com/hbldh/bleak)  
+- Passive BLE scanning using [bleak](https://github.com/hbldh/bleak)  
   (Supported on Windows, Linux, and macOS)
 - Device information collection: Name, RSSI, UUIDs, Manufacturer ID, MAC address (when available)
 - Vendor/OUI detection:  
@@ -28,7 +28,7 @@ Unlike simple scanners, this tool classifies threats based on proximity, vendor 
 - Modern CLI output:  
   Uses the [Rich](https://github.com/Textualize/rich) library for colored output, ASCII art banners, and intuitive status icons
 
-\* **Note:**  
+> **Note:**  
 Tracker/vendor detection, GATT fingerprinting, and behavioral anomaly detection are limited to passive analysis based on OUI, device name, and UUID patterns. The tool does not provide device type clustering, advanced behavioral analysis, or real-time tracking capabilities.
 
 
@@ -44,9 +44,6 @@ The following factors contribute to a device's total `risk_score`:
 | **Passive Tracker** | Apple (AirTag), Tile, Samsung SmartTag via Manufacturer ID | +2    |
 | **BLE Services**    | Sensitive UUIDs like Heart Rate, User Data                | +3    |
 
-## 📋 Usage
-
-```bash
 ## 📋 Usage
 
 ```bash
