@@ -1,3 +1,5 @@
+# src/report_generator.py
+
 import json
 from datetime import datetime
 from pathlib import Path
@@ -13,9 +15,9 @@ def save_json_report(devices, output_path="output/report.json"):
 
 
 def save_html_report(devices, output_path="output/report.html"):
-    """Save the scan results as an HTML report with fingerprint summary column."""
-    risk_levels = {"Low": "#e8f5e9", "Medium": "#fff3e0", "High": "#ffebee", "Critical": "#ffcdd2"}
-    risk_count = {"Low": 0, "Medium": 0, "High": 0, "Critical": 0}
+    """Save the scan results as an HTML report with risk severity visualization and filter buttons."""
+    risk_levels = {"Low": "#9e9e9e", "Medium": "#ff9800", "High": "#f44336", "Critical": "#b71c1c"}
+    risk_count = {level: 0 for level in risk_levels}
 
     for dev in devices:
         level = dev.get("risk_level", "Low")
@@ -25,34 +27,58 @@ def save_html_report(devices, output_path="output/report.html"):
     html = [
         "<html><head><title>Bluetooth Risk Report</title>",
         "<style>",
-        "body { font-family: Arial, sans-serif; margin: 30px; }",
+        "body { font-family: Arial, sans-serif; margin: 30px; background-color: #ffffff; color: #333; }",
         "table { width: 100%; border-collapse: collapse; margin-top: 20px; }",
         "th, td { padding: 10px; border: 1px solid #ccc; text-align: left; vertical-align: top; }",
         "th { background-color: #f2f2f2; }",
         ".summary { background-color: #e3f2fd; padding: 15px; border: 1px solid #90caf9; margin-bottom: 20px; }",
+        ".badge { padding: 4px 10px; border-radius: 8px; color: white; font-weight: bold; }",
+        ".filter-btn { margin-right: 8px; padding: 6px 12px; font-size: 14px; cursor: pointer; }",
     ]
 
+    # Add dynamic badge color classes
     for level, color in risk_levels.items():
-        html.append(f".risk-{level.lower()} {{ background-color: {color}; }}")
+        html.append(f".badge-{level.lower()} {{ background-color: {color}; }}")
 
     html += [
-        "</style></head><body>",
+        "</style>",
+        "<script>",
+        "function filterRisk(level) {",
+        "  var rows = document.querySelectorAll('tbody tr');",
+        "  rows.forEach(row => {",
+        "    if (level === 'All') { row.style.display = ''; return; }",
+        "    row.style.display = row.classList.contains('risk-' + level.toLowerCase()) ? '' : 'none';",
+        "  });",
+        "}",
+        "</script>",
+        "</head><body>",
         "<h1>Bluetooth Device Risk Assessment</h1>",
         "<div class='summary'>",
         f"<p><strong>Total Devices Scanned:</strong> {len(devices)}</p>",
         "<p><strong>Risk Level Breakdown:</strong></p>",
         "<ul>",
-        f"<li>Low: {risk_count['Low']}</li>",
-        f"<li>Medium: {risk_count['Medium']}</li>",
-        f"<li>High: {risk_count['High']}</li>",
-        f"<li>Critical: {risk_count['Critical']}</li>",
-        "</ul>",
-        "</div>",
+    ]
+
+    for level in risk_levels:
+        html.append(f"<li>{level}: {risk_count[level]}</li>")
+    html += ["</ul></div>"]
+
+    # Add filter buttons
+    html += [
+        "<div>",
+        "<button class='filter-btn' onclick=\"filterRisk('All')\">Show All</button>",
+        "<button class='filter-btn' onclick=\"filterRisk('Low')\">Low</button>",
+        "<button class='filter-btn' onclick=\"filterRisk('Medium')\">Medium</button>",
+        "<button class='filter-btn' onclick=\"filterRisk('High')\">High</button>",
+        "<button class='filter-btn' onclick=\"filterRisk('Critical')\">Critical</button>",
+        "</div>"
+    ]
+
+    html += [
         "<table>",
         "<thead><tr>",
         "<th>Risk Score</th><th>Risk Level</th><th>Recommendation</th><th>Risk Explanation</th><th>Fingerprint Summary</th>",
-        "</tr></thead>",
-        "<tbody>"
+        "</tr></thead><tbody>"
     ]
 
     for dev in devices:
@@ -65,7 +91,7 @@ def save_html_report(devices, output_path="output/report.html"):
         mac = dev.get("mac", "Unknown")
         vendor = dev.get("vendor", "Unknown")
 
-        # Build fingerprint summary
+        # Fingerprint summary section
         fp_lines = [
             f"<strong>Name:</strong> {name}",
             f"<strong>MAC:</strong> {mac}",
@@ -83,7 +109,9 @@ def save_html_report(devices, output_path="output/report.html"):
         row_class = f"risk-{level.lower()}"
 
         html.append(f"<tr class='{row_class}'>")
-        html.append(f"<td>{score}</td><td>{level}</td><td>{rec}</td><td>{reason}</td><td>{fingerprint_html}</td>")
+        html.append(f"<td>{score}</td>")
+        html.append(f"<td><span class='badge badge-{level.lower()}'>{level}</span></td>")
+        html.append(f"<td>{rec}</td><td>{reason}</td><td>{fingerprint_html}</td>")
         html.append("</tr>")
 
     html += ["</tbody></table></body></html>"]
