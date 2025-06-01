@@ -1,0 +1,8 @@
+# BLE Risk Scoring Weights
+
+static_mac: 40
+public_name: 20
+known_tracking_vendor: 30
+ble_advertising_enabled: 15
+exposes_manufacturer_data: 25
+weak_signal_proximity: 10
