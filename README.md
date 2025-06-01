@@ -84,7 +84,6 @@ python cli.py --scan --timeout 20 --min-rssi -80 --output-dir results/
 ## 📊 Reporting & Output
 - **HTML Report**: Color-coded severity (Low/Medium/High/Critical), sortable/filterable, device fingerprint summary, recommendations, explanations per finding.
 - **JSON Report**: Structured data for automation or further offline analysis.
-- **Sample Output**: See [Sample HTML Report](docs/sample_report.html), [See Sample JSON report](docs/sample_report.json).
 
 Reports are saved to:
 - `output/scan_report.json`
