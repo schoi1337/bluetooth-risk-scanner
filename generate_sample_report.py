@@ -1,5 +1,9 @@
 # generate_sample_report.py
 
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
+
 from report_generator import save_html_report
 
 # Sample anonymized BLE scan results

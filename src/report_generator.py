@@ -15,8 +15,8 @@ def save_json_report(devices, output_path="output/report.json"):
 
 
 def save_html_report(devices, output_path="output/report.html"):
-    """Save the scan results as an HTML report with risk severity visualization and filter buttons."""
-    risk_levels = {"Low": "#9e9e9e", "Medium": "#ff9800", "High": "#f44336", "Critical": "#b71c1c"}
+    """Save the scan results as a dark-themed portfolio-style HTML report."""
+    risk_levels = {"Low": "#90caf9", "Medium": "#ffb74d", "High": "#ef5350", "Critical": "#d32f2f"}
     risk_count = {level: 0 for level in risk_levels}
 
     for dev in devices:
@@ -27,16 +27,19 @@ def save_html_report(devices, output_path="output/report.html"):
     html = [
         "<html><head><title>Bluetooth Risk Report</title>",
         "<style>",
-        "body { font-family: Arial, sans-serif; margin: 30px; background-color: #ffffff; color: #333; }",
+        "body { font-family: 'Segoe UI', sans-serif; background-color: #121212; color: #f5f5f5; margin: 30px; }",
         "table { width: 100%; border-collapse: collapse; margin-top: 20px; }",
-        "th, td { padding: 10px; border: 1px solid #ccc; text-align: left; vertical-align: top; }",
-        "th { background-color: #f2f2f2; }",
-        ".summary { background-color: #e3f2fd; padding: 15px; border: 1px solid #90caf9; margin-bottom: 20px; }",
-        ".badge { padding: 4px 10px; border-radius: 8px; color: white; font-weight: bold; }",
-        ".filter-btn { margin-right: 8px; padding: 6px 12px; font-size: 14px; cursor: pointer; }",
+        "th, td { padding: 12px; border: 1px solid #444; text-align: left; vertical-align: top; }",
+        "th { background-color: #1e1e1e; color: #ffffff; }",
+        "tr:nth-child(even) { background-color: #1a1a1a; }",
+        "tr:hover { background-color: #2a2a2a; }",
+        ".summary { background-color: #1e1e1e; padding: 15px; border: 1px solid #333; margin-bottom: 20px; border-radius: 8px; }",
+        ".badge { padding: 5px 12px; border-radius: 10px; font-weight: bold; color: #111; display: inline-block; }",
+        ".filter-btn { margin-right: 10px; padding: 8px 16px; font-size: 14px; cursor: pointer; border: none; border-radius: 6px; background-color: #333; color: #f5f5f5; transition: 0.2s; }",
+        ".filter-btn:hover { background-color: #555; }",
     ]
 
-    # Add dynamic badge color classes
+    # Dynamic CSS badge colors
     for level, color in risk_levels.items():
         html.append(f".badge-{level.lower()} {{ background-color: {color}; }}")
 
@@ -52,20 +55,19 @@ def save_html_report(devices, output_path="output/report.html"):
         "}",
         "</script>",
         "</head><body>",
-        "<h1>Bluetooth Device Risk Assessment</h1>",
+        "<h1>🔒 Bluetooth Device Risk Assessment</h1>",
         "<div class='summary'>",
         f"<p><strong>Total Devices Scanned:</strong> {len(devices)}</p>",
-        "<p><strong>Risk Level Breakdown:</strong></p>",
-        "<ul>",
+        "<p><strong>Risk Level Breakdown:</strong></p><ul>",
     ]
 
     for level in risk_levels:
         html.append(f"<li>{level}: {risk_count[level]}</li>")
     html += ["</ul></div>"]
 
-    # Add filter buttons
+    # Filter buttons
     html += [
-        "<div>",
+        "<div style='margin-bottom: 20px;'>",
         "<button class='filter-btn' onclick=\"filterRisk('All')\">Show All</button>",
         "<button class='filter-btn' onclick=\"filterRisk('Low')\">Low</button>",
         "<button class='filter-btn' onclick=\"filterRisk('Medium')\">Medium</button>",
@@ -74,6 +76,7 @@ def save_html_report(devices, output_path="output/report.html"):
         "</div>"
     ]
 
+    # Table headers
     html += [
         "<table>",
         "<thead><tr>",
@@ -91,7 +94,7 @@ def save_html_report(devices, output_path="output/report.html"):
         mac = dev.get("mac", "Unknown")
         vendor = dev.get("vendor", "Unknown")
 
-        # Fingerprint summary section
+        # Fingerprint summary formatting
         fp_lines = [
             f"<strong>Name:</strong> {name}",
             f"<strong>MAC:</strong> {mac}",
