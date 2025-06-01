@@ -45,3 +45,25 @@ def analyze_device_risk(device, risk_weights):
         reasons.append("Device is in close proximity (strong RSSI).")
 
     return score, reasons
+
+def analyze_privacy_risks(device):
+    """
+    Analyze BLE advertisement fields to detect privacy risks.
+    Returns a list of human-readable risk indicators.
+    """
+
+    risks = []
+
+    # Manufacturer-specific data reveals vendor identity
+    if device.get("manufacturer_data"):
+        risks.append("Exposes manufacturer-specific BLE data")
+
+    # Service data may contain UUIDs that reveal functionality
+    if device.get("service_data"):
+        risks.append("Exposes service-specific data in advertisements")
+
+    # BLE flags indicate discoverability and connectability
+    if device.get("flags") in [0x02, 0x04, 0x06]:
+        risks.append("BLE is discoverable and connectable")
+
+    return risks

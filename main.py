@@ -1,7 +1,7 @@
 import argparse
 import asyncio
 from src.ble_sniffer import scan_ble_devices
-from src.risk_analyzer import enrich_devices_with_score
+from src.risk_analyzer import load_risk_weights, analyze_device_risk, analyze_privacy_risks
 from src.report_generator import save_html_report, save_json_report
 
 async def main():
@@ -17,13 +17,23 @@ async def main():
 
     if count == 0:
         print("⚠️  No BLE devices found. Try again or reduce min_rssi threshold.\n")
-    else:
-        print(f"📡 Found {count} BLE device(s).\n")
+        return
 
-    enriched_devices = enrich_devices_with_score(devices)
+    print(f"📡 Found {count} BLE device(s).\n")
 
-    save_json_report(enriched_devices, "output/scan_report.json")
-    save_html_report(enriched_devices, "output/scan_report.html")
+    # Load risk scoring weights
+    weights = load_risk_weights()
+
+    # Enrich each device with risk score, reason, and privacy risks
+    for dev in devices:
+        score, reasons = analyze_device_risk(dev, weights)
+        dev["risk_score"] = score
+        dev["risk_reason"] = ", ".join(reasons)
+        dev["privacy_risks"] = analyze_privacy_risks(dev)
+
+    # Save reports
+    save_json_report(devices, "output/scan_report.json")
+    save_html_report(devices, "output/scan_report.html")
 
 if __name__ == "__main__":
     asyncio.run(main())
