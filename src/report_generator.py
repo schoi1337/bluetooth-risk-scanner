@@ -1,26 +1,28 @@
-# src/report_generator.py
-
 import json
-from datetime import datetime
 from pathlib import Path
+from datetime import datetime
 
 def save_json_report(devices, output_path="output/report.json"):
-    """Save the scan results as a JSON file."""
+    """
+    Save devices data as JSON file.
+    """
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     with output_path.open("w", encoding="utf-8") as f:
         json.dump(devices, f, indent=2)
+
     print(f"[+] JSON report saved to {output_path.resolve()}")
 
-
 def save_html_report(devices, output_path="output/report.html"):
-    """Save the scan results as a dark-themed HTML report with CVE and fingerprint data."""
+    """
+    Save the scan results as a dark-themed HTML report with CVE and fingerprint data.
+    """
     risk_levels = {"Low": "#90caf9", "Medium": "#ffb74d", "High": "#ef5350", "Critical": "#d32f2f"}
     risk_count = {level: 0 for level in risk_levels}
 
     for dev in devices:
-        level = dev.get("risk_level", "Low")
+        level = dev.get("risk_level", dev.get("score", 0))
         if level in risk_count:
             risk_count[level] += 1
 
@@ -37,6 +39,8 @@ def save_html_report(devices, output_path="output/report.html"):
         ".badge { padding: 5px 12px; border-radius: 10px; font-weight: bold; color: #111; display: inline-block; }",
         ".filter-btn { margin-right: 10px; padding: 8px 16px; font-size: 14px; cursor: pointer; border: none; border-radius: 6px; background-color: #333; color: #f5f5f5; transition: 0.2s; }",
         ".filter-btn:hover { background-color: #555; }",
+        "ul { margin: 0; padding-left: 1em; }",
+        "li { margin-bottom: 0.25em; }"
     ]
 
     for level, color in risk_levels.items():
@@ -77,22 +81,24 @@ def save_html_report(devices, output_path="output/report.html"):
     html += [
         "<table>",
         "<thead><tr>",
-        "<th>Risk Score</th><th>Risk Level</th><th>Recommendation</th><th>Risk Explanation</th>",
-        "<th>CVE Summary</th>",
-        "<th>Fingerprint Summary</th>",
+        "<th>Risk Score</th><th>Risk Level</th><th>Recommendation</th><th>Risk Explanation</th><th>CVE Summary</th><th>Fingerprint Summary</th><th>Anomaly</th>",
         "</tr></thead><tbody>"
     ]
 
     for dev in devices:
-        score = dev.get("risk_score", "N/A")
+        score = dev.get("score", "N/A")
         level = dev.get("risk_level", "Low")
         rec = dev.get("recommendation", "N/A")
-        reason = dev.get("risk_reason", "N/A")
+        reason = dev.get("risk_reasons", "N/A")
+        # Convert list reason to bullet points
+        if isinstance(reason, list):
+            reason = "<ul>" + "".join(f"<li>{item}</li>" for item in reason) + "</ul>"
+
         uuids = dev.get("uuids", [])
         name = dev.get("name", "Unknown")
         mac = dev.get("mac", "Unknown")
-        vendor = dev.get("vendor", "Unknown")
-        row_class = f"risk-{level.lower()}"
+        vendor = dev.get("vendor_name", "Unknown")
+        anomaly = dev.get("anomaly", "None")
 
         # Fingerprint summary
         fp_lines = [
@@ -117,10 +123,10 @@ def save_html_report(devices, output_path="output/report.html"):
         else:
             cve_html = "None"
 
-        html.append(f"<tr class='{row_class}'>")
+        html.append(f"<tr class='risk-{level.lower()}'>")
         html.append(f"<td>{score}</td>")
         html.append(f"<td><span class='badge badge-{level.lower()}'>{level}</span></td>")
-        html.append(f"<td>{rec}</td><td>{reason}</td><td>{cve_html}</td><td>{fingerprint_html}</td>")
+        html.append(f"<td>{rec}</td><td>{reason}</td><td>{cve_html}</td><td>{fingerprint_html}</td><td>{anomaly}</td>")
         html.append("</tr>")
 
     html += ["</tbody></table></body></html>"]
