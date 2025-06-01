@@ -13,7 +13,7 @@ def save_json_report(devices, output_path="output/report.json"):
 
 
 def save_html_report(devices, output_path="output/report.html"):
-    """Save the scan results as an HTML report with risk explanation and recommendation."""
+    """Save the scan results as an HTML report with fingerprint summary column."""
     risk_levels = {"Low": "#e8f5e9", "Medium": "#fff3e0", "High": "#ffebee", "Critical": "#ffcdd2"}
     risk_count = {"Low": 0, "Medium": 0, "High": 0, "Critical": 0}
 
@@ -49,23 +49,41 @@ def save_html_report(devices, output_path="output/report.html"):
         "</ul>",
         "</div>",
         "<table>",
-        "<thead><tr><th>Device Name</th><th>MAC Address</th><th>Vendor</th><th>RSSI</th><th>Risk Score</th><th>Risk Level</th><th>Recommendation</th><th>Risk Explanation</th></tr></thead>",
+        "<thead><tr>",
+        "<th>Risk Score</th><th>Risk Level</th><th>Recommendation</th><th>Risk Explanation</th><th>Fingerprint Summary</th>",
+        "</tr></thead>",
         "<tbody>"
     ]
 
     for dev in devices:
-        name = dev.get("name", "Unknown")
-        mac = dev.get("mac", "Unknown")
-        vendor = dev.get("vendor", "Unknown")
-        rssi = dev.get("rssi", "N/A")
         score = dev.get("risk_score", "N/A")
         level = dev.get("risk_level", "Low")
         rec = dev.get("recommendation", "N/A")
         reason = dev.get("risk_reason", "N/A")
+        uuids = dev.get("uuids", [])
+        name = dev.get("name", "Unknown")
+        mac = dev.get("mac", "Unknown")
+        vendor = dev.get("vendor", "Unknown")
+
+        # Build fingerprint summary
+        fp_lines = [
+            f"<strong>Name:</strong> {name}",
+            f"<strong>MAC:</strong> {mac}",
+            f"<strong>Vendor:</strong> {vendor}",
+        ]
+        if uuids:
+            fp_lines.append("<strong>UUIDs:</strong><ul>")
+            for u in uuids:
+                fp_lines.append(f"<li>{u}</li>")
+            fp_lines.append("</ul>")
+        else:
+            fp_lines.append("<strong>UUIDs:</strong> None")
+
+        fingerprint_html = "<br>".join(fp_lines)
         row_class = f"risk-{level.lower()}"
 
         html.append(f"<tr class='{row_class}'>")
-        html.append(f"<td>{name}</td><td>{mac}</td><td>{vendor}</td><td>{rssi}</td><td>{score}</td><td>{level}</td><td>{rec}</td><td>{reason}</td>")
+        html.append(f"<td>{score}</td><td>{level}</td><td>{rec}</td><td>{reason}</td><td>{fingerprint_html}</td>")
         html.append("</tr>")
 
     html += ["</tbody></table></body></html>"]
@@ -73,6 +91,6 @@ def save_html_report(devices, output_path="output/report.html"):
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8") as f:
-        f.write("\\n".join(html))
+        f.write("\n".join(html))
 
     print(f"[+] HTML report saved to {output_path.resolve()}")
